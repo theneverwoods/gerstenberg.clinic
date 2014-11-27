@@ -5,9 +5,14 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/deputy.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/response.css">
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>forms | gerstenberg.clinic</title>
   </head>
@@ -18,21 +23,31 @@
           <div class="col-sm-12">
             <div class="logo-border">
               <div class="row">
-                <div class="col-sm-6">
-                  <h1 class="logo">gerstenberg.clinic</h1>
+                <div class="col-md-6">
+                  <h1 class="logo"><a href="index.html">gerstenberg.clinic</a></h1>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                   <p class="address"><a href="#map">2645 Nall Street, Port Neches 77651, (409) 210-3336</a></p>
                 </div>
               </div>
             </div>
-            <nav>
-              <ul class="nav navbar-nav nav-justified">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="forms.html">Forms</a></li>
-                <li><a href="education.html">Education</a></li>
-              </ul>
+            <nav role="navigation">
+              <div class="navbar-header visible-xs">
+                <button type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target=".navbar-main">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#!">Menu</a>
+              </div>
+              <div class="collapse navbar-collapse navbar-main">
+                <ul class="nav navbar-nav nav-justified">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="forms.html">Forms</a></li>
+                  <li><a href="education.html">Education</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>

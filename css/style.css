@@ -34,6 +34,11 @@ a {
   margin-bottom: 0;
 }
 
+.logo a {
+  text-decoration: none;
+  color: black !important;
+}
+
 .logo-border {
   border-bottom: 3px solid #352716;
   margin-bottom: 10px;
@@ -74,6 +79,10 @@ nav .navbar-nav li:not(:last-child) a {
 nav .navbar-nav li a:hover, nav .navbar-nav li a:active, nav .navbar-nav li a:focus {
   /*border: 2px solid #003366;*/
   background-color: #995E2E;
+}
+
+.navbar-collapse {
+  padding: 0;
 }
 
 .full-img img {

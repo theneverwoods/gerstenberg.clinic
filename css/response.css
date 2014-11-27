@@ -1,0 +1,78 @@
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+}
+
+/* Portrait tablet to landscape and desktop */ /*(min-width: 768px) and*/
+@media (max-width: 991px) { 
+  .address, .logo {
+    padding: 0;
+    text-align: center;
+  }
+
+  .logo {
+    padding-bottom: 20px;
+  }
+  .container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+  nav .navbar-nav {
+    margin-left: 0;
+  }
+  nav .navbar-nav li:not(:last-child) a {
+    border: 0;
+  }
+  .bio img {
+    float: left;
+    width: 300px;
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .navbar-header {
+      background-color: #AB723E;
+  }
+
+  .navbar-header a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .navbar-header button, .navbar-header button:hover {
+      background-color: transparent;
+      border: 1px solid white;
+  }
+
+  .navbar-header .icon-bar, .navbar-header button:hover  .icon-bar {
+      background-color: white;
+  }
+
+  .navbar-header button:active {
+      background-color: white;
+  }
+
+  .navbar-header button:active .icon-bar {
+      background-color: #AB723E;
+  }
+
+  .sm-pad-t-15 {
+    padding-top: 15px !important;
+  }
+  .nav-pills>li>a {
+    margin-top:8px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+  .logo {
+    font-size: 30px;
+  }
+}
+
+
