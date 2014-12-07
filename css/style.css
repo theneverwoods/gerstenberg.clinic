@@ -29,8 +29,8 @@ a {
   font-weight: 800;
   font-size: 50px;
   color: #352716;
-  padding-bottom: 20px;
-  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-top: 30px;
   margin-bottom: 0;
 }
 
@@ -45,14 +45,15 @@ a {
 }
 
 .address {
-  text-align: right;
-  padding-top: 90px;
+  text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
+  color: #808080;
+  font-weight:bold;
 }
 
 .address a {
-  color: #352716;
+  color: #808080;
   text-decoration: none;
 }
 
@@ -125,4 +126,11 @@ footer {
   font-size: 16px;
 }
 
+.blue-gberg {
+color:#19375C;
+}
+
+.brwn-clinic {
+color:#653308;
+}
 
