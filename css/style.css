@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Futura';
+  font-family: 'FuturaBold';
   font-weight: 800;
   src: url('../fonts/FuturaBold.ttf') format('truetype');
 }
@@ -25,7 +25,7 @@ a {
 }
 
 .logo {
-  font-family: 'Futura';
+  font-family: 'FuturaBold', Arial, sans-serif; 
   font-weight: 800;
   font-size: 50px;
   color: #352716;
