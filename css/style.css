@@ -134,3 +134,17 @@ color:#19375C;
 color:#653308;
 }
 
+@media (max-width: 1200px) and (min-width: 768px) {
+  .bio img {
+    width:100%;
+    margin: 50px 0;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .bio img {
+    max-width: 50%;
+  }
+}
+
