@@ -127,11 +127,19 @@ footer {
 }
 
 .blue-gberg {
-color:#19375C;
+  color:#19375C;
 }
 
 .brwn-clinic {
-color:#653308;
+  color:#653308;
+}
+
+footer .blue-gberg, footer .brwn-clinic {
+  font-weight: bolder;
+}
+
+#YoutubeFrame ul li.active a {
+  color: #23527c;
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
@@ -141,10 +149,32 @@ color:#653308;
   }
 }
 
-
 @media (max-width: 767px) {
   .bio img {
     max-width: 50%;
   }
 }
 
+@media (min-width: 1200px) {
+    #YoutubeFrame iframe {
+        height: 402px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #YoutubeFrame iframe {
+        height: 326px;
+    }
+}
+
+@media (max-width: 991px) {
+    #YoutubeFrame iframe {
+        height: 242px;
+    }
+}
+
+@media (max-width: 768px) {
+    #YoutubeFrame iframe {
+        height: 300px;
+    }
+}
