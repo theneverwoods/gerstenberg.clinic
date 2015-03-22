@@ -73,10 +73,6 @@ $(document).ready(function() {
       });
 
       $('#YoutubeFrame ul li:first-child a').click();
-
-      console.log(t)
-      console.log(v)
-
     }
   })
 });
