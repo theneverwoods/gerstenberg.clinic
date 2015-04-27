@@ -142,6 +142,25 @@ footer .blue-gberg, footer .brwn-clinic {
   color: #23527c;
 }
 
+.news-link::before {
+    content: 'In The News: ';
+}
+
+.news-link {
+    margin-top:10px;
+    background-color:#AB723E;
+    color:white;
+    padding:10px;
+    text-align:center;
+    color: white !important;
+    text-decoration: none !important;
+    display:block;
+}
+
+.news-link:hover {
+    background-color: #995E2E;
+}
+
 @media (max-width: 1200px) and (min-width: 768px) {
   .bio img {
     width:100%;
