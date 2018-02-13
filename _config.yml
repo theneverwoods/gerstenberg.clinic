@@ -1,0 +1,14 @@
+title: gerstenberg.clinic
+email: (409) 210-3336
+description: ""
+baseurl: ""
+url: "http://gerstenberg.clinic"
+sass:
+    style: compressed
+plugins:
+  - jekyll-redirect-from
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
