@@ -2,6 +2,8 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+$baseUrl: '{{ site.baseurl }}';
+
 @import "variables";
 @import "header";
 @import "footer";
