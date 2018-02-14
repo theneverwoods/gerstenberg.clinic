@@ -1,3 +1,138 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+
+@import "variables";
+@import "header";
+@import "footer";
+@import "hero";
+@import "grid";
+@import "fonts";
+@import "buttons";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Uni Neue';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.6rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  background: $bodyBg;
+}
+
+.card {
+  display: block;
+  background: $gray1;
+  text-decoration: none;
+  padding: 20px 15px;
+
+  h2 {
+    color: $gray4;
+  }
+
+  p {
+    color: $gray3;
+    margin: 0;
+    margin-top: 15px;
+    font-size: 2rem;
+  }
+}
+
+.tile {
+  position: relative;
+
+  &.text {
+    background: $gray3;
+    padding: 0;
+
+    &:before {
+      content: '';
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    &:first-child {
+      margin-left: 15px;
+      width: calc(50% - 15px);
+    }
+
+    &:last-child {
+      margin-right: 15px;
+      width: calc(50% - 15px);
+    }
+
+    h2 {
+      color: $bodyBg;
+      position: absolute;
+      top: 50px;
+      left: 30px;
+      right: 30px;
+      max-width: calc(100% - 60px);
+      margin: auto;
+    }
+
+    p {
+      color: $bodyBg;
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      right: 30px;
+      max-width: calc(100% - 60px);
+      margin: auto;
+      margin-top: 15px;
+      font-size: 2rem;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 50px;
+      left: 30px;
+    }
+  }
+
+  &.img {
+    padding: 0;
+    width: calc(50% - 15px);
+
+    &:first-child {
+      margin-left: 15px;
+    }
+
+    &:last-child {
+      margin-right: 15px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    img {
+      float: left;
+    }
+  }
+}

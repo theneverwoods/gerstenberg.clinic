@@ -1,0 +1,11 @@
+.btn {
+  color: $gray4;
+  background: $gray2;
+  font-size: 1.6rem;
+  padding: 10px 15px;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background: darken($gray2, 5);
+  }
+}

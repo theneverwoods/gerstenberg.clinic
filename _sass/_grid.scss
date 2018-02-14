@@ -1,0 +1,21 @@
+.row {
+  margin: 0 -15px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.third {
+  width: calc(100% / 3);
+  float: left;
+  padding: 0 15px;
+}
+
+.half {
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+}

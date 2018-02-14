@@ -15,6 +15,14 @@
   <body>
     <div class="container">
       {% include header.html %}
+      <section class="hero">
+        {% if page.hero && page.hero != "" %}
+          <img src="{{ page.hero }}" class="hero-img">
+        {% endif %}
+        {% if page.tagline && page.tagline != "" %}
+          <h1 class="hero-tagline">{{ page.tagline }}</h1>
+        {% endif %}
+      </section>
       <main>
         {{ content }}
       </main>
