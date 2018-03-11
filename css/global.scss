@@ -19,6 +19,12 @@ html, body {
   font-family: 'Uni Neue';
 }
 
+@media (max-width: 850px) {
+  html, body {
+    font-size: 8px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -34,11 +40,24 @@ img {
 h2 {
   margin: 0;
   padding: 0;
-  font-size: 2.6rem;
+  font-size: 3rem;
+}
+
+p {
+  svg {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+
+    &.logo-svg {
+      margin-top: 2px;
+    }
+  }
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   background: $bodyBg;
 }
@@ -47,7 +66,8 @@ h2 {
   display: block;
   background: $gray1;
   text-decoration: none;
-  padding: 20px 15px;
+  padding: 30px 20px;
+  border-radius: 10px;
 
   h2 {
     color: $gray4;
@@ -57,7 +77,8 @@ h2 {
     color: $gray3;
     margin: 0;
     margin-top: 15px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 300;
   }
 }
 
@@ -89,29 +110,32 @@ h2 {
     h2 {
       color: $bodyBg;
       position: absolute;
-      top: 50px;
-      left: 30px;
-      right: 30px;
+      top: 70px;
+      left: 50px;
+      right: 50px;
       max-width: calc(100% - 60px);
+      font-weight: 600;
+      font-size: 3.4rem;
       margin: auto;
     }
 
     p {
       color: $bodyBg;
       position: absolute;
-      top: 80px;
-      left: 30px;
-      right: 30px;
+      top: 130px;
+      left: 50px;
+      right: 50px;
       max-width: calc(100% - 60px);
+      font-size: 2.4rem;
       margin: auto;
       margin-top: 15px;
-      font-size: 2rem;
+      font-weight: 400;
     }
 
     .btn {
       position: absolute;
       bottom: 50px;
-      left: 30px;
+      left: 50px;
     }
   }
 
@@ -135,6 +159,89 @@ h2 {
 
     img {
       float: left;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .tile.text {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+
+    .btn {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1041px) {
+  .tile.text {
+    h2 {
+      font-size: 2.4rem;
+      top: 45px;
+      left: 30px;
+      right: 30px;
+    }
+
+    p {
+      top: 105px;
+      left: 30px;
+      right: 30px;
+    }
+
+    .btn {
+      bottom: 30px;
+      left: 30px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .tile.text {
+    p {
+      top: 75px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .tile.img {
+    width: calc(100% - 30px);
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+
+    &:last-child {
+      float: right;
+    }
+  }
+
+  .tile.text {
+    width: calc(100% - 30px) !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    padding: 30px 0;
+
+    &:first-child {
+      float: right;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    h2, p, .btn {
+      position: static;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 15px;
     }
   }
 }

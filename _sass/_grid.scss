@@ -19,3 +19,34 @@
   float: left;
   padding: 0 15px;
 }
+
+
+
+@media (max-width: 850px) {
+  .third {
+    width: 100%;
+    margin-bottom: 15px;
+
+    &.visible-xs {
+      display: block;
+    }
+
+    &.hidden-xs {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .half {
+    width: 100%;
+
+    &.visible-xs {
+      display: block;
+    }
+
+    &.hidden-xs {
+      display: none;
+    }
+  }
+}
