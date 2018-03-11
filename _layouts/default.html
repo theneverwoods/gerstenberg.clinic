@@ -9,6 +9,8 @@
     {% if page.stylesheet && page.stylesheet != "" %}<link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.stylesheet }}.css">{% endif %}
     <!-- <link rel="icon" href="/img/favicon.png?v=2"> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>{% if page.title && page.title != "" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   </head>
 
@@ -23,9 +25,7 @@
           <h1 class="hero-tagline">{{ page.tagline }}</h1>
         {% endif %}
       </section>
-      <main>
-        {{ content }}
-      </main>
+      <main>{{ content }}</main>
       {% include footer.html %}
     </div>
 

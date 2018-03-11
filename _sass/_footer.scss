@@ -1,11 +1,12 @@
 footer {
   background: $purple1;
   padding: 50px;
-  font-size: 1.6rem;
 
   .third {
     p {
       margin: 5px 0;
+      font-size: 1.6rem;
+      color: $gray4;
 
       .logo-svg {
         margin-top: 0;
@@ -25,6 +26,7 @@ footer {
         a {
           color: $gray4;
           text-decoration: none;
+          font-size: 1.6rem;
 
           &:hover {
             text-decoration: underline;

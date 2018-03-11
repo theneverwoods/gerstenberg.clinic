@@ -20,7 +20,9 @@
   padding: 0 15px;
 }
 
-
+.visible-xs {
+  display: none;
+}
 
 @media (max-width: 850px) {
   .third {
