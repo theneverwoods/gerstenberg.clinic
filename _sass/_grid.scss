@@ -14,6 +14,12 @@
   padding: 0 15px;
 }
 
+.two-thirds {
+  width: calc(2 * (100% / 3));
+  float: left;
+  padding: 0 15px;
+}
+
 .half {
   width: 50%;
   float: left;
@@ -25,6 +31,10 @@
 }
 
 @media (max-width: 850px) {
+  .two-thirds {
+    width: 100%;
+  }
+
   .third {
     width: 100%;
     margin-bottom: 15px;

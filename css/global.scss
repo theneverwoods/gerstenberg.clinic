@@ -64,8 +64,17 @@ p {
   }
 }
 
+a {
+  svg {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1600px; // 1600px
   margin: auto;
   background: $bodyBg;
 }

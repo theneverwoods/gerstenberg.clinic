@@ -5,6 +5,7 @@
 @import "variables";
 
 .about-row {
+  margin: 0;
   margin-bottom: 40px;
 
   .card {
@@ -67,12 +68,6 @@
 
 iframe {
   width: 100%;
-}
-
-@media (max-width: 1200px) {
-  .about-row {
-    margin: 0;
-  }
 }
 
 @media (max-width: 1195px) {
