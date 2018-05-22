@@ -1,0 +1,91 @@
+@import "variables";
+
+.row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > div {
+  margin: 0 15px;
+  padding: 0 15px;
+  min-height: 10em;
+  border: 2px solid #fafafa;
+}
+
+.row.tiles div {
+  margin: 0 0;
+}
+
+.tiles {
+  margin: 0 0;
+}
+
+.two-thirds, .half, .third, .fourth {
+  width: 0;
+}
+
+.two-thirds {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 2 + ($gutter * 6);
+}
+
+.half {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+}
+
+.third {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+}
+
+.fourth {
+  margin: 0 !important;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: $max-width / 4;
+}
+
+.visible-xs {
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .half.tile img {
+    max-width: $max-width/2
+  }
+}
+
+@media (max-width: 850px) {
+  .half, .third, .two-thirds {
+    flex-basis: 100%;
+  }
+
+  .third {
+    margin-bottom: 15px;
+
+    &.visible-xs {
+      display: block;
+    }
+
+    &.hidden-xs {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .half {
+    &.visible-xs {
+      display: block;
+    }
+
+    &.hidden-xs {
+      display: none;
+    }
+  }
+}

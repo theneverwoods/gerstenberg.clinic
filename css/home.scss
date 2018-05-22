@@ -3,15 +3,10 @@
 ---
 
 .row {
-  &.cards {
-    padding: 0 30px;
-  }
-
   &.tiles:nth-child(2) {
     margin-top: 30px;
   }
 }
-
 
 @media (min-width: 850px) {
   .card {
