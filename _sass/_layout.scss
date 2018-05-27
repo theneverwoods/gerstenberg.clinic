@@ -10,7 +10,6 @@
   margin: 0 15px;
   padding: 0 15px;
   min-height: 10em;
-  border: 2px solid #fafafa;
 }
 
 .row.tiles div {
@@ -87,5 +86,17 @@
     &.hidden-xs {
       display: none;
     }
+  }
+}
+
+@media (min-width: $max-width / 2) {
+  .half {
+    max-width: $max-width / 2;
+  }
+}
+
+@media (max-width: $max-width) {
+  .tile.half {
+    min-width: 50%;
   }
 }

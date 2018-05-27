@@ -76,7 +76,11 @@ a {
   }
 }
 
-.container {
+div.visible-xs {
+  display: none;
+}
+
+.container, .row {
   max-width: $max-width; // 1280px
   margin: auto;
   background: $bodyBg;
@@ -84,13 +88,22 @@ a {
 
 .light {
   background-color: $gray1;
+
+  h2, a h2 {
+    color: $gray4;
+  }
 }
 
 .dark {
   background-color: $gray3;
   color: $bodyBg;
-  p {
+
+  h2, h3, p {
     color: $bodyBg;
+  }
+
+  h2 {
+    font-weight: 600;
   }
 }
 
@@ -111,82 +124,19 @@ a {
   }
 }
 
-@media (max-width: 1150px) {
-  .tile.text {
-    h2 {
-      font-size: 3rem;
-    }
-
-    p {
-      font-size: 2rem;
-    }
-
-    .btn {
-      font-size: 2rem;
-    }
-  }
-}
-
-@media (max-width: 1041px) {
-  .tile.text {
-    h2 {
-      font-size: 2.4rem;
-      top: 45px;
-      left: 30px;
-      right: 30px;
-    }
-
-    p {
-      top: 105px;
-      left: 30px;
-      right: 30px;
-    }
-
-    .btn {
-      bottom: 30px;
-      left: 30px;
-    }
-  }
-}
-
-@media (max-width: 950px) {
-  .tile.text {
-    p {
-      top: 75px;
-    }
-  }
-}
-
-@media (max-width: 750px) {
-  .tile.img {
-    width: calc(100% - 30px);
-    margin-right: 15px !important;
-    margin-left: 15px !important;
+.tile {
+  &.half.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0 6em;
   }
 
-  .tile.visible-xs + .tile.text {
-    margin-left: 15px;
-    width: calc(50% - 15px);
-  }
-
-  .tile.text {
-    width: calc(100% - 30px) !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-    padding: 30px 0;
-
-    &:before {
-      display: none;
-    }
-
-    h2, p, .btn {
-      position: static;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-left: 30px;
-      margin-top: 15px;
-    }
+  &.half.img {
+    padding: 0;
+    margin-bottom: -3px;
   }
 }
