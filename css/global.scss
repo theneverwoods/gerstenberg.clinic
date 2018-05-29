@@ -42,6 +42,13 @@ h2 {
   margin: 0;
   padding: 0;
   font-size: 3rem;
+  font-weight: 600;
+}
+
+h3 {
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 p {
@@ -67,6 +74,10 @@ a {
     width: auto;
     vertical-align: middle;
   }
+}
+
+ul {
+  font-size: 2.4em;
 }
 
 .center {
@@ -101,14 +112,11 @@ div.visible-xs {
   h2, h3, p {
     color: $bodyBg;
   }
-
-  h2 {
-    font-weight: 600;
-  }
 }
 
 .cards {
   padding: 0 30px;
+  align-items: stretch;
 }
 
 .card {
@@ -135,8 +143,29 @@ div.visible-xs {
     padding: 0 6em;
   }
 
+  p, ul {
+    font-weight: 300;
+  }
+
   &.half.img {
     padding: 0;
     margin-bottom: -3px;
   }
+}
+
+.schedule-consultation {
+  padding: 4em 0;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h2:nth-of-type(2) {
+    padding-bottom: .5em;
+  }
+}
+
+.row:nth-child(1) .dark p {
+  text-align: center;
+  font-weight: 500;
 }

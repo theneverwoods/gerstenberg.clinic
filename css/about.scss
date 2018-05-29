@@ -27,19 +27,9 @@
 
 .row.tiles {
   .tile.text {
-    background: $gray1;
 
     h2 {
       font-size: 3.2rem;
-      color: $gray4;
-    }
-
-    p {
-      color: $gray3;
-
-      strong {
-        color: $gray4;
-      }
     }
 
     .overlay {
@@ -49,12 +39,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: $gray3;
       z-index: 100;
       padding: 30px;
 
       p {
-        color: $gray0;
         font-size: 1.6rem;
         position: static;
         display: block;

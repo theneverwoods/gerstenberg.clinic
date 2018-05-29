@@ -2,18 +2,17 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import "variables";
+
 .forms-row {
   margin: 30px 0;
 
   .links-row {
-    clear: both;
+    height: calc(25% - 15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 15px 0;
-
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
 
     .btn {
       font-size: 17px;
@@ -28,14 +27,16 @@
       margin-top: 0;
     }
 
-    .third {
-      width: 35%;
-      margin-right: 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray3;
     }
 
-    .two-thirds {
-      width: 55%;
-      margin: 0;
+    & div:first-child {
+      width: 35%;
+    }
+
+    & div:last-child {
+      width: 60%;
     }
   }
 }

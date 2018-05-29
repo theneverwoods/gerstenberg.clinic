@@ -46,7 +46,7 @@
   margin: 0 !important;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: $max-width / 4;
+  flex-basis: calc(100% / 4);
 }
 
 .visible-xs {
