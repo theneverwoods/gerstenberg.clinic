@@ -1,0 +1,18 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+.blurb {
+	margin: 4em 0;
+	padding: 4em 1em;
+}
+
+.blurb + .row {
+	padding-bottom: 4em;
+}
+
+.row > p {
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+}

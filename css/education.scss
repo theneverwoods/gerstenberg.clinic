@@ -1,0 +1,103 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+main .row:nth-child( -n + 3 ) {
+	margin-bottom: 3em;
+}
+
+.cards {
+	display: flex;
+	align-items: stretch;
+}
+
+.card {
+	padding-bottom: 3em;
+
+	&.light {
+		padding: 0 3em 3em;
+
+		h3 {
+			font-size: 2.8rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+.light {
+	.third {
+		padding: 3em;
+	}
+
+	ul {
+		font-size: 2.2rem;
+		font-weight: 300;
+		color: $gray3;
+	}
+}
+
+li p {
+	margin-top: 0;
+	margin-left: -2em;
+	text-indent: 0;
+	padding-left: 1em;
+}
+
+.tile {
+	h3 {
+		font-size: 2.2rem;
+		font-weight: 400;
+		margin: 0;
+		padding: 0;
+		display: inline;
+	}
+
+	h2 + h3 {
+		font-size: 2.1rem;
+		margin-bottom: 1em;
+	}
+
+	p, ul {
+		font-size: 1.6rem;
+	}
+
+	ul {
+		margin-top: 0;
+	}
+}
+
+.img + .text {
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	h2 + h3 {
+		font-size: 2.2rem;
+	}
+}
+
+.cards.light {
+	padding: 4em 3em;
+	text-align: center;
+
+	h2 {
+		font-size: 2.4rem;
+	}
+
+	p {
+		font-size: 1.8rem;
+	}
+}
+
+.row > p {
+	display: block;
+	width: 100%;
+	font-style: italic;
+	font-weight: 300;
+	text-align: center;
+}
