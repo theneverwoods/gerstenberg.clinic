@@ -3,9 +3,11 @@
 ---
 
 .blurb {
-	margin: 4em 0;
+  margin: 3em 0;
 }
 
-.blurb + .row {
-	padding-bottom: 4em;
+.tile.fourth .overlay {
+  span {
+    max-width: 10em;
+  }
 }

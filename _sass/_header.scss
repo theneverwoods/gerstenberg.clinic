@@ -21,6 +21,11 @@ header {
   nav {
     float: right;
 
+    svg {
+      height: 1.2rem;
+      width: auto;
+    }
+
     ul {
       list-style-type: none;
       padding: 0;
@@ -91,7 +96,6 @@ header {
 
       .label {
         font-size: 1.2rem;
-        font-weight: 500;
         padding-left: .5em;
       }
     }

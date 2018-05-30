@@ -26,6 +26,11 @@ p {
 	font-weight: 300;
 }
 
+.row > p {
+	font-style: italic;
+	text-align: center;
+}
+
 ul, ol {
 	font-size: 2.2rem;
 	font-weight: 300;
@@ -42,8 +47,8 @@ small {
 	font-size: 1rem;
 }
 
-strong {
-	font-weight: 500;
+strong, b {
+	font-weight: 600;
 }
 
 .btn {
@@ -55,7 +60,7 @@ a:not(.btn) {
 	color: inherit;
 }
 
-.cards .card:nth-child(2) {
+.cards:not(.light) .card:nth-child(2) {
 	h2 {
 		font-size: 2.8rem;
 	}
@@ -86,14 +91,19 @@ a:not(.btn) {
 		font-size: 2.4rem;
 	}
 
-	.half {
+	&.half {
 		text-align: left;
 	}
 
-	.quarter {
+	&.quarter {
 		text-align: center;
+
+		.overlay {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: $bodyBg;
+		}
 	}
-	
 }
 
 .blurb {

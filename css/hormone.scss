@@ -1,0 +1,39 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+.blurb {
+	align-items: flex-start;
+
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.blurb + .row {
+	padding-bottom: 4em;
+
+	.third {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	img + img {
+		margin-left: 19%;
+		margin-top: 77%;
+	}
+}
+
+.tiles {
+	margin-bottom: -3px;
+}
+
+.tile.fourth .overlay {
+  span {
+		font-size: 3.2rem;
+		font-weight: 700;
+		max-width: 7em;
+  }
+}
