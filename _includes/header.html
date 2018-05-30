@@ -4,9 +4,9 @@
   </a>
   <nav>
     <ul>
-      <li><a href="{{ site.baseurl }}/about">About</a></li>
-      <li><a href="{{ site.baseurl }}/forms">Forms</a></li>
-      <li>
+      <li class="{% if page.permalink contains '/about' %}active{% endif %}"><a href="{{ site.baseurl }}/about">About</a></li>
+      <li class="{% if page.permalink contains '/forms' %}active{% endif %}"><a href="{{ site.baseurl }}/forms">Forms</a></li>
+      <li class="{% if page.permalink contains '/services' %}active{% endif %}">
         <a href="#!">Services</a>
         <ul>
           <li class="label">Primary Care Services</li>
@@ -20,7 +20,7 @@
           <li><a href="{{ site.baseurl }}/services/ed">Male Sexual Wellness</a></li>
         </ul>
       </li>
-      <li><a href="{{ site.baseurl }}/fullscript">Fullscript</a></li>
+      <li class="{% if page.permalink contains '/fullscript' %}active{% endif %}"><a href="{{ site.baseurl }}/fullscript">Fullscript</a></li>
     </ul>
   </nav>
 </header>
