@@ -2,6 +2,10 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+.cards .card {
+  padding: 3em;
+}
+
 .row {
   &.tiles:nth-child(2) {
     margin-top: 30px;
