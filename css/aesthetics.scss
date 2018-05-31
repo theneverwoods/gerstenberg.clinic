@@ -10,9 +10,6 @@ ul {
 }
 
 .row.light {
-	margin-bottom: 4em;
-	padding: 4em 4em 3em;
-
 	p {
 		font-size: 2.3rem;
 	}
@@ -20,7 +17,6 @@ ul {
 	ul {
 		color: $gray3;
 		font-size: 2em;
-		padding-bottom: .5em;
 	}
 
 	.third {
@@ -36,7 +32,11 @@ ul {
 
 .card.dark {
 	font-size: .8em;
-  margin: 2em;
+	padding: 5rem;
+
+	h3 {
+		margin-top: 0;
+	}
 
 	ul {
 		font-weight: 300;
@@ -47,19 +47,9 @@ ul {
 	margin-top: 0;
 }
 
-.row.cards {
-	margin: 2em auto 6em;
-}
-
 .blurb + .row {
   display: flex;
   align-items: flex-start;
-  padding-left: 1em;
-
-  .dark {
-    margin: 0 2.5em;
-    padding: 1em 1em 1em 3em;
-  }
 }
 
 .tile.text {
@@ -69,14 +59,8 @@ ul {
 }
 
 @media (min-width: 850px) {
-
-  .card.light {
-  	margin: 0;
-    padding: 3em;
-    padding-right: 4em;
-  }
-
-  .card.light:not(:nth-child(3)) {
-    margin-right: 3em;
-  }
+	.third.card.dark {
+		max-width: 31%;
+		margin-right: 5rem;
+	}
 }

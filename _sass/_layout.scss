@@ -16,21 +16,9 @@ iframe {
     margin: 6em 0;
   }
 
-  & > div {
-    margin: 0 15px;
-
-    &:not(.card) {
-      padding: 0;
-    }
+  &:not(.tiles) {
+    margin: 0 -15px 5rem -15px;
   }
-}
-
-.row.tiles div {
-  margin: 0 0;
-}
-
-.tiles {
-  margin: 0 0;
 }
 
 .two-thirds, .half, .third, .fourth {
@@ -70,6 +58,18 @@ iframe {
   .half.tile img {
     max-width: $max-width/2
   }
+
+  .half:not(.tile) {
+    &:first-child {
+      margin-right: 5rem;
+    }
+  }
+
+  .third {
+    &:nth-child(2) {
+      margin: 0 5rem;
+    }
+  }
 }
 
 @media (max-width: 850px) {
@@ -95,15 +95,6 @@ iframe {
 }
 
 @media (max-width: 750px) {
-  .half {
-    &.visible-xs {
-      display: block;
-    }
-
-    &.hidden-xs {
-      display: none;
-    }
-  }
   .row > div, .row:first-child .third.card.dark {
     margin: 10px auto;
   }
