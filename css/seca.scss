@@ -9,3 +9,11 @@
 .blurb + .row {
 	padding-bottom: 4em;
 }
+
+.row:first-child {
+  .third.card {
+    margin: 0 2.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
