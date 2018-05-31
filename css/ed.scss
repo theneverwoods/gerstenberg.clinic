@@ -17,10 +17,6 @@ h3 {
 }
 
 .tile {
-	h2 {
-		padding-top: 1em;
-	}
-
 	a {
 		margin-top: 1em;
 	}
@@ -28,6 +24,18 @@ h3 {
 	p, ul {
 		font-size: 1.6rem;
 	}
+
+	ul {
+		line-height: 1.4;
+	}
+
+	&.light h3 {
+		padding-bottom: 2em;
+	}
+}
+
+.half.tile.text {
+	padding: 5em;
 }
 
 .row:nth-child(4) {
@@ -36,3 +44,4 @@ h3 {
 	}
 	padding-bottom: 3em;
 }
+

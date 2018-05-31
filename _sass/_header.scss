@@ -35,6 +35,10 @@ header {
         display: inline-block;
         position: relative;
 
+        &.active {
+          font-weight: 600;
+        }
+
         &:hover {
           ul {
             display: block;
