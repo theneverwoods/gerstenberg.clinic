@@ -36,21 +36,26 @@
 
     .overlay {
       display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 100;
-      padding: 30px;
 
       p {
         font-size: 1.6rem;
-        position: static;
+      }
+    }
+
+    &.dark .overlay {
+      margin-top: -3em;
+    }
+
+    &:hover {
+      .wrapper {
+        display: none;
+      }
+      .overlay {
+        cursor: default;
+        position: absolute;
         display: block;
-        left: 0;
-        right: 0;
-        max-width: none;
+        max-width: 50em;
+        z-index: 1;
       }
     }
   }
@@ -58,92 +63,4 @@
 
 iframe {
   width: 100%;
-}
-
-@media (max-width: 1195px) {
-  .row.tiles {
-    .tile.text {
-      h2 {
-        font-size: 3rem;
-      }
-
-      .overlay {
-        padding: 30px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1125px) {
-  .row.tiles {
-    .tile.text {
-      h2 {
-        font-size: 2.6rem;
-      }
-
-      .overlay {
-        padding: 20px;
-
-        p:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1093px) {
-  .row.tiles {
-    .tile.text {
-      &:hover {
-        .overlay {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1092px) {
-  .row.tiles {
-    .tile.text {
-      cursor: pointer;
-
-      p {
-        font-size: 1.8rem;
-      }
-
-      .overlay {
-        cursor: pointer;
-        position: fixed;
-        overflow-y: auto;
-        padding: 50px 15px;
-
-        &:before {
-          content: "\00d7";
-          display: block;
-          font-size: 4rem;
-          position: absolute;
-          top: 10px;
-          right: 30px;
-          color: white;
-        }
-
-        p {
-          max-width: 450px;
-          margin: 15px auto;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 920px) {
-  .row.tiles {
-    .tile.text {
-      h2 {
-        font-size: 2.4rem;
-      }
-    }
-  }
 }

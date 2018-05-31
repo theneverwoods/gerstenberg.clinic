@@ -38,17 +38,17 @@ ul, ol {
   padding-left: 0;
 }
 
-li {
-  padding-left: 2em;
-  text-indent: -1.5em;
-}
-
 small {
 	font-size: 1rem;
 }
 
 strong, b {
 	font-weight: 600;
+}
+
+main li {
+  padding-left: 2em;
+  text-indent: -2em;
 }
 
 .btn {

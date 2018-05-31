@@ -110,12 +110,11 @@ div.visible-xs {
 
 .tile {
   &.half.text {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 6em;
+    padding: 6em;
   }
 
   h3 {
