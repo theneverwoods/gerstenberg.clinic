@@ -4,6 +4,10 @@
 
 @import "variables";
 
+hr {
+  display: none;
+}
+
 .about-row {
   margin: 0;
   margin-bottom: 40px;
@@ -34,19 +38,21 @@
       font-size: 2.2rem;
     }
 
-    .overlay {
-      display: none;
-
-      p {
-        font-size: 1.6rem;
-      }
+    .overlay p {
+      font-size: 1.6rem;
     }
+  }
+}
 
-    &.dark .overlay {
-      margin-top: -3em;
-    }
+iframe {
+  width: 100%;
+}
 
+@media (min-width: 840px) {
+  .tiles .half.tile.text {
     &:hover {
+      background-color: $gray3;
+
       .wrapper {
         display: none;
       }
@@ -56,11 +62,24 @@
         display: block;
         max-width: 50em;
         z-index: 1;
+        
+        p {
+          color: $bodyBg;
+        }
       }
+    }
+    .overlay {
+      display: none;
+    }
+
+    &.dark .overlay {
+      margin-top: -3em;
     }
   }
 }
 
-iframe {
-  width: 100%;
+@media (max-width: 840px) {
+  hr {
+    display: block;
+  }
 }

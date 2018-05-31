@@ -22,10 +22,6 @@ iframe {
     &:not(.card) {
       padding: 0;
     }
-
-    &:first-child {
-      margin-left: 0;
-    }
   }
 }
 
@@ -81,6 +77,10 @@ iframe {
     flex-basis: 100%;
   }
 
+  .row > .half, .tile.half.img, .tile.half.text {
+    margin: 0 auto;
+  }
+
   .third {
     margin-bottom: 15px;
 
@@ -103,6 +103,15 @@ iframe {
     &.hidden-xs {
       display: none;
     }
+  }
+  .row > div, .row:first-child .third.card.dark {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: $max-width) {
+  .row > div:first-child {
+    margin-left: 0;
   }
 }
 

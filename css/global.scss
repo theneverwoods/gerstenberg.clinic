@@ -174,3 +174,11 @@ div.visible-xs {
     padding-bottom: .5em;
   }
 }
+
+@media (max-width: 850px) {
+  .tiles.switch {
+    .tile:first-of-type {
+      order: 2;
+    }
+  }
+}

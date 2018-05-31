@@ -56,3 +56,13 @@
 		color: $gray4;
 	}
 }
+
+@media (max-width: 750px) {
+	.third .card.dark {
+		margin: 3em;
+
+		&:first-child {
+			margin-top: -3em;
+		}
+	}
+}
