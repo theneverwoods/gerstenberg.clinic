@@ -8,8 +8,13 @@ hr {
   display: none;
 }
 
-.about-row {
+h1.hero-tagline {
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
 
+.about-row {
   .card {
     text-align: center;
     padding: 1rem 5rem;

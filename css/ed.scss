@@ -12,8 +12,12 @@ h3 {
 	margin-top: 0;
 }
 
-.tiles {
-	margin-bottom: 3em;
+.schedule-consultation {
+	margin-bottom: 3rem;
+}
+
+footer {
+	margin-top: -3rem;
 }
 
 .tile {
@@ -42,5 +46,8 @@ h3 {
 	ul {
 		color: $gray3;
 	}
-	padding-bottom: 3em;
+}
+
+.row.dark.icons {
+	padding-bottom: 0;
 }

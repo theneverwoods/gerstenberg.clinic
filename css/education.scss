@@ -4,10 +4,6 @@
 
 @import "variables";
 
-main .row:nth-child( -n + 3 ) {
-	margin-bottom: 3em;
-}
-
 .cards {
 	display: flex;
 	align-items: stretch;
@@ -50,12 +46,17 @@ li p {
 
 .tile {
 	margin-bottom: .3rem;
+
+	h2 {
+		padding-bottom: 0;
+	}
 	
 	h3 {
 		font-size: 2.2rem;
 		font-weight: 400;
 		margin: 0;
 		padding: 0;
+		padding-bottom: 0;
 		display: inline;
 	}
 
@@ -66,10 +67,18 @@ li p {
 
 	p, ul {
 		font-size: 1.6rem;
+		padding-bottom: 0;
 	}
 
 	ul {
 		margin-top: 0;
+	}
+}
+
+.blurb {
+	padding: 3rem 5rem;
+	& > div {
+		padding: 0;
 	}
 }
 
