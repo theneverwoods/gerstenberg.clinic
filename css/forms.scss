@@ -7,6 +7,10 @@
 .forms-row {
   margin: 30px 0;
 
+  .two-thirds {
+    padding-left: 0;
+  }
+
   .links-row {
     height: calc(25% - 15px);
     display: flex;
@@ -30,7 +34,7 @@
     }
 
     & div:first-child {
-      width: 35%;
+      width: 36%;
     }
 
     & div:last-child {

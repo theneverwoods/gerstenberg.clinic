@@ -19,11 +19,6 @@
 		margin-left: 0;
 		padding-left: 0;
 	}
-
-	img + img {
-		margin-left: 19%;
-		margin-top: 77%;
-	}
 }
 
 .tiles {
@@ -38,14 +33,31 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1050px) {
   .two-thirds {
     padding-left: 5rem;
+  }
+
+  .blurb + .row {
+    img + img {
+      margin-left: 19%;
+      margin-top: 77%;
+    }
   }
 }
 
 @media (max-width: 850px) {
   .two-thirds {
     padding: 0 2.5rem;
+  }
+
+  .blurb + .row {
+    img {
+      max-width: 30rem;
+    }
+
+    img + img {
+      margin-left: 15%;
+    }
   }
 }
