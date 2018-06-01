@@ -38,7 +38,13 @@
   }
 }
 
-@media (max-width: 849px) {
+@media (min-width: 1080px) {
+  .two-thirds {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width: 850px) {
   .two-thirds {
     padding: 0 2.5rem;
   }
