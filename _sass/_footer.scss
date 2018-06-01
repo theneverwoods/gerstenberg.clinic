@@ -19,14 +19,26 @@ footer {
     }
 
     .footer-nav {
+      display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
       text-align: right;
 
+      b {
+        font-size: 1.6rem;
+      }
+
       li {
-        display: inline-block;
-        margin-left: 20px;
+        line-height: 1.2;
+      }
+
+      & > li {
+        display: inline;
+
+        &:first-child {
+          margin-right: 2em;
+        }
 
         a {
           color: $gray4;
@@ -36,6 +48,10 @@ footer {
           &:hover {
             text-decoration: underline;
           }
+        }
+
+        ul li {
+          display: block;
         }
       }
     }
@@ -49,9 +65,12 @@ footer {
         margin-top: 20px;
         text-align: left;
 
+        & > li, & > li:first-child {
+          margin-right: 10px;
+        }
+
         li {
           margin-left: 0;
-          margin-right: 20px;
         }
       }
     }

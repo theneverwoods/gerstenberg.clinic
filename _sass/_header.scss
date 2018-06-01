@@ -39,9 +39,10 @@ header {
           font-weight: 600;
         }
 
-        &:hover {
+        &:hover, &:focus {
           ul {
             display: block;
+            z-index: 10;
           }
         }
 
