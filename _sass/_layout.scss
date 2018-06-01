@@ -46,6 +46,11 @@ iframe {
   flex-basis: 2 + ($gutter * 6);
 }
 
+.blurb .two-thirds {
+  display: flex;
+  align-items: center;
+}
+
 .half {
   flex-grow: 1;
   flex-shrink: 1;
@@ -80,6 +85,12 @@ iframe {
     &:nth-child(2) {
       margin: 0 5rem;
     }
+  }
+}
+
+@media (min-width: 1080px) {
+  .two-thirds {
+    padding-left: 5rem;
   }
 }
 

@@ -12,8 +12,18 @@
   }
 }
 
+h3:not(:first-child) {
+  padding-top: 3rem;
+}
+
 @media (max-width: 849px) {
   .two-thirds {
     padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .blurb + .row .two-thirds {
+    padding: 0 5rem 4rem 5rem;
   }
 }
