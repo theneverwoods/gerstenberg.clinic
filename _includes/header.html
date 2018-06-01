@@ -1,0 +1,27 @@
+<header>
+  <a class="logo" href="{{ site.baseurl }}/">
+    {% include svgs/logo.html %}
+  </a>
+  <nav>
+    <ul>
+      <li class="{% if page.permalink contains '/about' %}active{% endif %}"><a href="{{ site.baseurl }}/about">About</a></li>
+      <li class="{% if page.permalink contains '/forms' %}active{% endif %}"><a href="{{ site.baseurl }}/forms">Forms</a></li>
+      <li class="{% if page.permalink contains '/services' %}active{% endif %}">
+        <a href="{{ site.baseurl }}/services/education">Services &amp; Education</a>
+        <ul>
+          <li class="label">Primary Care Services</li>
+          <li><a href="{{ site.baseurl }}/services/education">General Education</a></li>
+          <li><a href="{{ site.baseurl }}/services/seca">Seca Body Composition</a></li>
+          <li><a href="{{ site.baseurl }}/services/lower-extremity-treatment">Lower Extremity Treatment</a></li>
+          <li class="label">{% include svgs/gc-wellness-abbreviated.html %}</li>
+          <li><a href="{{ site.baseurl }}/services/hormone">Hormone Therapy</a></li>
+          <li><a href="{{ site.baseurl }}/services/aesthetics">Aesthetics</a></li>
+          <li><a href="{{ site.baseurl }}/services/weight-loss">Medical Weight Loss</a></li>
+          <li><a href="{{ site.baseurl }}/services/ed">Male Sexual Wellness</a></li>
+        </ul>
+      </li>
+      <li><a href="https://us.fullscript.com/welcome/gerstenbergclinic
+" target="_blank">Fullscript</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,66 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+ul {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+.row.light {
+	p {
+		font-size: 2.3rem;
+	}
+
+	ul {
+		color: $gray3;
+		font-size: 2em;
+	}
+
+	.third {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+	}
+
+	.third:first-child {
+		flex-grow: 1.2;
+	}
+}
+
+.card.dark {
+	font-size: .8em;
+	padding: 5rem;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	ul {
+		font-weight: 300;
+	}
+}
+
+.two-thirds h3:first-child {
+	margin-top: 0;
+}
+
+.blurb + .row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tile.text {
+	ul {
+		list-style: none;
+	}
+}
+
+@media (min-width: 850px) {
+	.third.card.dark {
+		max-width: 31%;
+		margin-right: 5rem;
+	}
+}

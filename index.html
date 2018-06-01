@@ -1,159 +1,59 @@
-<!doctype html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/deputy.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/response.css">
+---
+layout: default
+permalink: /
+hero: /img/heros/hero-gclinic-index.jpg
+tagline: Primary Care &amp; Wellness ~ a Holistic Approach for the Whole Family
+stylesheet: home
+---
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<div class="row cards">
+  <div class="third card light">
+    <h2>Primary Care</h2>
+    <p>Our clinic performs periodic physical exams such a school physicals, well women exams and annual wellness visits for Medicare enrollees. We provide non-immunization newborn, infant and child checkups as well as much more at {% include svgs/logo.html %}.</p>
+  </div>
+  <div class="third card light">
+    <h2>Cutting-Edge Services</h2>
+    <p>{% include svgs/logo.html %} is always looking to stay aware of current medical standards and breakthroughs as we pioneer the future. You will find many options here that are not available anywhere else in the area. </p>
+  </div>
+  <div class="third card light">
+    <h2>Natural Options</h2>
+    <p>You always have the right to be responsible for your medical care. We offer a variety of supplements since there are almost always non-drug treatment options. We want to be your advocate as we partner with you in your healthcare.</p>
+  </div>
+</div>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>home | gerstenberg.clinic</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="logo-border">
-              <div class="row">
-                <div class="col-xs-12 center no-m-b">
-                  <h1 class="logo"><a href="/"><span class="blue-gberg">gerstenberg<span><span class="brwn-clinic">.clinic</span></a></h1>
-                </div>
-                <div class="col-xs-12 center">
-                  <p class="address">K. Paul Gerstenberg, D.O., P.A. &middot; <a href="#map">2645 Nall Street &middot; Port Neches 77651</a> &middot; 409.210.3336</p>
-                </div>
-              </div>
-            </div>
-            <nav role="navigation">
-              <div class="navbar-header visible-xs">
-                <button type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target=".navbar-main">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#!">Menu</a>
-              </div>
-              <div class="collapse navbar-collapse navbar-main">
-                <ul class="nav navbar-nav nav-justified">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/services">Services</a></li>
-                  <li><a href="/forms">Forms</a></li>
-                  <li><a href="/education">Education</a></li>
-                  <li><a href="/biote-elite-health">BioTE/Elite Health</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <div class="row">
-          <div class="col-sm-7 module">
-            <div>
-              <p class="letter pad-t-50">
-                Valued patient,<br><br>
-
-                It is with very thankful hearts that we are now settled in Port Neches (in the former Hamby Medical Clinic). Since we opened here in 2014, we have continued to invest in research and education for our staff - so we can benefit the health of our community to the best of our ability.<br><br>
-
-                One of the resources we provide in clinic is the Elite Health program from Cenegenics. This is a proactive lifestyle plan designed to help prevent age-related diseases and symptoms of declining health, often labeled as "getting old".<br><br>
-
-                The highly-customized treatment plan consists of 3 key components:<br>
-                1. A Balanced Lifestyle Program to assist with weight loss based on health history forms and your physician consultation.<br>
-                2. Nutritional Supplementation based on documented nutrition deficiencies.<br>
-                3. Hormone Optimization based on hormonal deficiencies and clinic symptoms.<br>
-                We offer BioTe, a body-identical hormone therapy, to help you improve energy, muscle strength and greater ability to lose weight; increase mental clarity; and feel younger and happier again.<br><br>
-
-                Many patients have noticed results in as little as two weeks on our innovative, customized programs.<br><br>
-
-                Please take a minute to look over some of the resources we provide in the “Services” tab. There is also information in the “Education” tab that may answer some of your questions and save you a trip over here. However, please call 409.210.3336 if you need to schedule an appointment.<br><br>
-                <strong>Please note our office hours:</strong><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Monday - Thursday, 8:00 a.m. to 5:00 p.m.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Friday, 8:00 a.m. to Noon.<br><br><br>
-                Blessings to you and yours from our family and staff!<br><br>
-                Sincerely,<br><br>
-                K. Paul Gerstenberg, D.O., P.A.<br>
-                Board Certified, Family Practice<br><br>
-                <em>Proverbs 22:1</em>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-sm-5 pad-l-30 pad-t-30 pad-b-30" id="map">
-            <iframe height="600" frameborder="0" style="width: 100%; border:0" src="https://www.google.com/maps/embed/v1/place?q=2645+Nall+Street,+Port+Neches,+TX+77651,+United+States&key=AIzaSyDfDkNM9SL3oAQsfv3UbPRLjEArrLaS1Zo"></iframe>
-          </div>
-        </div>
-        <div class="row pad-b-30">
-          <div class="col-sm-12">
-            <h2 class="center">Our Providers</h2>
-          </div>
-          <div class="col-sm-4 col-sm-offset-2">
-            <div class="row">
-              <div class="col-sm-9">
-                <p class="bio">
-                  <img src="img/gerstenberg-thumb.jpg">
-                </p>
-              </div>
-              <div class="col-sm-12">
-                <p>
-                  <strong>K. Paul Gerstenberg, D.O.</strong>
-                  <br>
-                  <br>
-                  Education:<br>
-                  Medical School: University North Texas - TCOM<br>
-                  Residency: St. Anthony Hospital, Oklahoma City, OK<br>
-                  Internship: Osteopathic Medical - FT. Worth, TX<br>
-                  Specialities: Board Certified in Family Medicine<br>
-                  Certified BioTE provider<br>
-                  Certified in Age Management Medicine (AMM)<br>
-                  Fellow, AMM with Cenegenics<br>
-                  <a href="/gerstenberg.html">More...</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 right">
-            <div class="row">
-              <div class="col-sm-9 col-sm-offset-3">
-                <p class="bio">
-                  <img src="img/wright-thumb.jpg">
-                </p>
-              </div>
-              <div class="col-sm-12">
-                <p>
-                  <strong>Brandi Wright, MSN, APRN, FNP-C</strong>
-                  <br>
-                  <br>
-                  Education:<br>
-                  Bachelor of Science in Nursing: Lamar University- Beaumont, TX<br>
-                  Master of Science in Nursing: University of Texas Medical Branch- Galveston, TX<br>
-                  Licensure: Advanced Practice Registered Nurse- TX BON<br>
-                  Specialties: Certified Family Nurse Practitioner<br>
-                  Certified BioTE provider<br>
-                  <a href="/wright.html">More...</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <footer>
-        <div class="row">
-          <div class="col-sm-12">
-            <p class="center">
-              All content &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> <span class="blue-gberg">gerstenberg</span><span class="brwn-clinic">.clinic</span>. Web Development by <a href="http://www.joahg.com/">Joah Gerstenberg</a>.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+<div class="row tiles">
+  <div class="half tile img">
+    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-biote.jpg" />
+  </div>
+  <div class="half tile text dark">
+    <h2>Hormone Replacement Therapy</h2>
+    <p>As we age, hormone production changes, and hormonal imbalance can occur as a result. Unbalanced hormones can have a variety of side effects and symptoms.
+    <br><br>
+    BioTE is a human-identical hormone subcutaneous pellet therapy to help NATURALLY balance hormones in both women and men.</p>
+    <a href="{{ site.baseurl }}/services/hormone" class="btn">Learn More</a>
+  </div>
+</div>
+<div class="row tiles switch">
+  <div class="half tile text dark">
+    <h2>Aesthetic Treatments</h2>
+    <p>Dead skin cells can clog pores and leave skin dry and lifeless. With DermaSweep, they are gently removed with soft bristle brushes, in contrast to the harsher abrasives used elsewhere.
+    <br><br>
+    After exfoliation, your skin may be infused with a wide range of nutrient-dense ingredients, further healing it and making it radiant.</p>
+    <a href="{{ site.baseurl }}/services/aesthetics" class="btn">Learn More</a>
+  </div>
+  <div class="half tile img">
+    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-derma.jpg" />
+  </div>
+</div>
+<div class="row tiles">
+  <div class="half tile img">
+    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-reflife.jpg" />
+  </div>
+  <div class="half tile text dark">
+    <h2>Medical Weight Loss</h2>
+    <p>Many people have stubborn fat reserves that just won’t budge no matter what they’ve tried, whether diet or exercise. With Reforming Life Medical Weight Loss, you can naturally remove abnormal fat from your body.
+    <br><br>
+    This will reset your hypothalamus to keep you at a normal weight, and teach you to eat correctly to maintain a healthy weight for life.</p>
+    <a href="{{ site.baseurl }}/services/weight-loss" class="btn">Learn More</a>
+  </div>
+</div>

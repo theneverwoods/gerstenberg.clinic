@@ -1,0 +1,89 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+hr {
+  display: none;
+}
+
+h1.hero-tagline {
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+.about-row {
+  .card {
+    text-align: center;
+    padding: 1rem 5rem;
+
+    svg {
+      display: inline-block;
+      height: 70px;
+      width: 400px;
+      max-width: 100%;
+    }
+  }
+
+  p {
+    padding: 0 30px;
+  }
+}
+
+.row.tiles {
+  .tile.text {
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 2.2rem;
+    }
+
+    .overlay p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+iframe {
+  width: 100%;
+}
+
+@media (min-width: 840px) {
+  .tiles .half.tile.text {
+    &:hover {
+      background-color: $gray3;
+
+      .wrapper {
+        display: none;
+      }
+      .overlay {
+        cursor: default;
+        position: absolute;
+        display: block;
+        max-width: 50em;
+        z-index: 1;
+        
+        p {
+          color: $bodyBg;
+        }
+      }
+    }
+    .overlay {
+      display: none;
+    }
+
+    &.dark .overlay {
+      margin-top: -3em;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  hr {
+    display: block;
+  }
+}

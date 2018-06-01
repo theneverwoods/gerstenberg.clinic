@@ -1,0 +1,65 @@
+.row.tiles div {
+  margin: 0 0;
+}
+
+.tiles {
+  margin: 0 0;
+}
+
+.tile {
+  &.half.text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  &.half.img {
+    padding: 0;
+    margin-bottom: -3px;
+  }
+
+  &.fourth {
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      color: $bodyBg;
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    .overlay {
+      display: none;
+    }
+
+    &:hover {
+      img {
+        filter: grayscale(70%) brightness(40%);
+      }
+
+      .overlay {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .tiles.switch {
+    .tile:first-of-type {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+h3 {
+	font-weight: 500;
+}
+
+.card p {
+	margin-top: 0;
+}
+
+.schedule-consultation {
+	margin-bottom: 3rem;
+}
+
+footer {
+	margin-top: -3rem;
+}
+
+.tile {
+	a {
+		margin-top: 1em;
+	}
+
+	p, ul {
+		font-size: 1.6rem;
+	}
+
+	ul {
+		line-height: 1.4;
+	}
+
+	&.light h3 {
+		padding-bottom: 2em;
+	}
+}
+
+.half.tile.text {
+	padding: 5em;
+}
+
+.row:nth-child(4) {
+	ul {
+		color: $gray3;
+	}
+}
+
+.row.dark.icons {
+	padding-bottom: 0;
+}

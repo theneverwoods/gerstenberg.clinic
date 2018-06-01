@@ -1,0 +1,52 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
+.forms-row {
+  margin: 30px 0;
+
+  .links-row {
+    height: calc(25% - 15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 15px 0;
+
+    .btn {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray3;
+    }
+
+    & div:first-child {
+      width: 35%;
+    }
+
+    & div:last-child {
+      width: 60%;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .row:first-child {
+    margin: 5rem auto;
+    padding: 0 5rem;
+  }
+
+  .third.card {
+    margin: 0 5rem;
+  }
+}
+

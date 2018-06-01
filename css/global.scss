@@ -1,0 +1,128 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$baseUrl: '{{ site.baseurl }}';
+
+@import "variables";
+@import "header";
+@import "footer";
+@import "hero";
+@import "layout";
+@import "fonts";
+@import "buttons";
+@import "typography";
+@import "tile";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: #000;
+}
+
+p {
+  color: $gray3;
+
+  svg {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+
+    &.logo-svg {
+      margin-top: 2px;
+    }
+  }
+}
+
+.row > p {
+  width: 100%;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+a {
+  svg {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
+.container, .row {
+  max-width: $max-width; // 1280px
+  margin: auto;
+  background: $bodyBg;
+}
+
+.light {
+  background-color: $gray1;
+
+  h2, a h2 {
+    color: $gray4;
+  }
+}
+
+.dark {
+  background-color: $gray3;
+  color: $bodyBg;
+
+  h2, h3, p {
+    color: $bodyBg;
+  }
+}
+
+.cards {
+  padding: 0 5rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  padding: 5rem;
+  border-radius: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.blurb {
+  padding: 3em;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.schedule-consultation {
+  padding: 4em 0;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h2:nth-of-type(2) {
+    padding-bottom: .5em;
+  }
+}
