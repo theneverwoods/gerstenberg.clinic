@@ -8,4 +8,8 @@
   &:hover, &:focus {
     background: darken($gray2, 5);
   }
+
+  svg {
+    max-width: 100%;
+  }
 }

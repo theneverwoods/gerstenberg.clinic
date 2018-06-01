@@ -22,3 +22,36 @@ small {
   display: block;
   width: 100%;
 }
+
+@media (max-width: 849px) {
+  .table {
+    padding: 0 2.5rem !important;
+    overflow-x: auto;
+
+    table {
+      min-width: 650px;
+      height: calc(100% - 28px);
+    }
+  }
+
+  .third > img {
+    width: 350px;
+    max-width: 100%;
+    padding: 0 2.5rem;
+    margin: auto;
+    display: block;
+  }
+
+  .video + .row {
+    margin-bottom: 0;
+  }
+
+  .row.video {
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .row.blurb {
+    margin-bottom: 2.5rem;
+  }
+}

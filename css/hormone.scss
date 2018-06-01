@@ -37,3 +37,9 @@
 		max-width: 7em;
   }
 }
+
+@media (max-width: 849px) {
+  .two-thirds {
+    padding: 0 2.5rem;
+  }
+}

@@ -58,10 +58,11 @@ footer {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 849px) {
   footer {
     .third {
       .footer-nav {
+        display: block;
         margin-top: 20px;
         text-align: left;
 
@@ -70,6 +71,7 @@ footer {
         }
 
         li {
+          display: block;
           margin-left: 0;
         }
       }

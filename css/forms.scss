@@ -50,3 +50,14 @@
   }
 }
 
+@media (max-width: 1135px) {
+  .card.light {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 849px) {
+  main {
+    padding: 0 2.5rem;
+  }
+}
