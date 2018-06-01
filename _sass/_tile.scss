@@ -53,7 +53,7 @@
       width: 100%;
     }
 
-    &:hover {
+    &:hover, &:focus {
       img {
         filter: grayscale(70%) brightness(40%);
       }
@@ -80,6 +80,25 @@
   .tiles.switch {
     .tile:first-of-type {
       order: 2;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .tile.fourth {
+    span {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .tile.fourth.img {
+    min-width: 50%;
+
+    span {
+      font-size: 1.8rem;
     }
   }
 }

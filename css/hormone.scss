@@ -25,14 +25,6 @@
 	margin-bottom: -3px;
 }
 
-.tile.fourth .overlay {
-  span {
-		font-size: 3.2rem;
-		font-weight: 700;
-		max-width: 7em;
-  }
-}
-
 @media (min-width: 1050px) {
   .two-thirds {
     padding-left: 5rem;
@@ -42,6 +34,14 @@
     img + img {
       margin-left: 19%;
       margin-top: 77%;
+    }
+  }
+
+  .tile.fourth .overlay {
+    span {
+      font-size: 3.2rem;
+      font-weight: 700;
+      max-width: 7em;
     }
   }
 }
