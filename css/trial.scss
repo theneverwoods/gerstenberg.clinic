@@ -21,12 +21,15 @@
 
 	.card {
 		text-align: center;
-		padding-top: 4em;
-		padding-bottom: 4em;
+		padding-top: 3em;
+		padding-bottom: 3em;
 
 		p {
 			font-size: 1.8rem;
-			padding-top: .4em;
+		}
+
+		h2 {
+			padding-bottom: 1.5rem;
 		}
 	}
 
@@ -35,13 +38,22 @@
 
 		h3 {
 			margin-top: 0;
+			margin-bottom: 0;
 		}
 	}
+}
+
+.spacious {
+	margin-top: 0;
 }
 
 .spacious li {
 	padding: 1em 0 1em 2em;
 	color: $gray3;
+
+	&:first-child {
+		padding-top: 0;
+	}
 }
 
 .tile {
@@ -54,6 +66,13 @@
 		font-weight: 400;
 		font-style: normal;
 		color: $gray4;
+	}
+}
+
+@media (min-width: 850px) {
+	.blurb + .row .two-thirds {
+		padding: 5rem;
+		padding-top: 0;
 	}
 }
 

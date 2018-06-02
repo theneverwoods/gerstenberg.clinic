@@ -53,6 +53,12 @@ iframe {
   width: 100%;
 }
 
+.row.img {
+  display: block;
+  margin-bottom: -3px;
+  padding-bottom: 0 !important;
+}
+
 @media (min-width: 840px) {
   .tiles .half.tile.text {
     &:hover {

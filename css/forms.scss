@@ -6,6 +6,7 @@
 
 .forms-row {
   margin: 30px 0;
+  align-items: flex-start;
 
   .two-thirds {
     padding-left: 0;
@@ -15,12 +16,12 @@
     height: calc(25% - 15px);
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 
     .btn {
       display: block;
       padding-left: 0;
       padding-right: 0;
+      margin-bottom: 2.5rem;
     }
 
     p {
@@ -29,7 +30,7 @@
     }
 
     &:not(:first-child) {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
     }
 
     &:not(:last-child) {
@@ -60,6 +61,12 @@
 @media (max-width: 1135px) {
   .card.light {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 1090px) {
+  .links-row:first-child {
+    padding-top: 2.5rem;
   }
 }
 

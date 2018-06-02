@@ -5,6 +5,8 @@ footer {
   .row {
     background: $purple1;
     padding-bottom: 0 !important;
+    display: flex;
+    align-items: flex-end;
   }
 
   .third {
@@ -20,17 +22,18 @@ footer {
 
     .footer-nav {
       display: flex;
+      justify-content: flex-end;
       list-style-type: none;
       margin: 0;
       padding: 0;
       text-align: right;
 
       b {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       }
 
       li {
-        line-height: 1.2;
+        line-height: .75;
       }
 
       & > li {
@@ -43,7 +46,7 @@ footer {
         a {
           color: $gray4;
           text-decoration: none;
-          font-size: 1.6rem;
+          font-size: 1.2rem;
 
           &:hover {
             text-decoration: underline;
