@@ -5,6 +5,14 @@
 @import "variables";
 
 .blurb {
+	.third {
+		flex-grow: 1;
+
+		&:first-child {
+			flex-grow: 1.2;
+		}
+	}
+	
 	.third:nth-child(3) {
 		p {
 			font-size: 1.8rem;
