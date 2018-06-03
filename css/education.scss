@@ -30,7 +30,19 @@
 .light {
 	&.cards.light {
 		margin-bottom: 0;
-		padding-bottom: 4rem;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+
+	& + .row {
+		&.row {
+			padding-top: 4rem;
+			padding-bottom: 4rem;	
+		}
+
+		p {
+			padding-top: 0;
+		}
 	}
 
 	.third {
@@ -127,5 +139,32 @@ li p {
 	.row:first-child {
 		margin-bottom: 0 !important;
 		padding-bottom: 0 !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.tile {
+		h3:nth-child(2) {
+			margin-bottom: 0;
+		}
+
+		ol {
+			margin-top: 0;
+			list-style-position: outside;
+		}
+
+		li h3 {
+			font-size: 2rem;
+			padding-bottom: 1rem !important;
+		}
+
+		ul li {
+			padding-bottom: 1rem;
+		}
+	}
+
+	.row > p {
+		padding: 5rem 3rem;
+		padding-bottom: 0rem;
 	}
 }
