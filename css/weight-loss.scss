@@ -16,6 +16,11 @@ h3:not(:first-child) {
   padding-top: 3rem;
 }
 
+.row:first-child .card {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 849px) {
   .two-thirds {
     padding: 0 2.5rem;

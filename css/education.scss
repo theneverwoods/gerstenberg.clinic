@@ -17,6 +17,8 @@
 
 		h3 {
 			font-size: 2.8rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0 !important;
 		}
 
 		p {
@@ -26,8 +28,19 @@
 }
 
 .light {
+	&.cards.light {
+		margin-bottom: 0;
+		padding-bottom: 4rem;
+	}
+
 	.third {
 		padding: 3em;
+
+		&.card.dark {
+			h2 {
+				padding-bottom: 1rem;
+			}
+		}
 	}
 
 	ul {
@@ -88,6 +101,7 @@ li p {
 
 .img + .text {
 	ul {
+		font-weight: 400;
 		list-style-type: none;
 		padding-left: 0;
 	}
@@ -109,3 +123,9 @@ li p {
 	}
 }
 
+@media (max-width: 1080px) {
+	.row:first-child {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}

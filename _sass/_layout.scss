@@ -94,6 +94,19 @@ iframe {
   }
 }
 
+@media (max-width: 1020px) {
+  .blurb {
+    .third {
+      flex-basis: 100%;
+
+      &:nth-child(2) {
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 1080px) {
   .row > .half.tile {
     flex-basis: 100%;

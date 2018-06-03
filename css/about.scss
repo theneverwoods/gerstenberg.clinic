@@ -59,9 +59,9 @@ iframe {
   padding-bottom: 0 !important;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1080px) {
   .tiles .half.tile.text {
-    &:hover {
+    &:hover, &:focus {
       background-color: $gray3;
 
       .wrapper {

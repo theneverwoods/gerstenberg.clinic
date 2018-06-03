@@ -37,10 +37,21 @@ footer {
       }
 
       & > li {
-        display: inline;
+        display: flex;
+        align-items: flex-end;
+        white-space: nowrap;
 
         &:first-child {
           margin-right: 2em;
+        }
+
+        &:nth-child(3) ul {
+          display: flex;
+          flex-direction: column;
+
+          li:first-child {
+            order: 8;
+          }
         }
 
         a {
@@ -61,9 +72,17 @@ footer {
   }
 }
 
-@media (max-width: 849px) {
+@media (max-width: 851px) {
   footer {
     .third {
+      flex-basis: 100%;
+
+      &:nth-child(2) {
+        order: 3;
+        margin-left: 0;
+        padding-top: 3rem;
+      }
+
       .footer-nav {
         display: block;
         margin-top: 20px;
@@ -73,9 +92,14 @@ footer {
           margin-right: 10px;
         }
 
-        li {
+        li, li:nth-child(3) ul {
           display: block;
           margin-left: 0;
+        }
+
+        b, li, li a {
+          font-size: 1.8rem;
+          line-height: 1.5;
         }
       }
     }

@@ -21,6 +21,12 @@
 	}
 }
 
+.two-thirds {
+  p:last-child {
+    font-weight: 500;
+  }
+}
+
 .tiles {
 	margin-bottom: -3px;
 }
@@ -28,6 +34,12 @@
 @media (min-width: 1050px) {
   .two-thirds {
     padding-left: 5rem;
+  }
+
+  .blurb {
+    .third:nth-child(2) {
+      padding-left: 5rem;
+    }
   }
 
   .blurb + .row {
