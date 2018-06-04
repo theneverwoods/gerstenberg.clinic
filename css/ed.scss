@@ -37,6 +37,14 @@ footer {
 		line-height: 1.4;
 	}
 
+	&.fourth.img {
+		&:hover, &:focus {
+			img {
+				filter: unset;
+			}
+		}
+	}
+
 	&.light h3 {
 		padding-bottom: 2em;
 	}
@@ -67,15 +75,7 @@ footer {
 @media (max-width: 1231px) {
 	.half.tile.dark {
 		h2 {
-			font-size: 3rem;
-		}
-	}
-}
-
-@media (max-width: 1110px) {
-	.half.tile.dark {
-		h2 {
-			font-size: 2.7rem;
+			font-size: 2.5rem;
 		}
 	}
 }

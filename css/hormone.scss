@@ -31,6 +31,15 @@
 	margin-bottom: -3px;
 }
 
+@media (max-width: 1020px) and (min-width: 600px) {
+  .blurb .third {
+    &:not(:first-child) {
+      flex-basis: 45%;
+      margin-top: 0;
+    }
+  }
+}
+
 @media (min-width: 1050px) {
   .two-thirds {
     padding-left: 5rem;
