@@ -123,3 +123,15 @@
 		}
 	}
 }
+
+@media (min-width: 400px) {
+	.btn {
+		white-space: nowrap;
+	}
+}
+
+@media (max-width: 399px) {
+	.btn {
+		display: block;
+	}
+}
