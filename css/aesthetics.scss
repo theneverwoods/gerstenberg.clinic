@@ -124,3 +124,16 @@ ul {
 		}
 	}
 }
+
+@media (max-width: 850px) {
+	.blurb {
+		.third {
+			&:nth-child(2) {
+				margin-bottom: 0;
+			}
+			&:nth-child(3) {
+				margin-top: 0;
+			}
+		}
+	}
+}

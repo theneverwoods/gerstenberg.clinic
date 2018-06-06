@@ -147,6 +147,29 @@ li p {
 	}
 }
 
+@media (max-width: 1150px) {
+	.tiles .tile.text {
+		h2 {
+			font-size: 2.5rem;
+		}
+		h3, h2 + h3 {
+			font-size: 2rem;
+		}
+		li {
+			h3 {
+				font-size: 1.8rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+		}
+		ol {
+			margin: 0;
+		}
+	}
+}
+
 @media (max-width: 1080px) {
 	.row:first-child {
 		margin-bottom: 0 !important;
