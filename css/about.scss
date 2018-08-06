@@ -53,9 +53,23 @@ iframe {
   width: 100%;
 }
 
-@media (min-width: 840px) {
+.row.img {
+  display: block;
+  margin-bottom: -3px;
+  padding-bottom: 0 !important;
+}
+
+@media (min-width: 1080px) {
+  .about-row .half {
+    &:nth-child(1) .card.light {
+      margin-left: 2rem;
+    }
+    &:nth-child(2) .card.light {
+      margin-right: 3rem;
+    }
+  }
   .tiles .half.tile.text {
-    &:hover {
+    &:hover, &:focus {
       background-color: $gray3;
 
       .wrapper {

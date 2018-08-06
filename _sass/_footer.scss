@@ -5,6 +5,8 @@ footer {
   .row {
     background: $purple1;
     padding-bottom: 0 !important;
+    display: flex;
+    align-items: flex-end;
   }
 
   .third {
@@ -20,30 +22,46 @@ footer {
 
     .footer-nav {
       display: flex;
+      justify-content: flex-end;
       list-style-type: none;
       margin: 0;
       padding: 0;
       text-align: right;
 
       b {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        color: $gray4;
       }
 
       li {
-        line-height: 1.2;
+        line-height: .75;
       }
 
       & > li {
-        display: inline;
+        display: flex;
+        align-items: flex-end;
+        white-space: nowrap;
 
         &:first-child {
           margin-right: 2em;
         }
 
+        &:nth-child(3) ul {
+          display: flex;
+          flex-direction: column;
+
+          li:first-child {
+            order: 8;
+          }
+        }
+
         a {
           color: $gray4;
           text-decoration: none;
-          font-size: 1.6rem;
+          font-size: 1.2rem;
+          display: block;
+          line-height: 1.2;
 
           &:hover {
             text-decoration: underline;
@@ -58,9 +76,17 @@ footer {
   }
 }
 
-@media (max-width: 849px) {
+@media (max-width: 851px) {
   footer {
     .third {
+      flex-basis: 100%;
+
+      &:nth-child(2) {
+        order: 3;
+        margin-left: 0;
+        padding-top: 3rem;
+      }
+
       .footer-nav {
         display: block;
         margin-top: 20px;
@@ -70,9 +96,14 @@ footer {
           margin-right: 10px;
         }
 
-        li {
+        li, li:nth-child(3) ul {
           display: block;
           margin-left: 0;
+        }
+
+        b, li, li a {
+          font-size: 1.8rem;
+          line-height: 1.5;
         }
       }
     }

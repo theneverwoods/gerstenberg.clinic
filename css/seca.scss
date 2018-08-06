@@ -5,7 +5,15 @@
 @media (min-width: 850px) {
   .blurb {
     .third {
-      margin-right: 5rem;
+      padding-right: 5rem;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .two-thirds {
+      padding-left: 0;
     }
   }
 }

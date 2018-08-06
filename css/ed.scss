@@ -8,6 +8,10 @@ h3 {
 	font-weight: 500;
 }
 
+.two-thirds h3:last-of-type {
+	padding-top: 3rem;
+}
+
 .card p {
 	margin-top: 0;
 }
@@ -33,8 +37,22 @@ footer {
 		line-height: 1.4;
 	}
 
+	&.fourth.img {
+		&:hover, &:focus {
+			img {
+				filter: unset;
+			}
+		}
+	}
+
 	&.light h3 {
 		padding-bottom: 2em;
+	}
+
+	&.dark {
+		ul {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -43,6 +61,8 @@ footer {
 }
 
 .row:nth-child(4) {
+	padding-top: 2.5rem;
+	
 	ul {
 		color: $gray3;
 	}
@@ -50,6 +70,14 @@ footer {
 
 .row.dark.icons {
 	padding-bottom: 0;
+}
+
+@media (max-width: 1231px) {
+	.half.tile.dark {
+		h2 {
+			font-size: 2.5rem;
+		}
+	}
 }
 
 @media (max-width: 849px) {

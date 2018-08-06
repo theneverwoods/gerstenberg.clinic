@@ -21,15 +21,22 @@
 	}
 }
 
+.two-thirds {
+  p:last-child {
+    font-weight: 500;
+  }
+}
+
 .tiles {
 	margin-bottom: -3px;
 }
 
-.tile.fourth .overlay {
-  span {
-		font-size: 3.2rem;
-		font-weight: 700;
-		max-width: 7em;
+@media (max-width: 1020px) and (min-width: 600px) {
+  .blurb .third {
+    &:not(:first-child) {
+      flex-basis: 45%;
+      margin-top: 0;
+    }
   }
 }
 
@@ -38,10 +45,24 @@
     padding-left: 5rem;
   }
 
+  .blurb {
+    .third:nth-child(2) {
+      padding-left: 5rem;
+    }
+  }
+
   .blurb + .row {
     img + img {
       margin-left: 19%;
       margin-top: 77%;
+    }
+  }
+
+  .tile.fourth .overlay {
+    span {
+      font-size: 3.2rem;
+      font-weight: 700;
+      max-width: 7em;
     }
   }
 }

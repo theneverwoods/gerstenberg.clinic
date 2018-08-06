@@ -17,6 +17,8 @@
 
 		h3 {
 			font-size: 2.8rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0 !important;
 		}
 
 		p {
@@ -26,8 +28,31 @@
 }
 
 .light {
+	&.cards.light {
+		margin-bottom: 0;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+
+	& + .row {
+		&.row:not(.tiles) {
+			padding-top: 4rem;
+			padding-bottom: 4rem;	
+		}
+
+		p {
+			padding-top: 0;
+		}
+	}
+
 	.third {
 		padding: 3em;
+
+		&.card.dark {
+			h2 {
+				padding-bottom: 1rem;
+			}
+		}
 	}
 
 	ul {
@@ -81,6 +106,7 @@ li p {
 
 .blurb {
 	padding: 3rem 5rem;
+	
 	& > div {
 		padding: 0;
 	}
@@ -88,16 +114,18 @@ li p {
 
 .img + .text {
 	ul {
+		font-weight: 400;
 		list-style-type: none;
 		padding-left: 0;
 	}
+
 	h2 + h3 {
 		font-size: 2.2rem;
 	}
 }
 
 .cards.light {
-	padding: 4em 3em;
+	padding: 4.5rem;
 	text-align: center;
 
 	h2 {
@@ -109,3 +137,74 @@ li p {
 	}
 }
 
+@media (min-width: 850px) {
+	.row.light {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.light.cards .dark:nth-child(2) {
+		margin-left: 4.5rem;
+		margin-right: 4.5rem;
+	}
+}
+
+@media (max-width: 1150px) {
+	.tiles .tile.text {
+		h2 {
+			font-size: 2.5rem;
+		}
+
+		h3, h2 + h3 {
+			font-size: 2rem;
+		}
+
+		li {
+			h3 {
+				font-size: 1.8rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+		}
+
+		ol {
+			margin: 0;
+		}
+	}
+}
+
+@media (max-width: 1080px) {
+	.row:first-child {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.tile {
+		h3:nth-child(2) {
+			margin-bottom: 0;
+		}
+
+		ol {
+			margin-top: 0;
+			list-style-position: outside;
+		}
+
+		li h3 {
+			font-size: 2rem;
+			padding-bottom: 1rem !important;
+		}
+
+		ul li {
+			padding-bottom: 1rem;
+		}
+	}
+
+	.row > p {
+		padding: 5rem 3rem;
+		padding-bottom: 0rem;
+	}
+}

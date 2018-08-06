@@ -1,3 +1,4 @@
+{% capture favicon %}{{ site.baseurl }}/img/favicon.png{% endcapture %}
 {% capture description %}{% if page.description && page.description != "" %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture keywords %}{% if page.keywords && page.keywords != "" %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
 {% capture title %}{% if page.title && page.title != "" %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
@@ -9,7 +10,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <meta name="author" content="gerstenberg.clinic">
@@ -21,10 +21,11 @@
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.permalink }}">
     <meta property="og:description" content="{{ description }}">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/global.css?cachebust=3">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/global.css?cachebust=15">
 
-    {% if page.stylesheet && page.stylesheet != "" %}<link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.stylesheet }}.css?cachebust=3">{% endif %}
-    <!-- <link rel="icon" href="/img/favicon.png?v=2"> -->
+    {% if page.stylesheet && page.stylesheet != "" %}<link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.stylesheet }}.css?cachebust=15">{% endif %}
+
+    <link rel="icon" href="{{ favicon }}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
