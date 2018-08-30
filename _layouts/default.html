@@ -52,12 +52,19 @@
       {% include footer.html %}
     </div>
 
-    <span itemscope itemtype="http://schema.org/Organization">
-      <link itemprop="url" href="http://www.gerstenberg.clinic">
-      <a itemprop="sameAs" href="http://www.facebook.com/gerstenberg.clinic">FB</a>
-      <a itemprop="sameAs" href="http://www.twitter.com/gdotclinic">Twitter</a>
-      <a itemprop="sameAs" href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw?view_as=subscriber">YouTube</a>
-    </span>    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "gerstenberg.clinic",
+      "url": "http://gerstenberg.clinic",
+      "sameAs": [
+        "http://www.facebook.com/gerstenberg.clinic",
+        "http://www.twitter.com/gdotclinic",
+        "https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw?",
+      ]
+    }
+    </script>    
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
