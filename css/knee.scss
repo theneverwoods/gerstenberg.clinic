@@ -5,12 +5,6 @@
 @import "variables";
 
 
-@media (max-width: 1245px) and (min-width: 851px) {
-	.blurb + .row .third {
-		padding-left: 4rem;
-	}
-}
-
 @media (min-width: 850px) {
 	.blurb + .row .two-thirds {
 		padding: 5rem;
