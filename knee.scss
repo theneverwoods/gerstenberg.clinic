@@ -2,17 +2,118 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import "variables";
+
+.blurb {
+	padding-bottom: 5rem !important;
+
+	.third {
+		flex-grow: 1;
+		min-width: 30rem;
+
+		&:first-child {
+			flex-grow: 1.2;
+			font-size: 2.2rem;
+			font-weight: 400;
+		}
+	}
+
+	.third:nth-child(2) {
+		margin-right: 0;
+	}
+	
+	.third:nth-child(3) {
+		p {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.blurb + .row {
+	padding-bottom: 0 !important;
+
+	.card:not(:last-of-type) {
+		margin-bottom: 3em;
+	}
+
+	.card {
+		text-align: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		p {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	.two-thirds {
+		padding-bottom: 2rem !important;
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.spacious {
+	margin-top: 0;
+}
+
+.spacious li {
+	padding: 1em 0 1em 2em;
+	color: $gray3;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.tile {
+	h2 {
+		font-size: 2.7rem;
+	}
+
+	h2 + h3 {
+		font-size: 2.7rem;
+		font-weight: 400;
+		font-style: normal;
+		color: $gray4;
+	}
+}
+
+@media (max-width: 1245px) and (min-width: 851px) {
+	.blurb + .row .third {
+		padding-left: 4rem;
+	}
+}
+
 @media (min-width: 850px) {
-  .blurb {
-    .third {
-      padding-right: 5rem;
+	.blurb + .row .two-thirds {
+		padding: 5rem;
+		padding-top: 0;
+	}
+	.cards + .row {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
 
-      p {
-        margin: 0;
-      }
-    }
+@media (max-width: 850px) {
+	.blurb + .row {
+		padding-left: 3rem;
+		padding-right: 3rem;
 
-	 
+		.two-thirds {
+			padding-top: 1.5rem;
+		}
+	}
+}
+
 @media (max-width: 750px) {
 	.third .card.dark {
 		margin: 3em;
@@ -21,17 +122,16 @@
 			margin-top: -3em;
 		}
 	}
-}	  
-	  
-    .two-thirds {
-      padding-left: 0;
-    }
-  }
 }
 
-@media (max-width: 849px) {
-  .two-thirds {
-    padding: 0 2.5rem;
-  }
-}/* Scss Document */
+@media (min-width: 400px) {
+	.btn {
+		white-space: nowrap;
+	}
+}
 
+@media (max-width: 399px) {
+	.btn {
+		display: block;
+	}
+}
