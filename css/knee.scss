@@ -4,47 +4,71 @@
 
 @import "variables";
 
+.blurb {
+	padding-bottom: 5rem !important;
 
-@media (min-width: 850px) {
-	.blurb + .row .two-thirds {
-		padding: 5rem;
-		padding-top: 0;
-	}
-	.cards + .row {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-	}
-}
-
-@media (max-width: 850px) {
-	.blurb + .row {
-		padding-left: 3rem;
-		padding-right: 3rem;
-
-		.two-thirds {
-			padding-top: 1.5rem;
-		}
-	}
-}
-
-@media (max-width: 750px) {
-	.third .card.dark {
-		margin: 3em;
+	.third {
+		flex-grow: 1;
+		min-width: 30rem;
 
 		&:first-child {
-			margin-top: -3em;
+			flex-grow: 1.2;
+			font-size: 2.2rem;
+			font-weight: 400;
+		}
+	}
+
+	.third:nth-child(2) {
+		margin-right: 0;
+	}
+	
+	.third:nth-child(3) {
+		p {
+			font-size: 1.8rem;
 		}
 	}
 }
 
-@media (min-width: 400px) {
-	.btn {
-		white-space: nowrap;
+.blurb + .row {
+	padding-bottom: 0 !important;
+
+	.card:not(:last-of-type) {
+		margin-bottom: 3em;
+	}
+
+	.card {
+		text-align: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		p {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	.two-thirds {
+		padding-bottom: 2rem !important;
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 }
 
-@media (max-width: 399px) {
-	.btn {
-		display: block;
+.spacious {
+	margin-top: 0;
+}
+
+.spacious li {
+	padding: 1em 0 1em 2em;
+	color: $gray3;
+
+	&:first-child {
+		padding-top: 0;
 	}
 }
