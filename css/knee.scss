@@ -1,0 +1,58 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@media (min-width: 850px) {
+  .blurb {
+    .third {
+      padding-right: 5rem;
+
+      p {
+        margin: 0;
+      }
+    }
+
+	 
+.blurb + .row {
+	padding-bottom: 0 !important;
+
+	.card:not(:last-of-type) {
+		margin-bottom: 3em;
+	}
+
+	.card {
+		text-align: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		p {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	.two-thirds {
+		padding-bottom: 2rem !important;
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}	  
+	  
+    .two-thirds {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: 849px) {
+  .two-thirds {
+    padding: 0 2.5rem;
+  }
+}/* Scss Document */
+
