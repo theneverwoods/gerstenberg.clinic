@@ -1,0 +1,37 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@media (min-width: 850px) {
+  .blurb {
+    .third {
+      padding-right: 5rem;
+
+      p {
+        margin: 0;
+      }
+    }
+
+	 
+@media (max-width: 750px) {
+	.third .card.dark {
+		margin: 3em;
+
+		&:first-child {
+			margin-top: -3em;
+		}
+	}
+}	  
+	  
+    .two-thirds {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: 849px) {
+  .two-thirds {
+    padding: 0 2.5rem;
+  }
+}/* Scss Document */
+
