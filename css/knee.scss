@@ -4,6 +4,14 @@
 
 @import "variables";
 
+h3:not(:first-child) {
+    padding-top: 3rem;
+}
+
+.blurb .two-thirds {
+	display: block;
+}
+
 
 .blurb + .row {
 	padding-bottom: 0 !important;
@@ -25,6 +33,14 @@
 			padding-bottom: 1.5rem;
 		}
 	}
+}
+
+.blurb + .row .two-thirds {
+	padding-bottom: 50px;
+}
+
+.tiles + .blurb {
+	margin-top: 50px;
 }
 
 

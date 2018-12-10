@@ -4,6 +4,10 @@
 
 @import "variables";
 
+h3:not(:first-child) {
+    padding-top: 3rem;
+}
+
 
 .video + .row {
 	padding-bottom: 0 !important;
@@ -26,4 +30,8 @@
 		}
 	}
 }/* Scss Document */
+
+.video + .row .two-thirds {
+	padding-bottom: 50px;
+}
 
