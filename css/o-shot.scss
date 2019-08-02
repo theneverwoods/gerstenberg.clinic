@@ -8,6 +8,12 @@
     margin:20px;
 }
 
+h3 {
+    [class~="bottom"] {
+    padding-top:30px;
+}
+}
+
 .two-third.bottom {
     h3 {
     padding-top: 200px;
