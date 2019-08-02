@@ -14,6 +14,33 @@
     }
 }
 
+.video + .row {
+	padding-bottom: 0 !important;
+
+	.card:not(:last-of-type) {
+		margin-bottom: 3em;
+	}
+
+	.card {
+		text-align: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		p {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			padding-bottom: 1.5rem;
+		}
+	}
+}/* Scss Document */
+
+.video + .row .two-thirds {
+	padding-bottom: 50px;
+}
+
+
 .cards {
 	display: flex;
 	align-items: stretch;
