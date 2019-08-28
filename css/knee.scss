@@ -15,7 +15,7 @@ h3:not(:first-child) {
 .blurb + .row {
 	padding-bottom: 0 !important;
 
-	.card:not(:last-of-type) {
+	.card {
 		margin-bottom: 3em;
 	}
 
