@@ -153,11 +153,14 @@ li p {
 		padding: 0;
 	}
     
-        row.light{
-            margin-bottom: 0;
-            margin-top: 30px;
-    }
 }
+
+.light {
+	&.cards.light {
+		margin-bottom: 0;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 
 .img + .text {
 	ul {
