@@ -12,10 +12,14 @@ h3:not(:first-child) {
 	display: block;
 }
 
+.card dark {
+    margin-bottom: 50px;
+}
+
 .blurb + .row {
 	padding-bottom: 0 !important;
 
-	.card {
+	.card:not(:last-of-type) {
 		margin-bottom: 3em;
 	}
 
