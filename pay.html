@@ -13,7 +13,33 @@ stylesheet: home
     </div>
     <div style="margin-top: 30px">
       <p>{% include svgs/logo.html %} accepts Amex, MasterCard, Discover and Visa.</p>
-    </div>      
+    </div> 
+    <div>
+        <form action="https://secure.rectanglegateway.com/cart/cart.php
+" method="POST">
+
+<input type="text" size="6" name="amount" />
+
+<input type="hidden" name="key_id" value="13779258" />
+
+<input type="hidden" name="action" value="process_variable" />
+
+<input type="hidden" name="order_description" value="Payment" />
+
+<input type="hidden" name="language" value="en" />
+
+<input type="hidden" name="url_finish" value="https://gerstenberg.clinic
+" />
+
+<input type="hidden" name="customer_receipt" value="true" />
+
+<input type="hidden" name="hash" value="action|order_description|f0eb8e3d58a78d4b7c50c74283a7c1cc" />
+
+<input type="submit" name="submit" value="Donate" />
+
+</form>
+    </div>  
+      
   </div>
   <div class="third card light">
     <div>
