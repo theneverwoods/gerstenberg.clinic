@@ -4,8 +4,6 @@
   </a>
   <nav>
     <ul>
-      <li class="{% if page.permalink contains '/about' %}active{% endif %}"><a target="_blank" href="{{ site.baseurl }}/about">About</a></li>
-      <li class="{% if page.permalink contains '/forms' %}active{% endif %}"><a target="_blank" href="{{ site.baseurl }}/forms">Forms</a></li>
       <li class="{% if page.permalink contains '/services' %}active{% endif %}">
         <a href="#!">Services</a>
         <ul>
@@ -21,6 +19,16 @@
           <li><a target="_blank" href="{{ site.baseurl }}/services/weight-loss">Medical Weight Loss</a></li>
         </ul>
       </li>
+  
+      <li>
+        <a href="#!">Patient Tools</a>
+        <ul>
+            <li><a href="/pay" target="_blank">Pay A Bill</a></li>   
+            <li><a href="doxy.me/drgberg" target="_blank">Telemedicine</a></li>
+            <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank">Patient Portal</a>      </li>
+            <li><a href="https://us.fullscript.com/welcome/gerstenbergclinic" target="_blank">Fullscript</a></li>
+        </ul>
+      </li>  
         
       <li>
         <a href="#!">Education</a>
@@ -30,16 +38,10 @@
         </ul>
       </li>
 
-      <li>
-        <a href="#!">Patient Tools</a>
-        <ul>
-            <li><a href="/pay" target="_blank">Pay A Bill</a></li>   
-            <li><a href="doxy.me/drgberg" target="_blank">Telemedicine</a></li>
-            <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank">Patient Portal</a>      </li>
-            <li><a href="https://us.fullscript.com/welcome/gerstenbergclinic" target="_blank">Fullscript</a></li>
-        </ul>
-      </li>        
-     
+
+      <li class="{% if page.permalink contains '/forms' %}active{% endif %}"><a target="_blank" href="{{ site.baseurl }}/forms">Forms</a></li>
+        
+      <li class="{% if page.permalink contains '/about' %}active{% endif %}"><a target="_blank" href="{{ site.baseurl }}/about">About</a></li>
       <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank"><img src="{{ site.baseurl }}/img/fb-icon.png" /></a></li>
       <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank"><img src="{{ site.baseurl }}/img/youtube-icon.png" /></a></li>
     </ul>
