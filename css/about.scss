@@ -19,7 +19,6 @@ h1.hero-tagline {
     text-align: center;
     padding: 2rem 5rem;
     margin-bottom: 4.5rem;
-    padding-bottom: 4.5rem;
 
     svg {
       display: inline-block;
@@ -29,6 +28,15 @@ h1.hero-tagline {
     }
   }
 
+.row {
+  .card {
+    text-align: center;
+    padding: 2rem 5rem;
+    margin-bottom: 4.5rem;
+    }
+  }
+    
+    
   p {
     padding: 0 30px;
   }
