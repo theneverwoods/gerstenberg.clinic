@@ -29,6 +29,12 @@ h1.hero-tagline {
   }
 
 .light-blurb + .row {
+    padding-bottom: 0 !important;
+
+	.card:not(:last-of-type) {
+		margin-bottom: 3em;
+	}
+
 	.card {
 		text-align: center;
 		padding-top: 3em;
