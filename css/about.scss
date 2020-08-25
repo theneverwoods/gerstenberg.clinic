@@ -28,28 +28,6 @@ h1.hero-tagline {
     }
   }
 
-.blurb + .row {
-    padding-bottom: 0 !important;
-
-	.card:not(:last-of-type) {
-		margin-bottom: 3em;
-	}
-
-	.card {
-		text-align: center;
-		padding-top: 3em;
-		padding-bottom: 3em;
-
-		p {
-			font-size: 1.8rem;
-		}
-
-		h2 {
-			padding-bottom: 1.5rem;
-		}
-	}    
-}
-    
   p {
     padding: 0 30px;
   }
