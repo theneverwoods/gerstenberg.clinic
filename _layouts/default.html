@@ -126,5 +126,32 @@
         gtag('config', 'UA-92424942-5');
     </script>
       
+<!-- Begin TVSquared Page Visits Tracking Code -->
+<script type="text/javascript">
+    var _tvq = window._tvq = window._tvq || [];
+    (function() {
+      var u = (("https:" == document.location.protocol) ?
+          "https://collector-26348.us.tvsquared.com/"
+          :
+          "http://collector-26348.us.tvsquared.com/");
+      _tvq.push(['setSiteId', "TV-7236635418-1"]);
+      _tvq.push(['setTrackerUrl', u + 'tv2track.php']);
+      _tvq.push([function() {
+          this.deleteCustomVariable(5, 'page')
+      }]);
+      _tvq.push(['trackPageView']);
+      var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.defer = true;
+      g.async = true;
+      g.src = u + 'tv2track.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+</script>
+<!-- End TVSquared Tracking Code -->
+      
+      
   </body>
 </html>
