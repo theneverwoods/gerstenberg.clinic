@@ -67,14 +67,17 @@
     <div class="container">
       {% include header.html %}
       <section class="hero">
-          <a href="/scholarship.html">
+         
         {% if page.hero && page.hero != "" %}
+           <a href="/scholarship.html">
           <img src="{{ site.baseurl }}{{ page.hero }}" class="hero-img">
+            </a>
         {% endif %}
+           
         {% if page.tagline && page.tagline != "" %}
           <h1 class="hero-tagline">{{ page.tagline }}</h1>
         {% endif %}
-          </a>
+         
       </section>
       <main>{{ content }}</main>
       {% include footer.html %}
