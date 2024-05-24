@@ -1,0 +1,112 @@
+---
+layout: default
+permalink: /iasis
+hero: 
+tagline: Anti-inflammation protocols are a core part of our treatment plans
+keywords: inflammation, chronic disease, anti-inflammatory recommendations, anti-inflammatory treatment, painful inflammation
+Description: "Anti-Inflammation email articles and protocols"
+stylesheet: forms
+redirect_from:
+---
+
+<div class="row">
+    <div class="third" style="align-self: center">
+        <img src="/img/third/third-inflammation2.png" alt="man in pain.">
+	</div>
+    <div class="two-thirds">
+        <h2>How Can I Stop the Inflammation in My Body?</h2>
+  
+        <p>There are many, many contributors to inflammation. In general, the principle is: Give the body what it was intended to have, in optimal quantities, and let it do its thing. Do NOT put in/on the body what was not designed to have. Also, EVERYTHING you put in/on your body affects you, either in a positive or negative way....especially in terms of inflammation. Medical intervention is only a portion of the plan. If you commit to wellness, we WILL see the results you are looking for.</p>
+	</div>
+
+</div>
+
+<div class="row cards" style=text-align: center>
+  <div class="third card light">
+    <h2>Pain = Inflammation</h2>
+    <p>Any illness, whether acute or chronic, entails inflammation. <br/>Removing inflammation enhances the body's ability to do what it was designed to do.</p>
+  </div>
+</div>
+
+<div class="row">
+
+    <div class="two-thirds">
+        <h2>Anti-Inflammatory Recommendations</h2>
+
+        <h3>Avoidance</h3>
+        <ol>
+            <li>Stop/avoid all tobacco/vaping products</li>
+            <li>Reduce stress and optimize sleep (controls cortisol and the fight or flight response)</li>
+            <li>Consider removing any amalgams/metals, piercings, or implants to the extent possible</li>
+            <li>Limit excessive electromagnetic (EMF) radiation exposure (see p. 98 of Forty Something Forever book by Arline & Harold Brecher)</li>
+        </ol>
+        
+        <h3>Take Action</h3>
+        <ol>
+            <li>Drink clean water (ideally RO/carbon- and chlorine/fluoride filtered, preferably alkalinized)</li>
+            <li>Eat an optimal protein diet 1 gm/kg lean body weight; Low carb intake (near keto or keto, 10-30 gm net carbs 3x/day), with an organic, non-GMO, 80% plant based diet. Eat this way 90+% of the time or more. No cheats, or the body’s response will take days/week to recover gained ground.</li>
+            <li>Move/exercise by aerobics and strength training</li>
+        </ol>
+
+        <h3>Take Supplements</h3>
+        <ol>
+            <li>Basics for all patients: probiotics, organic multivitamin, vitamins C & D.</li>
+            <li>May also need omega-3 oil 1-4 grams/day.</li>
+            <li>Others as specifically needed, such as binders (i.e. oral chelation, zeolites, or prescription med)</li>
+        </ol>
+    </div>
+        <div class="third" style="align-self:flex-start">
+		<img src="/img/third/third-inflammation1.png" alt="Woman with inflamed lymph nodes.">
+    </div>
+</div>
+
+<div class="row cards" style=text-align: center>
+  <div class="third card light">
+    <h2>Be Consistent</h2>
+    <p>Treatment will likely take at least as long as you have had your symptoms.</p>
+  </div>
+</div>
+
+<div class="row">
+    <div class="two-thirds bottom">
+        <h2 style="margin-top: 30px">Medical / Physician Care as needed, if above is Insufficient</h2>
+        <ol>
+            <li>Address/optimize thyroid function.</li>
+            <li>Intravenous vitamins and minerals initially, until gut health is good and health condition has mostly normalized</li>
+            <li>Chelation for detoxification of heavy metals/calcium/free radicals, 10-20 sessions, and/or
+            ozone/ultraviolet blood irradiation 10-20 sessions, initially. EBOO is recommended, optimally.</li>
+            <li>Gerstenberg.clinic can help with further investigation and resources if they are needed. Just schedule to meet with our providers.</li>
+        </ol>
+    </div>
+    <div class="third" style="align-self: center">
+		<img src="/img/third/third-inflammation3.png" alt="Woman with inflamed lymph nodes.">
+	</div>
+</div>
+
+<div class="row">
+  
+  <div class="two-thirds" id="inflammation-articles">
+      <h2>Our Articles Concerning Inflammation</h2>
+        <div>            
+        <style type="text/css">
+                    <!--
+            .display_archive {font-family: arial,verdana; font-size: 16px;}
+          .campaign {line-height: 145%; margin: 5px;}
+          </style>
+          <script
+            language="javascript"
+            src="https://clinic.us18.list-manage.com/generate-js/?u=3bdf416b29288fcc89abfd51c&show=10&fid=13808"
+            type="text/javascript"
+          ></script>
+        </div>  
+  </div>
+</div>
+    
+    {% include schedule-consultation.html %}
+<div class="row">
+    <div>
+    <p>
+        The entire contents of the gerstenberg.clinic website, all associated articles and information are the sole opinion of Dr. Gerstenberg, unless otherwise stated.  Articles referenced are the research, copyright and/or opinion of the respective authors.  Information provided is not intended to replace the one-on-one relationship between a patient and their qualified healthcare provider and is not intended as medical advice.  It is intended for the purpose of sharing much needed research and information on topics covered. Dr. Gerstenberg emphasizes the need for each individual to make informed decisions, along with qualified healthcare professionals, as needed. If you are pregnant, nursing, taking medication, or have a medical condition, consult your personal healthcare professional before changing medication or using any nutritional supplements or treatment based on this content.
+        </p>
+    </div>
+</div>
