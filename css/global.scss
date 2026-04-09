@@ -18,6 +18,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  background: $warm-mid;
 }
 
 * {
@@ -31,24 +32,25 @@ img {
 h2 {
   margin: 0;
   padding: 0;
+  color: $text-heading;
 }
 
 h3 {
-  color: #000;
+  color: $text-heading;
 }
 
 p {
-  color: $gray3;
+  color: $text-body;
 
   svg {
     display: inline-block;
-    height: 1em;
+    height: 0.85em;
     width: auto;
-    vertical-align: middle;
+    vertical-align: baseline;
 
     &.logo-svg {
       width: 8.8804347826em;
-      margin-top: 2px;
+      margin-top: 0;
     }
 
     &.abbr-gc-w-logo {
@@ -76,40 +78,65 @@ a {
   }
 }
 
-.container, .row {
-  max-width: $max-width; // 1280px
+.container {
+  max-width: $max-width;
+  margin: auto;
+  background: $bodyBg;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.06);
+}
+
+.row {
+  max-width: $max-width;
   margin: auto;
   background: $bodyBg;
 }
 
 .light {
-  background-color: $gray1;
+  background-color: $cream;
 
   h2, a h2 {
-    color: $gray4;
+    color: $text-heading;
   }
 }
 
 .dark {
-  background-color: $gray3;
-  color: $bodyBg;
+  background-color: $warm-light;
+  color: $text-heading;
 
-  h2, h3, p {
-    color: $bodyBg;
+  h2, h3 {
+    color: $text-heading;
+  }
+
+  p {
+    color: $text-body;
   }
 }
 
 .cards {
-  padding: 0 5rem;
+  padding: 2rem 4rem;
   display: flex;
   align-items: stretch;
+  gap: 28px;
 }
 
 .card {
   display: block;
   text-decoration: none;
-  padding: 3rem;
-  border-radius: 10px;
+  padding: 4rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  background: $bodyBg;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.02);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  h2 {
+    margin-bottom: 1.2rem;
+  }
 
   p {
     margin: 0;
@@ -117,7 +144,7 @@ a {
 }
 
 .blurb {
-  padding: 3em;
+  padding: 4em;
 
   p {
     margin-top: 0;
@@ -138,6 +165,11 @@ a {
 
 @media (max-width: 550px) {
   .cards {
-    padding: 0 2.5rem;
+    padding: 1rem 1.5rem;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 2.5rem;
   }
 }

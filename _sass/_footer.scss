@@ -1,22 +1,45 @@
 footer {
-  background: $purple1;
-  padding: 50px;
+  background: #2C2621;
+  padding: 60px 50px 40px;
+  margin-top: 0;
 
   .row {
-    background: $purple1;
+    background: transparent;
     padding-bottom: 0 !important;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   .third {
     p {
       margin: 5px 0;
-      font-size: 1.6rem;
-      color: $gray4;
+      font-size: 1.35rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
 
-      .logo-svg {
-        margin-top: 0;
+      svg path, svg polygon, svg rect, svg circle {
+        fill: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+
+    &.footer-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: inline-block;
+        transition: opacity 0.2s ease;
+        opacity: 0.9;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      img {
+        max-width: 340px;
+        display: block;
       }
     }
 
@@ -29,9 +52,12 @@ footer {
       text-align: right;
 
       b {
-        font-size: 1.2rem;
-        line-height: 1.2;
-        color: $gray4;
+        font-size: 1.1rem;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-family: $font-body;
       }
 
       li {
@@ -57,15 +83,23 @@ footer {
         }
 
         a {
-          color: $gray4;
+          color: rgba(255, 255, 255, 0.45);
           text-decoration: none;
-          font-size: 1.2rem;
+          font-size: 1.15rem;
           display: block;
-          line-height: 1.2;
+          line-height: 1.9;
+          transition: color 0.2s ease;
 
           &:hover {
-            text-decoration: underline;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
           }
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
         }
 
         ul li {
@@ -78,10 +112,12 @@ footer {
 
 @media (max-width: 851px) {
   footer {
+    padding: 40px 30px;
+
     .third {
       flex-basis: 100%;
 
-      &:nth-child(2) {
+      &.footer-center {
         order: 3;
         margin-left: 0;
         padding-top: 3rem;
@@ -102,8 +138,8 @@ footer {
         }
 
         b, li, li a {
-          font-size: 1.8rem;
-          line-height: 1.5;
+          font-size: 1.5rem;
+          line-height: 1.6;
         }
       }
     }

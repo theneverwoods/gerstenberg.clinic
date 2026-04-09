@@ -9,16 +9,18 @@ hr {
 }
 
 h1.hero-tagline {
-  font-size: 3rem !important;
-  font-weight: 600 !important;
-  font-style: normal !important;
+  font-size: 2.8rem !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
 }
 
 .about-row {
+  padding: 3rem 2rem 1rem;
+
   .card {
     text-align: center;
-    padding: 2rem 5rem;
-    margin-bottom: 4.5rem;
+    padding: 2.5rem 5rem;
+    margin-bottom: 3rem;
 
     svg {
       display: inline-block;
@@ -34,23 +36,29 @@ h1.hero-tagline {
 }
 
 .row.tiles {
+  border-top: 1px solid $warm-mid;
+
   .tile.text {
     h2 {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 2.2rem;
+      font-size: 1.5rem;
+      line-height: 1.7;
     }
 
     .overlay p {
-      font-size: 1.6rem;
+      font-size: 1.45rem;
+      line-height: 1.7;
     }
   }
 }
 
 iframe {
   width: 100%;
+  margin: 2rem 0;
 }
 
 .row.img {
@@ -70,7 +78,7 @@ iframe {
   }
   .tiles .half.tile.text {
     &:hover, &:focus {
-      background-color: $gray3;
+      background-color: $text-heading;
 
       .wrapper {
         display: none;
@@ -84,16 +92,19 @@ iframe {
         bottom: 0;
         width: 100%;
         height: 100%;
-        display: block;
+        display: flex;
         max-width: 50em;
         margin: auto;
         z-index: 1;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        
+        justify-content: flex-start;
+        padding: 3em;
+        overflow-y: auto;
+
         p {
-          color: $bodyBg;
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 1.35rem;
+          line-height: 1.65;
         }
       }
     }
@@ -110,5 +121,8 @@ iframe {
 @media (max-width: 1080px) {
   hr {
     display: block;
+    border: none;
+    border-top: 1px solid $warm-mid;
+    margin: 2rem 0;
   }
 }

@@ -75,3 +75,16 @@
     padding: 0 2.5rem;
   }
 }
+
+// Inflammation page image styling
+.third img[src*="inflammation"] {
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 4 / 5;
+  width: 85%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  transform: scale(1.3);
+}

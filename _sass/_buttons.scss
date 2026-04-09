@@ -1,12 +1,18 @@
 .btn {
-  color: $gray4;
-  background: $gray2;
-  font-size: 2.4rem;
-  padding: 10px 15px;
+  color: #FFFFFF;
+  background: $accent;
+  font-size: 1.4rem;
+  padding: 14px 32px;
   text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 
   &:hover, &:focus {
-    background: darken($gray2, 5);
+    background: $accent-hover;
+    transform: translateY(-1px);
   }
 
   svg {
