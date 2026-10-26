@@ -13,22 +13,23 @@ redirect_from:
     margin-top: 35px;
 }
 
-/* Blog card */
+/* Individual blog card */
 .blog-posts .card {
     display: flex;
     align-items: flex-start;
     gap: 25px;
     padding: 25px 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* Blog image */
+/* Blog thumbnail container */
 .blog-image-link {
     display: block;
     flex: 0 0 220px;
 }
 
+/* Blog thumbnail */
 .blog-thumbnail {
     width: 220px;
     height: 155px;
@@ -37,16 +38,18 @@ redirect_from:
     display: block;
 }
 
-/* Blog text */
+/* Blog content */
 .blog-content {
     flex: 1;
     min-width: 0;
 }
 
+/* Blog title - reduced bottom spacing */
 .blog-content h2 {
     font-size: 25px;
-    line-height: 1.4;
-    margin: 0 0 12px;
+    line-height: 1.3;
+    margin: 0 0 4px !important;
+    padding: 0 !important;
 }
 
 .blog-content h2 a {
@@ -58,32 +61,41 @@ redirect_from:
     text-decoration: underline;
 }
 
-.blog-description {
-    font-size: 17px;
-    line-height: 1.6;
-    margin: 0 0 12px;
-}
-
-/* Dates for future blogs */
-.blog-date {
+/* Publication date - directly below title */
+.blog-content .blog-date {
     font-size: 14px;
     color: #777;
-    margin: 0 0 12px;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+    line-height: 1.4;
+}
+
+/* Blog description */
+.blog-content .blog-description {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 10px !important;
+    padding: 0 !important;
 }
 
 /* Read More link */
-.blog-read-more {
+.blog-content .blog-read-more {
+    display: inline-block;
     color: #a24f24;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
-.blog-read-more:hover {
+.blog-content .blog-read-more:hover {
     text-decoration: underline;
 }
 
-/* Mobile responsive */
+/* Mobile responsive layout */
 @media (max-width: 768px) {
+
     .blog-posts .card {
         flex-direction: column;
         gap: 15px;
@@ -102,11 +114,18 @@ redirect_from:
 
     .blog-content h2 {
         font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 4px !important;
+    }
+
+    .blog-content .blog-date {
+        margin-bottom: 8px !important;
     }
 }
 </style>
 
 <div class="row forms-row">
+
     <div class="two-thirds">
 
         <h1>Health &amp; Wellness Blog</h1>
@@ -121,13 +140,14 @@ redirect_from:
             <!-- BLOG POST 1 -->
             <article class="card">
 
+                <!-- Blog Thumbnail -->
                 <a
                     class="blog-image-link"
                     href="{{ site.baseurl }}/blog/hormone-therapy-prp-weight-loss-primary-care"
                 >
                     <img
                         src="{{ site.baseurl }}/img/blog/blog-1.webp"
-                        alt="Medical consultation about hormone therapy, PRP, weight loss, and primary care"
+                        alt="Woman experiencing stress while sitting at a desk"
                         class="blog-thumbnail"
                         loading="lazy"
                         width="220"
@@ -135,21 +155,25 @@ redirect_from:
                     >
                 </a>
 
+                <!-- Blog Content -->
                 <div class="blog-content">
 
+                    <!-- Blog Title -->
                     <h2>
                         <a href="{{ site.baseurl }}/blog/hormone-therapy-prp-weight-loss-primary-care">
                             How to Know If Hormone Therapy, PRP, Weight Loss, or Primary Care Is the Right Starting Point for You
                         </a>
                     </h2>
-                  
-<p class="blog-date">
-    Published:
-    <time datetime="2026-09-28">
-        September 28, 2026
-    </time>
-</p>
 
+                    <!-- Publication Date -->
+                    <p class="blog-date">
+                        Published:
+                        <time datetime="2026-09-28">
+                            September 28, 2026
+                        </time>
+                    </p>
+
+                    <!-- Blog Description -->
                     <p class="blog-description">
                         Learn how primary care, hormone therapy,
                         PRP, and medical weight loss differ and
@@ -157,6 +181,7 @@ redirect_from:
                         the right starting point.
                     </p>
 
+                    <!-- Read More -->
                     <a
                         class="blog-read-more"
                         href="{{ site.baseurl }}/blog/hormone-therapy-prp-weight-loss-primary-care"
@@ -172,4 +197,5 @@ redirect_from:
         </div>
 
     </div>
+
 </div>
