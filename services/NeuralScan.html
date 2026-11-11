@@ -1,105 +1,696 @@
 ---
-layout: default
+layout: null
 permalink: /services/NeuralScan
-hero: /img/heros/hero-gclinic-neuralscan.jpg
-tagline: "The BrainView NeuralScan system - objective measurement of cognitive function"
-stylesheet: evox
-description: "The BrainView NeuralScan system quantitatively assesses and often distinguishes various cognitive problems. The NeuralScan is also able to identify mild cognitive impairment and memory loss sooner than other methods, and is able to perform differential diagnosis of depression vs. dementia, and ADD vs. ADHD. It is bassically a lab test for the brain."
-keywords: "Gerstenberg, Gertenberg, Gersteberg, Gerstenburg, Gurstenburg, Gutenberg, Gutenburg, Gurtenberg, Gurtenburg, Paul, Doctor, Dr,wellness,well,head,mental,health,alzheimers,dementia,add,adhd,lab,brain,test,"
 redirect_from: /checkyourhead
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrainView NeuralScan</title>
+<meta name="description" content="The BrainView NeuralScan system at gerstenberg.clinic: an objective, in-person lab test for the brain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style> block, header, and footer verbatim, then
+       build new page-specific content (hero, sections, etc.) in the same
+       visual language.
 
-<div class="row light blurb">
-	<div class="third">
-		<h2>A "Lab Test" for the Brain</h2>
-		<ul>
-			<li>Memory loss / forgetfulness</li>
-			<li>Cognitive impairment</li>
-			<li>Lack of focus / ADD </li>
-			<li>Distraction problems / ADHD</li>
-			<li>Stress / anxiety</li>
-		</ul>		
-	</div>
-	<div class="two-thirds">
-		<p>Are you worried that you or a loved one has early dementia?<br>
-			Do you think that you may have Alzheimer's disease? <br>
-			Are you suffering from loss of productivity?  <br>
-			Are you concerned that you might have ADD? <br>
-			<br>
-			<b>NeuralScan quantitatively assesses and often distinguishes various cognitive problems.</b>
-		</p>
-	</div>
-</div>
+  KEY FACTS TO CARRY OVER
+  ------------------------
+  - Colors: --navy (#202B5C, headings), --gold (#984A22, accent/CTA). Full
+    token list is in the :root block below, plus dark-mode overrides.
+  - Fonts: Sora (headings/UI) + Public Sans (body), loaded from Google
+    Fonts — see the <link> tags below. (Real brand font is Uni Neue, a
+    paid font that can't be loaded from an artifact's allowed CDNs, so
+    Sora is the stand-in.)
+  - Logo: embedded below as a base64 PNG in both the nav and footer, each
+    on a white background chip (the brand guide requires a light backing
+    for contrast/visibility).
+  - Phone number display format: 409.210.3336 (dot-separated), but the
+    tel: link itself stays href="tel:4092103336".
+  - Brand rule: dark backgrounds should be extremely limited — keep new
+    sections light by default.
+  - The site is strictly in-person (no telehealth/remote/ship-to-you
+    language anywhere).
+-->
 
-<div class="row video">
-	<iframe class="assetIframe" style="border:0" 
-			src="https://www.youtube.com/embed/5yjJESSpaCk?si=x3wcqAeOS6M-ssYS"></iframe> 
-</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-<div class="row">
-	<div class="third center">
-		<div class="card dark">
-			<h2>Cognitive Capacity</h2>
-			<p>Assesses physiological aging and memory performance </p>
-		</div>
-		<div class="card dark">
-			<h2>Brain Processing Speed</h2>
-			<p>Tested with ERP (Event Related Potentials).  Indicates speed for cognitive processes like decision making, attention, and memory</p>
-		</div>
-		<div class="card dark">
-			<h2>Brain Activity</h2>
-			<p>Tested with EEG. Allows for early detection of memory loss and MCI (mild cognitive impairment)</p>
-		</div>
-		<div height="10px">
-		</div>
-		<div height="10px">	
-		</div>
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
 
-	</div>
-	<div class="two-thirds">
-		<h3>Going to the root cause</h3>
-		<p>As your most important organ, your brain serves as the center of your nervous system, controlling all parts of your body. Understanding and maintaining your brain function is important, especially when trying to manage these above issues.
-		</p>
-		<p>Since separate regions in your brain work together to produce all thoughts and body functions, each region can be measured and tested separately to determine if it is functioning optimally.</p>
-		<p>The BrainView NeuralScan system is also able to identify mild cognitive impairment and memory loss sooner than other methods, and is able to perform differential diagnosis of depression vs. dementia, and ADD vs. ADHD.</p>
-		<!-- FOLLOWING ONLY APPLIES TO EVOKE:
-		<h3> Exercise your brain with eVoke</h3>
-		<p>If you are dealing with symptoms of stress-related conditions like memory problems, cognitive impairment, or chronic pain, NeuralScan can also help <b>treat</b> symptoms through biofeedback. Biofeedback with NeuralScan is simple, painless, non-invsasive, does not require drugs, and can create long-lasting results. </p>
-		<p>The results from your eVoke can help your doctor fine-tune and individualize your biofeedback training.</p>
-		<p>By becoming consciously aware of what is going on inside your body, you can gain more control over your physical, mental, and emotional health. The BrainView NeuralScan system can help you train your heart and brain to achieve optimal function.</p>
-		-->
-		<p>
-		<a href="https://www.brainview.com/s_science.html" class="btn">
-			Curious About the Science?
-		</a>
-		</p>
-	</div>
-</div>
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
 
-<div class="row tiles">
-	<div class="half tile img">
-		<img src="../img/lrg-squares/lrg-squares-brainview.jpg" alt="Sample NeuralScan test results on a computer screen." />
-	</div>
-	<div class="half tile light text">
-		<h2>Ready to get tested?</h2>
-		<h3>How it works:</h3>
-		<p>The BrainView NeuralScan system runs a simple and painless assessment that takes about 45 minutes. During the test, you’ll wear the EEG cap, similar to a swim cap. The BrainView NeuralScan system prompts you through a series of simple exercises while your brainwave activity is recorded.</p>
-		<p>The resulting NeuralScan reveals objective measurements of your brain and heart function that help your doctor develop a care plan that is best for you. </p>
-	</div>
-</div>
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
 
-<div class="row" style="padding-bottom: 60px">
-	<div class="two-thirds bottom">
-        <h2 style="margin-top: 30px">Frequently Asked Questions:</h2>
-        <h3>Why should I consider doing BrainView testing?</h3>
-        <p>BrainView shows markers that relate to working memory, sensory/processing concerns, and focus. It can help discriminate ADD from ADHD, or ADD/ADHD from anxiety or similar states. Patients wondering about memory impairment, like early dementia or concerns for Alzheimer's disease can be tested.</p>
-		<h3 class="bottom">Who can get BrainView NeuralScan testing?</h3>
-        <p>BrainView is for all ages. If a child is able to read and sit still and answer questions on a screen, they most likely can take this test.</p>
-        <h3>What can you expect during BrainView NeuralScan testing?</h3>
-        <p>Testing is easy to get done. Our team will fit a testing cap onto your head (your hair will have water-based gel from testing in it afterwards). You will sit in a dark, quiet room while the EEG electrodes track your brain waves. Initially the test is very quiet, while it measures background brain activity, then it plays sounds or changes images on the computer screen, measuring brain activity. Last, you will have a button to quickly indicate as soon as you notice the right image being shown on the screen.</p>
-        <h3>How do I prepare for the test?</h3>
-        <p>Do NOT drink energy drinks, more than two cups of coffee, or take any stimulant medications within 12 hours prior to testing. This includes weight loss medications like phentermine, or any stimulant ADD/ADHD medications, such as Adderall® or Focalin®.</p>
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+  /* ===== NeuralScan page ===== */
+  /* Layout: split hero with live EEG trace, then alternating light sections; one light-blue band. */
+  :root{ --trace-bg:#F4F7FB; --trace-line:#202B5C; --trace-grid:#E1E6EF; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --trace-bg:#101729; --trace-line:#9FB3E0; --trace-grid:#243049; color-scheme:dark; } }
+  :root[data-theme="dark"]{ --trace-bg:#101729; --trace-line:#9FB3E0; --trace-grid:#243049; color-scheme:dark; }
+  .nav{top:env(safe-area-inset-top,0px);}
+  h1,h2,h3{text-wrap:balance;}
+  .eyebrow{font-family:var(--font-display); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;}
+  .section--tight{padding:0 0 84px;}
+  .crumbs{display:flex; gap:8px; font-size:.85rem; color:var(--ink-soft); margin-bottom:22px;}
+  .crumbs a{text-decoration:none;} .crumbs a:hover{color:var(--gold);}
+
+  .ns-hero{padding:72px 0 64px;}
+  .ns-hero__grid{display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center;}
+  .ns-hero__copy{min-width:0;}
+  .ns-hero__title{font-size:clamp(2.1rem,4.4vw,3.3rem); font-weight:700; letter-spacing:-0.02em;}
+  .ns-hero__lede{margin-top:18px; font-size:1.1rem; color:var(--ink-soft); max-width:48ch;}
+  .ns-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px;}
+  .trace{margin:0; background:var(--trace-bg); border:1px solid var(--line); border-radius:6px; padding:16px 18px; min-width:0;}
+  .trace__head{display:flex; justify-content:space-between; align-items:center; font-size:.78rem; color:var(--ink-soft); margin-bottom:8px; font-family:var(--font-display);}
+  .trace__label{letter-spacing:.04em; text-transform:uppercase;}
+  .trace__rec{display:inline-flex; align-items:center; gap:6px; color:var(--gold); font-weight:600;}
+  .trace__rec i{width:7px; height:7px; border-radius:50%; background:var(--gold); display:block;}
+  @media (prefers-reduced-motion: no-preference){ .trace__rec i{animation:blink 1.6s ease-in-out infinite;} }
+  @keyframes blink{50%{opacity:.25;}}
+  #eeg{width:100%; height:auto; aspect-ratio:560/300; display:block;}
+  .trace__foot{display:flex; justify-content:space-between; font-size:.72rem; color:var(--ink-soft); font-variant-numeric:tabular-nums; margin-top:6px; font-family:var(--font-display);}
+  @media (max-width:860px){ .ns-hero__grid{grid-template-columns:1fr; gap:36px;} .ns-hero{padding:48px 0 48px;} }
+
+  .strip__inner{justify-content:space-between;}
+  @media (max-width:760px){ .strip__inner{flex-direction:column; align-items:flex-start; gap:10px;} }
+
+  .concerns{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .concerns__head{min-width:0;}
+  .concern-chips{list-style:none; margin:26px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px;}
+  .concern-chips li{font-size:.88rem; font-weight:600; color:var(--clay); background:var(--gold-soft); border-radius:20px; padding:7px 14px;}
+  .questions{list-style:none; margin:0; padding:0; display:grid; gap:0; border-top:1px solid var(--line);}
+  .questions li{font-family:var(--font-display); font-size:1.12rem; font-weight:500; color:var(--navy); padding:20px 0; border-bottom:1px solid var(--line); line-height:1.35;}
+  @media (max-width:860px){ .concerns{grid-template-columns:1fr; gap:32px;} }
+
+  .video{position:relative; display:flex; align-items:flex-end; min-height:360px; border-radius:6px; overflow:hidden; text-decoration:none; color:#FFFFFF; background:#202B5C; isolation:isolate;}
+  .video__bg{position:absolute; inset:0; z-index:-1; background:
+      radial-gradient(circle at 72% 38%, rgba(152,74,34,.55), transparent 55%),
+      radial-gradient(circle at 20% 80%, rgba(215,239,249,.18), transparent 50%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 40px),
+      #202B5C;}
+  .video__play{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:84px; height:84px; border-radius:50%; background:#984A22; display:grid; place-items:center; transition:transform .2s ease, background .2s ease;}
+  .video__play svg{width:34px; height:34px; margin-left:4px; color:#FFFFFF;}
+  .video:hover .video__play{transform:translate(-50%,-50%) scale(1.06); background:#7A3B1B;}
+  .video__text{display:grid; gap:6px; padding:28px 30px;}
+  .video__kicker{font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; opacity:.8; font-family:var(--font-display);}
+  .video__title{font-family:var(--font-display); font-size:clamp(1.25rem,2.4vw,1.7rem); font-weight:600;}
+  .video__meta{font-size:.88rem; opacity:.8;}
+  @media (max-width:600px){ .video{min-height:260px;} .video__play{top:42%; width:68px; height:68px;} }
+
+  .measures{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .measure{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; gap:10px; transition:border-color .15s ease;}
+  .measure:hover{border-color:var(--gold);}
+  .measure__tag{font-size:.75rem; color:var(--gold); font-weight:600;}
+  .measure__title{font-size:1.25rem;}
+  .measure__text{color:var(--ink-soft); font-size:.96rem;}
+  @media (max-width:860px){ .measures{grid-template-columns:1fr;} }
+
+  .rc{display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center;}
+  .rc__copy{min-width:0; display:grid; gap:16px;}
+  .rc__copy .band__sub{margin-top:0;}
+  .rc__copy .feature__cta{justify-self:start;}
+  .erp{margin:0; background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:20px; min-width:0;}
+  .erp svg{width:100%; height:auto;}
+  .erp__grid line{stroke:var(--line); stroke-width:1;}
+  .erp__ref{fill:none; stroke:var(--ink-soft); stroke-width:1.5; stroke-dasharray:4 4; opacity:.6;}
+  .erp__wave{fill:none; stroke:var(--navy); stroke-width:2.5; stroke-linecap:round;}
+  .erp__dot{fill:var(--gold);}
+  .erp__txt{fill:var(--ink-soft); font-family:var(--font-display); font-size:12px;}
+  .erp__txt--em{fill:var(--gold); font-weight:700; font-size:13px;}
+  .erp figcaption{font-size:.82rem; color:var(--ink-soft); margin-top:10px;}
+  @media (max-width:860px){ .rc{grid-template-columns:1fr; gap:36px;} }
+
+  .how{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .how__intro{min-width:0;}
+  .steps{list-style:none; margin:0; padding:0; counter-reset:step; display:grid; gap:0;}
+  .steps li{counter-increment:step; display:grid; grid-template-columns:44px 1fr; column-gap:16px; padding:18px 0; border-top:1px solid var(--line);}
+  .steps li:last-child{border-bottom:1px solid var(--line);}
+  .steps li::before{content:counter(step); grid-row:span 2; width:34px; height:34px; border-radius:50%; border:1px solid var(--gold); color:var(--gold); display:grid; place-items:center; font-family:var(--font-display); font-weight:600; font-size:.9rem;}
+  .steps h3{font-size:1.05rem; margin-bottom:4px;}
+  .steps p{color:var(--ink-soft); font-size:.95rem;}
+  @media (max-width:860px){ .how{grid-template-columns:1fr; gap:32px;} }
+
+  .prep{display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center; border:1px solid var(--gold-soft); background:var(--gold-soft); border-radius:6px; padding:28px 30px;}
+  .prep__badge{display:grid; justify-items:center; min-width:96px;}
+  .prep__num{font-family:var(--font-display); font-weight:800; font-size:3rem; line-height:1; color:var(--clay); font-variant-numeric:tabular-nums;}
+  .prep__unit{font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--clay); font-weight:600; margin-top:4px;}
+  .prep__title{font-size:1.25rem; margin-bottom:8px;}
+  .prep__body{min-width:0; max-width:70ch;} .prep__body p{color:var(--ink);}
+  @media (max-width:600px){ .prep{grid-template-columns:1fr; gap:14px; justify-items:start;} .prep__badge{justify-items:start;} }
+
+  .faq-wrap{max-width:860px;}
+  .faq{border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none; cursor:pointer; display:flex; justify-content:space-between; gap:16px; align-items:center; padding:20px 0; font-family:var(--font-display); font-weight:600; font-size:1.08rem; color:var(--navy);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--gold); flex-shrink:0; transition:transform .15s ease;}
+  .faq details[open] summary::after{transform:rotate(45deg);}
+  .faq details p{color:var(--ink-soft); padding:0 0 22px; max-width:68ch;}
+
+  .cta{border-top:1px solid var(--line); padding:72px 0;}
+  .cta__inner{display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;}
+  .cta__title{font-size:clamp(1.5rem,2.6vw,2rem);}
+  .cta__phone{margin-top:10px;}
+  .cta__phone a{font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4vw,2.8rem); color:var(--gold); text-decoration:none; letter-spacing:-0.01em; font-variant-numeric:tabular-nums;}
+  .cta__note{color:var(--ink-soft); font-size:.92rem; margin-top:6px;}
+  .cta__actions{display:flex; gap:12px; flex-wrap:wrap;}
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
     </div>
-</div>
+  </div>
+</header>
 
-{% include schedule-consultation.html %}
+<main id="main">
+  <!-- HERO -->
+  <section class="ns-hero">
+    <div class="container ns-hero__grid">
+      <div class="ns-hero__copy">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Brain mapping</span></nav>
+        <p class="eyebrow">BrainView NeuralScan</p>
+        <h1 class="ns-hero__title">A lab test for the brain</h1>
+        <p class="ns-hero__lede">The BrainView NeuralScan system gives an objective measurement of cognitive function. It quantitatively assesses, and often distinguishes, various cognitive problems.</p>
+        <div class="ns-hero__actions">
+          <a class="btn btn--gold" href="tel:4092103336">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call 409.210.3336
+          </a>
+          <a class="btn btn--ghost" href="#video">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Watch the video
+          </a>
+        </div>
+      </div>
+
+      <figure class="trace" aria-label="Illustration of EEG brainwave channels recorded during a NeuralScan">
+        <div class="trace__head">
+          <span class="trace__label">EEG · resting baseline</span>
+          <span class="trace__rec"><i aria-hidden="true"></i>Recording</span>
+        </div>
+        <canvas id="eeg" width="560" height="300"></canvas>
+        <figcaption class="trace__foot">
+          <span>Fp1</span><span>Fz</span><span>Cz</span><span>Pz</span><span>O1</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FACTS STRIP -->
+  <div class="strip">
+    <div class="strip__inner">
+      <span class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><strong>About 45 minutes</strong>&nbsp;simple and painless</span>
+      <span class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2"/><path d="M15.5 14.2A4.5 4.5 0 0 1 21 18.5"/></svg><strong>All ages</strong>&nbsp;if they can read and answer on a screen</span>
+      <span class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><strong>In person</strong>&nbsp;2927 Nall Street, Port Neches</span>
+    </div>
+  </div>
+
+  <!-- CONCERNS -->
+  <section class="section" id="concerns">
+    <div class="container concerns">
+      <div class="concerns__head">
+        <h2 class="section__title">What NeuralScan can help sort out</h2>
+        <p class="section__sub">NeuralScan quantitatively assesses and often distinguishes various cognitive problems.</p>
+        <ul class="concern-chips">
+          <li>Memory loss / forgetfulness</li>
+          <li>Cognitive impairment</li>
+          <li>Lack of focus / ADD</li>
+          <li>Distraction problems / ADHD</li>
+          <li>Stress / anxiety</li>
+        </ul>
+      </div>
+      <ul class="questions">
+        <li>Are you worried that you or a loved one has early dementia?</li>
+        <li>Do you think that you may have Alzheimer's disease?</li>
+        <li>Are you suffering from loss of productivity?</li>
+        <li>Are you concerned that you might have ADD?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section section--tight" id="video">
+    <div class="container">
+      <a class="video" href="https://www.youtube.com/watch?v=5yjJESSpaCk" target="_blank" rel="noopener">
+        <!-- On the live site this block can be swapped for:
+             <iframe src="https://www.youtube.com/embed/5yjJESSpaCk?si=x3wcqAeOS6M-ssYS" title="BrainView NeuralScan at gerstenberg.clinic" allowfullscreen></iframe> -->
+        <span class="video__bg" aria-hidden="true"></span>
+        <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="video__text">
+          <span class="video__kicker">Video</span>
+          <span class="video__title">See how the BrainView NeuralScan works</span>
+          <span class="video__meta">Plays on YouTube</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- MEASURES -->
+  <section class="section" id="measures">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Three measurements from one scan</h2>
+      </div>
+      <div class="measures">
+        <article class="measure">
+          <p class="measure__tag">Memory performance</p>
+          <h3 class="measure__title">Cognitive Capacity</h3>
+          <p class="measure__text">Assesses physiological aging and memory performance.</p>
+        </article>
+        <article class="measure">
+          <p class="measure__tag">ERP · Event Related Potentials</p>
+          <h3 class="measure__title">Brain Processing Speed</h3>
+          <p class="measure__text">Tested with ERP (Event Related Potentials). Indicates speed for cognitive processes like decision making, attention, and memory.</p>
+        </article>
+        <article class="measure">
+          <p class="measure__tag">EEG · Electroencephalogram</p>
+          <h3 class="measure__title">Brain Activity</h3>
+          <p class="measure__text">Tested with EEG. Allows for early detection of memory loss and MCI (mild cognitive impairment).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOT CAUSE BAND -->
+  <section class="band" id="root-cause">
+    <div class="container rc">
+      <div class="rc__copy">
+        <h2 class="band__title">Going to the root cause</h2>
+        <p class="band__sub">As your most important organ, your brain serves as the center of your nervous system, controlling all parts of your body. Understanding and maintaining your brain function is important, especially when trying to manage these above issues.</p>
+        <p class="band__sub">Since separate regions in your brain work together to produce all thoughts and body functions, each region can be measured and tested separately to determine if it is functioning optimally.</p>
+        <p class="band__sub">The BrainView NeuralScan system is also able to identify mild cognitive impairment and memory loss sooner than other methods, and is able to perform differential diagnosis of depression vs. dementia, and ADD vs. ADHD.</p>
+        <a class="feature__cta" href="https://www.brainview.com/s_science.html" target="_blank" rel="noopener">Curious about the science? →</a>
+      </div>
+      <figure class="erp" aria-label="Illustration of an event related potential waveform with the P300 peak marked">
+        <svg viewBox="0 0 400 240" role="img">
+          <title>Event related potential waveform</title>
+          <g class="erp__grid">
+            <line x1="40" y1="30" x2="40" y2="200"/><line x1="40" y1="120" x2="380" y2="120"/>
+            <line x1="120" y1="30" x2="120" y2="200"/><line x1="200" y1="30" x2="200" y2="200"/><line x1="280" y1="30" x2="280" y2="200"/><line x1="360" y1="30" x2="360" y2="200"/>
+          </g>
+          <path class="erp__ref" d="M40,120 C70,120 80,112 95,104 S115,138 130,132 S160,116 175,100 S205,62 225,70 S255,110 280,118 S340,122 380,120"/>
+          <path class="erp__wave" d="M40,120 C70,120 80,110 95,100 S115,142 130,136 S160,110 175,90 S200,42 215,48 S250,108 280,116 S340,122 380,120"/>
+          <circle class="erp__dot" cx="215" cy="48" r="5"/>
+          <text class="erp__txt erp__txt--em" x="224" y="40">P300</text>
+          <text class="erp__txt" x="40" y="222">0 ms</text>
+          <text class="erp__txt" x="192" y="222">300</text>
+          <text class="erp__txt" x="346" y="222">600</text>
+        </svg>
+        <figcaption>Brain processing speed is read from the timing of peaks like the P300 after a sound or image appears. Illustration only.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="container how">
+      <div class="how__intro">
+        <p class="eyebrow">Ready to get tested?</p>
+        <h2 class="section__title">How it works</h2>
+        <p class="section__sub">The BrainView NeuralScan system runs a simple and painless assessment that takes about 45 minutes. During the test, you’ll wear the EEG cap, similar to a swim cap. The BrainView NeuralScan system prompts you through a series of simple exercises while your brainwave activity is recorded.</p>
+        <p class="section__sub">The resulting NeuralScan reveals objective measurements of your brain and heart function that help your doctor develop a care plan that is best for you.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>The cap goes on</h3><p>Our team fits a testing cap onto your head. Your hair will have water-based gel in it afterwards.</p></li>
+        <li><h3>Quiet baseline</h3><p>You sit in a dark, quiet room while the EEG electrodes measure background brain activity.</p></li>
+        <li><h3>Sounds and images</h3><p>The system plays sounds or changes images on the screen while it measures how your brain responds.</p></li>
+        <li><h3>Press the button</h3><p>Last, you press a button as soon as you notice the right image on the screen.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PREP -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="prep">
+        <div class="prep__badge"><span class="prep__num">12</span><span class="prep__unit">hours before</span></div>
+        <div class="prep__body">
+          <h2 class="prep__title">How to prepare for the test</h2>
+          <p>Do <strong>not</strong> drink energy drinks, more than two cups of coffee, or take any stimulant medications within 12 hours prior to testing. This includes weight loss medications like phentermine, or any stimulant ADD/ADHD medications, such as Adderall® or Focalin®.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq-wrap">
+      <div class="section__head">
+        <h2 class="section__title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Why should I consider doing BrainView testing?</summary>
+          <p>BrainView shows markers that relate to working memory, sensory/processing concerns, and focus. It can help discriminate ADD from ADHD, or ADD/ADHD from anxiety or similar states. Patients wondering about memory impairment, like early dementia or concerns for Alzheimer's disease can be tested.</p>
+        </details>
+        <details>
+          <summary>Who can get BrainView NeuralScan testing?</summary>
+          <p>BrainView is for all ages. If a child is able to read and sit still and answer questions on a screen, they most likely can take this test.</p>
+        </details>
+        <details>
+          <summary>What can you expect during BrainView NeuralScan testing?</summary>
+          <p>Testing is easy to get done. Our team will fit a testing cap onto your head (your hair will have water-based gel from testing in it afterwards). You will sit in a dark, quiet room while the EEG electrodes track your brain waves. Initially the test is very quiet, while it measures background brain activity, then it plays sounds or changes images on the computer screen, measuring brain activity. Last, you will have a button to quickly indicate as soon as you notice the right image being shown on the screen.</p>
+        </details>
+        <details>
+          <summary>How do I prepare for the test?</summary>
+          <p>Do NOT drink energy drinks, more than two cups of coffee, or take any stimulant medications within 12 hours prior to testing. This includes weight loss medications like phentermine, or any stimulant ADD/ADHD medications, such as Adderall® or Focalin®.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="schedule">
+    <div class="container cta__inner">
+      <div>
+        <h2 class="cta__title">Call now to schedule a consultation</h2>
+        <p class="cta__phone"><a href="tel:4092103336">409.210.3336</a></p>
+        <p class="cta__note">2927 Nall Street, Port Neches, TX 77651</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--gold" href="tel:4092103336">Call the clinic</a>
+        <a class="btn btn--ghost" href="/forms" target="_blank" rel="noopener">Download new patient forms</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+<script>
+(function(){
+  var c=document.getElementById('eeg'); if(!c) return;
+  var ctx=c.getContext('2d'), W=c.width, H=c.height, ch=5, t=0;
+  var dpr=Math.min(window.devicePixelRatio||1,2); c.width=W*dpr; c.height=H*dpr; ctx.scale(dpr,dpr);
+  var seeds=[1.3,2.1,0.7,1.8,2.6];
+  function col(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()||'#202B5C';}
+  function sig(i,x){var s=seeds[i];
+    return Math.sin(x*0.055*s+t*0.9)*6 + Math.sin(x*0.19+s*4+t*1.7)*3.2 + Math.sin(x*0.41*s+t*3.1)*1.6 + (i===4?Math.sin(x*0.09+t*1.2)*5:0);}
+  function draw(){
+    var g=col('--trace-grid'), line=col('--trace-line'), acc=col('--gold');
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle=g; ctx.lineWidth=1;
+    for(var x=0;x<=W;x+=40){ctx.beginPath();ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,H);ctx.stroke();}
+    var band=H/ch;
+    for(var i=0;i<ch;i++){
+      var y0=band*i+band/2;
+      ctx.beginPath(); ctx.strokeStyle=(i===2)?acc:line; ctx.lineWidth=(i===2)?1.8:1.3;
+      for(var x=0;x<=W;x+=2){var y=y0+sig(i,x); if(x===0)ctx.moveTo(x,y); else ctx.lineTo(x,y);}
+      ctx.stroke();
+    }
+  }
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  draw();
+  if(!reduce){ (function loop(){ t+=0.03; draw(); requestAnimationFrame(loop); })(); }
+  else if(window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw); }
+})();
+</script>
+</body>
+</html>

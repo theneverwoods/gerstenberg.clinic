@@ -1,80 +1,410 @@
 ---
-layout: default
+layout: null
 permalink: /services/care
-hero: /img/heros/hero-gclinic-carecredit.jpg
-tagline: "CareCredit health, wellness, and beauty credit card"
-stylesheet: care
-description: "CareCredit is the healthcare credit card designed exclusively for healthcare services with special financing options. Gerstenberg.clinic is pleased to accept the CareCredit healthcare credit card for our wellness services. CareCredit lets you say “yes” to recommended treatment and pay for it in convenient monthly payments that fit your budget."
-keywords: "Gerstenberg, Gertenberg, Gersteberg, Gerstenburg, Gurstenburg, Gutenberg, Gutenburg, Gurtenberg, Gurtenburg, Paul, Doctor, Dr,wellness,well,care,credit,carecredit,financing,card,monthly,payments,healthcare,health,deferred,interest"
 redirect_from: /care
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareCredit Financing | gerstenberg.clinic</title>
+<meta name="description" content="CareCredit is the healthcare credit card designed exclusively for healthcare services with special financing options. Gerstenberg.clinic is pleased to accept the CareCredit healthcare credit card for our wellness services.">
 
-<div class="row light blurb">
-	<div class="third">
-		<h2>Get the care you need. Now.</h2>
-		<p>CareCredit is the healthcare credit card designed exclusively for healthcare services with special financing options.*</p>
-		<small>*Subject to credit approval. Minimum monthly payments required. Ask us for details.</small>
-	</div>
-	<div class="two-thirds">
-		<p>You shouldn’t have to worry about how to get the best medical care. That’s why we’re pleased to accept the CareCredit healthcare credit card for our wellness services. CareCredit lets you say “yes” to recommended treatment and pay for it in convenient monthly payments that fit your budget.</p>
-	</div>
-</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-<div class="row video">
-	<iframe class="assetIframe" style="border:0" src="https://www.youtube.com/embed/kZV5dVJ3CkE"></iframe>
-</div>
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
 
-<div class="row">
-	<div class="third">
-		<img src="../img/third/third-card.jpg" alt="CareCredit credit card" />
-	</div>
-	<div class="two-thirds table">
-		<table>
-			<tr>
-				<th scope="col">Program Description:</th>
-				<th scope="col">Interest Rate:</th>
-				<th scope="col">Minimum Purchase:</th>
-			</tr>
-			<tr>
-				<td>Standard Account Terms (under $200)</td>
-				<td>0% / 26.99%*</td>
-				<td>$1.00</td>
-			</tr>
-			<tr>
-				<td>6 Month Deferred</td>
-				<td>0% / 26.99%**</td>
-				<td>$200.00</td>
-			</tr>
-			<tr>
-				<td>24 Month Fixed Pay / reduced APR</td>
-				<td>14.90%</td>
-				<td>$1,000.00</td>
-			</tr>
-			<tr>
-				<td>36 Month Fixed Pay / reduced APR</td>
-				<td>14.90%</td>
-				<td>$1,000.00</td>
-			</tr>
-			<tr>
-				<td>48 Month Fixed Pay / reduced APR</td>
-				<td>14.90%</td>
-				<td>$1,000.00</td>
-			</tr>
-		</table>
-		<small>* No interest if paid in full within 23 days</small>
-		<small>** No interest if paid in full within 6 month promotional period</small>
-	</div>
-</div>
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
 
-<div class="row tiles">
-	<div class="half tile img">
-		<img src="../img/lrg-squares/lrg-squares-care.jpg" alt="A woman and young girl happily sit together." />
-	</div>
-	<div class="half tile text light">
-		<p class="large">All services financed with CareCredit must be rendered within 30 days of transaction date, but may be paid for over a 6-month period with deferred interest if the purchase is over $200.</p>
-		<small>Visit <a href="https://www.carecredit.com/">www.carecredit.com</a> or call<br> 409.210.3336 to learn more.</small>
-		<div class="carecredit">
-			<a href="https://www.carecredit.com/apply/confirm.html?encm=BmcFPF0_VTAEOARgVGBaMwU_UTYHaVluBmJQY1A0AzI&sitecode=B3CALAdToolkitANCardPrimaryCareUrgentCare"><img width="275" style="max-width:100%;" src="http://www.carecredit.com/adtoolkit/assets/pages/library/buttons/280x100/CareCredit_Button_ApplyNow_280x100_a_v1.jpg" /></a>
-		</div>
-	</div>
-</div>
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+
+  /* ===== CareCredit page ===== */
+  .cc-hero{padding:72px 0 64px; border-bottom:1px solid var(--line);}
+  .cc-hero__grid{display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center;}
+  .cc-hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700;}
+  .cc-hero__sub{font-size:clamp(1.2rem,2vw,1.5rem); font-weight:500; color:var(--gold); margin-top:14px;}
+  .cc-hero__lede{margin-top:22px; font-size:1.06rem; color:var(--ink); max-width:52ch;}
+  .cc-fine{margin-top:12px; font-size:.84rem; color:var(--ink-soft); max-width:56ch;}
+  .cc-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px;}
+  .cc-hero__figure{margin:0; border-radius:4px; overflow:hidden; aspect-ratio:4/3; background:var(--paper-raised);}
+  .cc-hero__figure img{width:100%; height:100%; object-fit:cover;}
+
+  .cc-intro__grid{display:grid; grid-template-columns:1fr 1.15fr; gap:56px; align-items:center;}
+  .cc-intro__text{font-size:1.08rem; color:var(--ink); max-width:54ch;}
+  .cc-card-img{margin-top:32px; width:100%; max-width:340px; border-radius:6px; box-shadow:0 6px 20px rgba(20,20,25,0.12);}
+  .cc-video{position:relative; aspect-ratio:16/9; border-radius:4px; overflow:hidden; border:1px solid var(--line); background:var(--paper-raised);}
+  .cc-video iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+
+
+  .cc-band__grid{display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center;}
+  .cc-band__figure{margin:0; border-radius:4px; overflow:hidden; aspect-ratio:1/1; max-width:460px;}
+  .cc-band__figure img{width:100%; height:100%; object-fit:cover;}
+  .cc-band__text{font-size:1.06rem; color:var(--band-text); max-width:52ch;}
+  .cc-band__text + .cc-band__text{margin-top:16px; color:var(--band-text-soft);}
+  .cc-band .btn{margin-top:28px;}
+  .cc-link{color:var(--band-gold); font-weight:600; text-decoration:none; border-bottom:1px solid currentColor;}
+  .cc-link:hover{color:var(--band-text);}
+
+  @media (max-width:900px){
+    .cc-hero__grid, .cc-intro__grid, .cc-band__grid{grid-template-columns:1fr; gap:36px;}
+    .cc-hero{padding:48px 0;}
+    .cc-hero__figure{order:-1;}
+    .cc-band__figure{max-width:none; aspect-ratio:16/10;}
+  }
+
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="cc-hero">
+    <div class="container cc-hero__grid">
+      <div class="cc-hero__copy">
+        <span class="card__pill">Payment options</span>
+        <h1 class="cc-hero__title">CareCredit health, wellness, and beauty credit card</h1>
+        <h2 class="cc-hero__sub">Get the care you need. Now.</h2>
+        <p class="cc-hero__lede">CareCredit is the healthcare credit card designed exclusively for healthcare services with special financing options.*</p>
+        <p class="cc-fine">*Subject to credit approval. Minimum monthly payments required. Ask us for details.</p>
+        <div class="cc-hero__actions">
+          <a class="btn btn--gold" href="https://www.carecredit.com/apply/confirm.html?encm=BmcFPF0_VTAEOARgVGBaMwU_UTYHaVluBmJQY1A0AzI&amp;sitecode=B3CALAdToolkitANCardPrimaryCareUrgentCare" target="_blank" rel="noopener">
+            Apply now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="tel:4092103336">Call 409.210.3336</a>
+        </div>
+      </div>
+      <figure class="cc-hero__figure">
+        <img src="/img/heros/hero-gclinic-carecredit.jpg" alt="" loading="eager">
+      </figure>
+    </div>
+  </section>
+
+  <!-- INTRO + VIDEO -->
+  <section class="section cc-intro">
+    <div class="container cc-intro__grid">
+      <div class="cc-intro__copy">
+        <p class="cc-intro__text">You shouldn’t have to worry about how to get the best medical care. That’s why we’re pleased to accept the CareCredit healthcare credit card for our wellness services. CareCredit lets you say “yes” to recommended treatment and pay for it in convenient monthly payments that fit your budget.</p>
+        <img class="cc-card-img" src="/img/third/third-card.jpg" alt="CareCredit credit card" loading="lazy">
+      </div>
+      <div class="cc-video">
+        <iframe src="https://www.youtube.com/embed/kZV5dVJ3CkE" title="About CareCredit" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS BAND -->
+  <section class="band cc-band">
+    <div class="container cc-band__grid">
+      <figure class="cc-band__figure">
+        <img src="/img/lrg-squares/lrg-squares-care.jpg" alt="A woman and young girl happily sit together." loading="lazy">
+      </figure>
+      <div class="cc-band__copy">
+        <p class="cc-band__text">All services financed with CareCredit must be rendered within 30 days of transaction date, but may be paid for over a 6-month period with deferred interest if the purchase is over $200.</p>
+        <p class="cc-band__text">Visit <a class="cc-link" href="https://www.carecredit.com/" target="_blank" rel="noopener">www.carecredit.com</a> or call <a class="cc-link" href="tel:4092103336">409.210.3336</a> to learn more.</p>
+        <p class="cc-band__text">Looking for a payment plan? Most patients start with <a class="cc-link" href="/services/cherry">Cherry</a>: qualifying 0% APR options, no hard credit check, and applying takes seconds.</p>
+        <a class="btn btn--gold" href="https://www.carecredit.com/apply/confirm.html?encm=BmcFPF0_VTAEOARgVGBaMwU_UTYHaVluBmJQY1A0AzI&amp;sitecode=B3CALAdToolkitANCardPrimaryCareUrgentCare" target="_blank" rel="noopener">
+          Apply now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+</body>
+</html>

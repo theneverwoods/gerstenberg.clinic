@@ -1,0 +1,635 @@
+---
+layout: null
+permalink: /services/microdose-infusion-mdi
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microdose Infusion (MDI) | gerstenberg.clinic</title>
+
+<meta name="description" content="Microdose Infusion (MDI) at gerstenberg.clinic in Port Neches, TX: in-clinic IV microdose insulin therapy to support cellular metabolism.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+
+  /* ===== MDI service page ===== */
+  .svc-hero{padding:88px 0 72px; border-bottom:1px solid var(--line);}
+  .svc-hero__inner{max-width:820px;}
+  .svc-eyebrow{font-size:.82rem; font-weight:600; color:var(--gold); letter-spacing:.04em; text-transform:uppercase; margin-bottom:16px;}
+  .svc-hero__title{font-size:clamp(2.1rem,4.4vw,3.2rem); font-weight:700; margin-bottom:22px;}
+  .svc-hero__lede{font-size:1.12rem; color:var(--ink-soft); max-width:62ch;}
+  .svc-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px;}
+  .svc-facts{list-style:none; margin:48px 0 0; padding:24px 0 0; border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .svc-facts li{display:flex; flex-direction:column; gap:2px; font-size:.9rem; color:var(--ink-soft);}
+  .svc-facts strong{font-family:var(--font-display); font-weight:600; font-size:1.05rem; color:var(--navy);}
+  @media (max-width:600px){ .svc-hero{padding:56px 0 52px;} .svc-facts{grid-template-columns:1fr; gap:14px;} }
+
+  .section--tight{padding:64px 0;}
+  .svc-split{display:grid; grid-template-columns:1fr 1.4fr; gap:56px; align-items:center;}
+  .svc-split--top{align-items:start;}
+  .svc-split .section__sub{margin-top:14px;}
+  .svc-prose p{color:var(--ink-soft); font-size:1.04rem;}
+  .svc-prose p + p{margin-top:14px;}
+  .svc-note{margin-top:18px; font-size:.92rem; color:var(--ink-soft); padding-left:14px; border-left:2px solid var(--gold);}
+  .svc-inline-link{color:var(--gold); font-weight:600;}
+  @media (max-width:860px){ .svc-split{grid-template-columns:1fr; gap:28px;} }
+
+  .svc-conditions{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .svc-conditions .card{background:var(--paper); grid-column:span 2;}
+  @media (max-width:900px){ .svc-conditions .card{grid-column:span 1;} }
+
+  .svc-video{display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;}
+  .svc-video .band__sub{margin-top:12px;}
+  .band{padding:64px 0;}
+
+  .svc-schedule{border:1px solid var(--line); border-radius:4px; padding:26px; background:var(--paper-raised);}
+  .svc-schedule__label{font-family:var(--font-display); font-weight:600; color:var(--navy); margin-bottom:18px;}
+  .svc-schedule__label span{display:block; font-family:var(--font-body); font-weight:400; font-size:.82rem; color:var(--ink-soft); margin-top:2px;}
+  .svc-weeks{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:10px;}
+  .svc-weeks li{background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:12px; display:flex; flex-direction:column; gap:4px;}
+  .svc-weeks span{font-size:.78rem; color:var(--ink-soft);}
+  .svc-weeks b{font-family:var(--font-display); font-size:1.35rem; font-weight:600; color:var(--gold);}
+  .svc-schedule__foot{margin-top:14px; font-size:.82rem; color:var(--ink-soft);}
+  @media (max-width:520px){ .svc-weeks{grid-template-columns:repeat(3,1fr);} }
+
+  .svc-expect{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .svc-timeline{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; counter-reset:step;}
+  .svc-timeline li{border-top:2px solid var(--gold); padding-top:18px; counter-increment:step;}
+  .svc-timeline__step{display:block; font-family:var(--font-display); font-weight:600; font-size:1.1rem; color:var(--navy); margin-bottom:10px;}
+  .svc-timeline__step::before{content:counter(step, decimal-leading-zero) " "; color:var(--gold); font-size:.85rem; margin-right:4px;}
+  .svc-timeline p{color:var(--ink-soft); font-size:.94rem;}
+  @media (max-width:900px){ .svc-timeline{grid-template-columns:1fr 1fr; gap:32px 20px;} }
+  @media (max-width:560px){ .svc-timeline{grid-template-columns:1fr;} }
+
+  .faq{border-top:1px solid var(--line);}
+  .faq__item{border-bottom:1px solid var(--line);}
+  .faq__item summary{list-style:none; cursor:pointer; padding:20px 36px 20px 0; position:relative; font-family:var(--font-display); font-weight:500; font-size:1.05rem; color:var(--navy); line-height:1.4;}
+  .faq__item summary::-webkit-details-marker{display:none;}
+  .faq__item summary::after{content:""; position:absolute; right:6px; top:26px; width:9px; height:9px; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); transform:rotate(45deg); transition:transform .15s ease;}
+  .faq__item[open] summary::after{transform:rotate(-135deg); top:30px;}
+  .faq__item summary:hover{color:var(--gold);}
+  .faq__body{padding:0 0 22px; color:var(--ink-soft); font-size:.98rem;}
+  .faq__body p + p{margin-top:12px;}
+  .faq__body ul{margin:0; padding-left:20px;}
+  .faq__body li{margin-bottom:8px;}
+
+  .svc-cta{padding:84px 0;}
+  .svc-cta__inner{display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap; border:1px solid var(--line); border-radius:4px; padding:40px; background:var(--gold-soft);}
+  .svc-cta__inner > div:first-child{max-width:560px;}
+  .svc-cta .svc-hero__actions{margin-top:0;}
+  @media (max-width:600px){ .svc-cta__inner{padding:28px 22px;} }
+
+  @media (min-width:901px){ .svc-conditions .card:last-child{grid-column:span 4;} }
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container svc-hero__inner">
+      <p class="svc-eyebrow">Services · In-clinic IV therapy</p>
+      <h1 class="svc-hero__title">Microdose Infusion (MDI)</h1>
+      <p class="svc-hero__lede">Microdose infusion therapy uses human bioidentical regular insulin, given intravenously in a pattern that mimics normal pancreatic insulin release. The goal is to support more normal cell function and ATP (cellular energy) production, so organs that aren't fully functioning can move back toward normal.</p>
+      <div class="svc-hero__actions">
+        <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20microdose%20infusion%20(MDI)">See if I'm a candidate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="tel:4092103336">Call 409.210.3336</a>
+      </div>
+      <ul class="svc-facts">
+        <li><strong>Intravenous</strong><span>Bioidentical regular insulin</span></li>
+        <li><strong>About 3 hours</strong><span>Per in-clinic session</span></li>
+        <li><strong>Individualized</strong><span>Plan built around your diagnosis</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section section--tight">
+    <div class="container svc-split">
+      <div>
+        <h2 class="section__title">What is MDI good for?</h2>
+      </div>
+      <div class="svc-prose">
+        <p>Given proper energy, organs that are less than fully functional can return toward normal function. Every person improves at their own rate.</p>
+        <p>Generally, the more recent and sudden the onset of a condition, the quicker the response. More chronic conditions may take longer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS -->
+  <section class="section svc-conditions" id="who-benefits">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Who benefits most from MDI</h2>
+        <p class="section__sub">MDI works at the level of cellular metabolism, so it's used across a range of conditions. These are some of the patients who tend to benefit most.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="card__pill">Metabolic</span>
+          <h3 class="card__title">Diabetes</h3>
+          <p class="card__text">Patients may be able to take less medication, or even come off prescriptions altogether.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Kidney</span>
+          <h3 class="card__title">Chronic kidney disease</h3>
+          <p class="card__text">Patients may see very significant recovery. Some have even come off a transplant list.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Lung</span>
+          <h3 class="card__title">Pulmonary fibrosis</h3>
+          <p class="card__text">With COVID-related and other fibrotic or restrictive lung conditions, some patients are able to come off supplemental oxygen.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Vision</span>
+          <h3 class="card__title">Retinitis pigmentosa</h3>
+          <p class="card__text">Some types of RP regain or improve vision to a much more functional level.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Neurological</span>
+          <h3 class="card__title">ALS / Lou Gehrig's disease</h3>
+          <p class="card__text">Most show stabilization and reversal of motor loss progression, and some show regression.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Liver</span>
+          <h3 class="card__title">Liver cirrhosis &amp; fibrosis</h3>
+          <p class="card__text">Most show improvement in liver function and in FibroScan results.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">Energy</span>
+          <h3 class="card__title">Fibromyalgia &amp; chronic fatigue</h3>
+          <p class="card__text">Most regain stamina, endurance, and a sense of normalcy over time.</p>
+        </article>
+        <article class="card">
+          <span class="card__pill">And more</span>
+          <h3 class="card__title">Many other metabolic conditions</h3>
+          <p class="card__text">Many conditions show metabolic improvement over time as cellular function returns toward normal, including poorly healing wounds, dementia, chronic skin problems, and immune dysfunction.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO BAND -->
+  <section class="band">
+    <div class="container svc-video">
+      <div>
+        <h2 class="band__title">See the science behind MDI</h2>
+        <p class="band__sub">Dr. Gerstenberg highly recommends this 20-minute video. It explains how MDI works and walks through many case presentations, with graphs and photos.</p>
+      </div>
+      <a class="btn btn--gold" href="https://tinyurl.com/GbergMDI" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Watch the 20-minute video
+      </a>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="section" id="schedule">
+    <div class="container svc-split svc-split--top">
+      <div>
+        <h2 class="section__title">How often are MDI sessions?</h2>
+        <p class="section__sub">When starting or restarting, MDI is most commonly recommended 3 to 4 times weekly for 2–3 weeks, then 2–3 times per week for 2–4 weeks, then 1–2 times per week for 4–6 weeks, then once a week until your condition is stabilized.</p>
+        <p class="svc-note">This is <em>only</em> a guide. Each treatment plan is <em>highly</em> individualized based on your medical needs at the time.</p>
+      </div>
+      <div class="svc-schedule">
+        <p class="svc-schedule__label">Example 12-week plan <span>For demonstration only. Your plan may vary.</span></p>
+        <ol class="svc-weeks">
+          <li><span>Week 1</span><b>3–4</b></li>
+          <li><span>Week 2</span><b>3–4</b></li>
+          <li><span>Week 3</span><b>3</b></li>
+          <li><span>Week 4</span><b>2</b></li>
+          <li><span>Week 5</span><b>2</b></li>
+          <li><span>Week 6</span><b>2</b></li>
+          <li><span>Week 7</span><b>2</b></li>
+          <li><span>Week 8</span><b>2</b></li>
+          <li><span>Week 9</span><b>1</b></li>
+          <li><span>Week 10</span><b>1</b></li>
+          <li><span>Week 11</span><b>1</b></li>
+          <li><span>Week 12</span><b>1</b></li>
+        </ol>
+        <p class="svc-schedule__foot">Sessions per week · ongoing as each patient needs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section class="section svc-expect" id="expect">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">How should I expect to feel?</h2>
+        <p class="section__sub">Improvement builds over time. Here's what patients commonly report from the first session onward.</p>
+      </div>
+      <ol class="svc-timeline">
+        <li>
+          <span class="svc-timeline__step">During therapy</span>
+          <p>You should expect to feel normal. Patients often feel a resurgence of blood flow where it has been lacking, and some sleep during therapy. Some experience temporary diarrhea from drinking so much glucose solution; over-the-counter medication may be used. Some patients are even more active than normal afterward.</p>
+        </li>
+        <li>
+          <span class="svc-timeline__step">After a session</span>
+          <p>Some patients crave carbohydrates due to their body's production of insulin. It's fine to eat carbohydrates when this happens, but blood sugar should be monitored. Most patients report a very sound night of sleep as the therapy reestablishes the circadian rhythm of blood pressures.</p>
+        </li>
+        <li>
+          <span class="svc-timeline__step">After several weeks</span>
+          <p>Patients may feel progressively better with each session and may begin to see some improvement in complications of diabetes.</p>
+        </li>
+        <li>
+          <span class="svc-timeline__step">After three months</span>
+          <p>Patients may continue to feel better, with less daily fatigue, return of lost sexual function, return of eyesight, return of feeling in the feet, and reduced diabetes-related depression. Wounds may begin to heal.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container svc-split svc-split--top">
+      <div>
+        <h2 class="section__title">Frequently asked questions</h2>
+        <p class="section__sub">Have a question that isn't answered here? Call us at <a class="svc-inline-link" href="tel:4092103336">409.210.3336</a>.</p>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Why is microdose insulin therapy referred to as a type of artificial pancreas?</summary>
+          <div class="faq__body">
+            <p>Microdose insulin therapy is administered through a specially designed and programmed device that mimics the pancreas of a healthy young person consuming carbohydrates (e.g., sugar) by sending insulin to the liver. Insulin delivery to the liver activates at least 33 different enzymes the body needs to metabolize carbohydrates, function efficiently, and eliminate the diabetes/inflammatory process.</p>
+            <p>The body produces adenosine triphosphate (ATP) for cellular functions, and increased levels of ATP are produced when carbohydrates are metabolized. Most type 2 diabetics suffer from inadequate production of the enzymes needed for proper metabolism because their liver isn't receiving sufficient insulin from the pancreas. The core problem of diabetes is improper cellular metabolism; high blood sugar is a symptom of that core problem.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>How does microdose insulin therapy differ from subcutaneous (wearable) insulin pumps?</summary>
+          <div class="faq__body">
+            <p>Subcutaneous insulin pumps, even those programmed to deliver small doses of insulin, cannot achieve the results of our device. Insulin delivered under the skin is blunted by the time it reaches the liver, which then obstructs the liver's production of the enzymes needed for proper metabolism.</p>
+            <p>Our device delivers appropriate microdoses of insulin intravenously, reaching the liver within 4 seconds of delivery, so the liver can produce and excrete the enzymes needed for proper metabolism.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>Why does the body need to metabolize carbohydrates?</summary>
+          <div class="faq__body">
+            <p>Metabolizing carbohydrates increases ATP production, which produces cellular energy as a byproduct. When the body can't metabolize carbohydrates, it shifts its dependence to unbalanced forms of energy production, such as metabolizing fats and proteins. Increased metabolism of lipids (free fatty acids) causes an inflammatory process that damages the body's tissues and organs and increases cellular demand for oxygen.</p>
+            <p>An inability to metabolize carbohydrates often leaves cells unable to perform their functions effectively. Depending on genetic predispositions, this leads to complications from diabetes, such as issues with nerves, kidneys, heart, vision, and/or blood pressure. Metabolizing carbohydrates reduces lipids and inflammation, which helps mitigate these problems.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>How long does the administration of microdose insulin therapy last?</summary>
+          <div class="faq__body">
+            <p>Microdose insulin therapy administered through our device in the clinic typically involves three one-hour sessions.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>What is the frequency of microdose insulin therapies?</summary>
+          <div class="faq__body">
+            <p>Patients usually receive microdose insulin therapy every seven to ten days, though some prefer to receive it at intervals of two weeks or more. The frequency and dosage become regular once the body's metabolism has stabilized after three to six months of continuous therapy. See <a class="svc-inline-link" href="#schedule">How often are MDI sessions?</a> above for a typical starting schedule.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>What should I do before receiving microdose insulin therapy?</summary>
+          <div class="faq__body">
+            <ul>
+              <li>Continue all normal routines and medications, whether or not they relate to diabetes, before your scheduled therapy date.</li>
+              <li>Arrive for therapy with a high blood sugar level (150–180 mg/dL).</li>
+              <li>Do not take any diabetic medication on your therapy date unless your blood sugar is over 350 mg/dL. If it is, limit the medication to half your usual dose.</li>
+              <li>Eat a small breakfast that is high in carbohydrates and low in fat on your therapy date.</li>
+              <li>Prepare and bring a meal to eat after the therapy.</li>
+              <li>Afterward, periodically monitor your blood sugar and engage in light exercise.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>Do I continue to see my current doctor during microdose insulin therapy?</summary>
+          <div class="faq__body">
+            <p>Yes. Patients receiving microdose insulin therapy should continue to see their current doctor and follow their recommendations between therapy sessions. Continue taking medications as prescribed, including insulin, except on scheduled therapy dates.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>How long do I continue therapy?</summary>
+          <div class="faq__body">
+            <p>At a minimum, you should continue microdose insulin therapy until all of the serious complications of diabetes have ended and/or reversed. At that point, therapy may be reduced or stopped. Therapy can resume if complications return.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>How much does MDI cost?</summary>
+          <div class="faq__body">
+            <p>We offer MDI as part of our personalized care plans. Pricing and packages vary from patient to patient. It&rsquo;s not one-size-fits-all: your provider will recommend a plan after your consultation, and we&rsquo;ll go over pricing with you before you commit to anything.</p>
+            <p><a class="svc-inline-link" href="tel:4092103336">Call 409.210.3336</a> to schedule a consultation and receive your personalized care plan.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <div>
+        <h2 class="section__title">Find out if MDI is right for you</h2>
+        <p class="section__sub">Meet with one of our Doctors in person at our Port Neches clinic to review your health history and receive a personalized care plan.</p>
+      </div>
+      <div class="svc-hero__actions">
+        <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20microdose%20infusion%20(MDI)">See if I'm a candidate</a>
+        <a class="btn btn--ghost" href="tel:4092103336">Call 409.210.3336</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+</body>
+</html>

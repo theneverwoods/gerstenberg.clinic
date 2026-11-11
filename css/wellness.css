@@ -1,0 +1,154 @@
+/* gerstenberg.clinic "Wellness Hub" theme
+   Shared look for every redesigned page: light lavender-white background, navy + rust
+   palette sampled from the logo, Plus Jakarta Sans type, monospace eyebrows, softer cards.
+   Load this after each page's own <style> block. It works by overriding the brand-kit
+   tokens (--ink, --navy, --gold, ...) that every page already uses. */
+
+:root{
+  color-scheme: light;
+  /* !important so the pages' dark-mode token overrides never apply: the site is light-only */
+  --ink:#222A59 !important;
+  --ink-soft:#5B6189 !important;
+  --navy:#1A2147 !important;
+  --paper:#F9F5FE !important;
+  --paper-raised:#FFFFFF !important;
+  --white:#FFFFFF !important;
+  --gold:#884520 !important;
+  --gold-soft:#F3E6DD !important;
+  --clay:#6B3618 !important;
+  --line:rgba(34,42,89,0.12) !important;
+  --band-bg:#F1EEFB !important;
+  --band-text:#222A59 !important;
+  --band-text-soft:#5B6189 !important;
+  --band-gold:#884520 !important;
+  --font-display:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  --font-body:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --container:1080px !important;
+  --pine-dk:#1A2147;
+  --sand:#F1EEFB;
+  --chatblue:#458CE9;
+}
+
+html, body{ background:var(--paper); color:var(--ink); }
+body{ font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+h1, h2, h3{ font-family:var(--font-display); font-weight:800 !important; letter-spacing:-0.02em; color:var(--navy); overflow-wrap:break-word; hyphens:auto; }
+
+/* Eyebrows, tags and small labels: monospace, uppercase, rust */
+.eyebrow, [class*="__eyebrow"], [class*="-eyebrow"], .video__kicker,
+.card__pill, .article-card__tag, .j-card__tag, .lit__tag, .measure__tag, .way__tag{
+  font-family:var(--font-mono) !important;
+  font-size:11px !important;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-weight:500 !important;
+}
+.crumbs{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; }
+
+/* Header: sticky, light, hairline border */
+header.nav{ position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line); }
+/* keep #anchor targets (e.g. /about#dr-bell) from hiding under the sticky header */
+[id]{ scroll-margin-top:90px; }
+/* Same header on every page: logo, candidate button, phone. No menu. */
+header.nav .nav__inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative; }
+header.nav .nav__mark{ display:flex; align-items:center; background:none; border:none; border-radius:0; padding:0; }
+header.nav .nav__logo{ height:26px; width:auto; display:block; }
+header.nav .nav__right{ display:flex; align-items:center; gap:18px; }
+header.nav .nav__cta{ background:var(--navy); color:#fff; text-decoration:none; font-family:var(--font-body); font-size:.85rem; font-weight:600; padding:9px 16px; border-radius:6px; white-space:nowrap; }
+header.nav .nav__cta:hover{ background:var(--gold); }
+header.nav .nav__cta-short{ display:none; }
+header.nav .nav__phone{ text-decoration:none; font-family:var(--font-body); font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap; }
+header.nav .nav__phone svg{ width:15px; height:15px; flex:none; }
+header.nav .nav__phone span{ display:inline; }
+@media (max-width:640px){
+  header.nav .nav__cta-long{ display:none; }
+  header.nav .nav__cta-short{ display:inline; }
+}
+@media (max-width:480px){
+  header.nav .nav__right{ flex:none; gap:10px; }
+  header.nav .nav__cta{ padding:8px 11px; font-size:.8rem; }
+  header.nav .nav__phone{ border:1px solid var(--line); border-radius:6px; padding:8px 10px; }
+  header.nav .nav__phone span{ display:none; }
+  header.nav .nav__phone svg{ width:18px; height:18px; }
+  header.nav .nav__mark{ min-width:0; flex:0 1 160px; }
+  header.nav .nav__logo{ width:100%; height:auto; max-height:20px; object-fit:contain; }
+}
+@media (max-width:380px){
+  header.nav .nav__inner{ padding:12px 14px; gap:8px; }
+  header.nav .nav__right{ gap:6px; }
+  header.nav .nav__cta{ padding:7px 9px; }
+  header.nav .nav__phone{ padding:7px 8px; }
+}
+
+/* Buttons: square-ish, navy primary feel with rust accent */
+.btn{ border-radius:6px; }
+.btn--gold{ background:var(--gold); color:#fff; }
+.btn--gold:hover{ background:var(--clay); }
+
+/* Softer, white cards on the lavender page */
+.card, .funnel-card, .grid__empty, .pay-card, .opt-card, .package, .warnings, .step, .cta__card, .facts,
+.measure, .treatment, .symptom-card, .notice, .tip, .prep, .svc-schedule, .a-cta__box, .ps-panel, .flow li,
+.form-list__empty, .ai-callout, .video, .stack{
+  border-radius:12px !important;
+  border-color:var(--line);
+}
+.card, .funnel-card, .pay-card, .opt-card, .package, .warnings{ background:var(--white); }
+.team__photo, .photo, .media, .therapy__img, .k-hero__media, .ps-split__media, .pay-hero__photo, .cc-band__figure{
+  border-radius:12px !important;
+}
+
+/* Raised sections use the lavender "sand" tone instead of grey */
+.section--raised{ background:var(--sand); }
+
+/* Footer */
+.footer{ background:var(--sand); border-top:1px solid var(--line); }
+/* logo sits on the footer background, no white box (matches the header) */
+.footer .footer__logo-wrap{ background:none; border:none; border-radius:0; padding:0; }
+
+/* Office hours under Visit in the footer */
+.footer .footer__subhead{ margin-top:22px; }
+.footer .footer__hours li{ margin-bottom:4px; }
+
+/* Discovery Journal (homepage #discover and the end of every journal article): treatment and journal cards on the navy band */
+.dj-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px 32px; flex-wrap:wrap; margin-bottom:40px;}
+.dj-head .band__head{margin-bottom:0;}
+.dj-more{display:inline-flex; align-items:center; gap:9px; background:transparent; color:#F9F5FE; border:1px solid rgba(249,245,254,.38); border-radius:999px; padding:11px 20px; font:600 .92rem var(--font-body); cursor:pointer; white-space:nowrap; transition:border-color .15s ease, color .15s ease;}
+.dj-more:hover{border-color:#E7B996; color:#E7B996;}
+.dj-more svg{width:16px; height:16px; flex:none; transition:transform .45s ease;}
+.dj-more.is-turning svg{transform:rotate(360deg);}
+.dj-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; transition:opacity .18s ease;}
+.dj-grid.is-swapping{opacity:0;}
+.dj-card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:22px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+.dj-card:hover{border-color:rgba(231,185,150,.6);}
+.dj-card__tag{align-self:flex-start; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:20px; margin-bottom:14px; background:rgba(231,185,150,.16); color:#E7B996;}
+.dj-card--journal .dj-card__tag{background:rgba(191,212,247,.14); color:#BFD4F7;}
+.dj-card__title{font-family:var(--font-display); font-weight:700; font-size:1.2rem; line-height:1.25; letter-spacing:-0.01em; color:#F9F5FE; margin-bottom:10px;}
+.dj-card__text{color:rgba(249,245,254,.74); font-size:.95rem; flex:1;}
+.dj-card__link{margin-top:18px; align-self:flex-start; font-size:.92rem; font-weight:600; color:#F9F5FE; text-decoration:none; border-bottom:1px solid #E7B996; padding-bottom:2px;}
+.dj-card__link:hover{color:#E7B996;}
+.dj-foot{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px 28px; margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,.16); font-size:.92rem; color:rgba(249,245,254,.74);}
+.dj-foot p{margin:0; max-width:60ch;}
+.dj-foot a{color:#F9F5FE; font-weight:600; text-decoration:none; border-bottom:1px solid #E7B996; padding-bottom:2px; white-space:nowrap;}
+.dj-foot a:hover{color:#E7B996;}
+@media (max-width:900px){ .dj-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .dj-grid{grid-template-columns:1fr;} }
+
+/* Journal articles: Discovery Journal band (three hand-picked cards) and the candidate button */
+.band.dj-band{ background:#1A2147; color:#F9F5FE; padding:80px 0; }
+.dj-band .band__title{ color:#F9F5FE; }
+.dj-band .band__sub{ color:rgba(249,245,254,.74); }
+.dj-all{ display:inline-flex; align-items:center; gap:8px; color:#F9F5FE; border:1px solid rgba(249,245,254,.38); border-radius:999px; padding:11px 20px; font-weight:600; font-size:.92rem; text-decoration:none; white-space:nowrap; transition:border-color .15s ease, color .15s ease; }
+.dj-all:hover{ border-color:#E7B996; color:#E7B996; }
+.dj-cand{ display:flex; align-items:center; gap:22px; margin-top:28px; background:#F9F5FE; color:#1A2147; border-radius:16px; padding:26px 30px; text-decoration:none; transition:transform .15s ease, box-shadow .15s ease; box-shadow:0 14px 34px rgba(0,0,0,.22); }
+.dj-cand:hover{ transform:translateY(-2px); box-shadow:0 18px 40px rgba(0,0,0,.3); }
+.dj-cand__icon{ flex:none; width:50px; height:50px; border-radius:50%; background:var(--gold); display:grid; place-items:center; font-size:1.3rem; color:#fff; }
+.dj-cand__body{ flex:1; min-width:0; }
+.dj-cand__eyebrow{ display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+.dj-cand__title{ display:block; font-family:var(--font-display); font-weight:800; font-size:clamp(1.25rem,2.2vw,1.6rem); line-height:1.15; letter-spacing:-0.02em; color:#1A2147; }
+.dj-cand__text{ display:block; margin-top:6px; color:#4A4F6A; font-size:.96rem; }
+.dj-cand__btn{ flex:none; background:#1A2147; color:#fff; font-weight:700; font-size:.98rem; padding:13px 20px; border-radius:10px; white-space:nowrap; transition:background .15s ease; }
+.dj-cand:hover .dj-cand__btn{ background:var(--gold); }
+@media (max-width:700px){
+  .dj-cand{ flex-direction:column; align-items:flex-start; gap:14px; padding:24px 22px; }
+  .dj-cand__btn{ align-self:stretch; text-align:center; }
+}

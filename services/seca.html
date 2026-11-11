@@ -1,85 +1,586 @@
 ---
-layout: default
+layout: null
 permalink: /services/seca
-hero: 
-tagline: The seca mBCA - Easily assess your fat mass vs. your fat-free mass
-keywords: "Gerstenberg, Gertenberg, Gersteberg, Gerstenburg, Gurstenburg, Gutenberg, Gutenburg, Gurtenberg, Gurtenburg, Paul, Doctor, Dr,wellness,well, Seca,scale,Medical,Body,Composition,Analysis,Analyzer,Muscle,Track,Fat,Content,Concentration,Hydration,Water,Measure,health,track"
-description: "Seca Medical Body Composition Analysis. Track growth of muscle, hydration and fat deposits with a fast and easy measurement on gerstenberg.clinic’s medical body analyzer. The Seca mBCA can see where muscle and fat are concentrated and how many pounds you have of each."
-stylesheet: seca
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seca Body Composition</title>
+<meta name="description" content="Seca Medical Body Composition Analysis. Track growth of muscle, hydration and fat deposits with a fast and easy measurement on gerstenberg.clinic’s medical body analyzer. The Seca mBCA can see where muscle and fat are concentrated and how many pounds you have of each.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style> block, header, and footer verbatim, then
+       build new page-specific content (hero, sections, etc.) in the same
+       visual language.
+
+  KEY FACTS TO CARRY OVER
+  ------------------------
+  - Colors: --navy (#202B5C, headings), --gold (#984A22, accent/CTA). Full
+    token list is in the :root block below, plus dark-mode overrides.
+  - Fonts: Sora (headings/UI) + Public Sans (body), loaded from Google
+    Fonts — see the <link> tags below. (Real brand font is Uni Neue, a
+    paid font that can't be loaded from an artifact's allowed CDNs, so
+    Sora is the stand-in.)
+  - Logo: embedded below as a base64 PNG in both the nav and footer, each
+    on a white background chip (the brand guide requires a light backing
+    for contrast/visibility).
+  - Phone number display format: 409.210.3336 (dot-separated), but the
+    tel: link itself stays href="tel:4092103336".
+  - Brand rule: dark backgrounds should be extremely limited — keep new
+    sections light by default.
+  - The site is strictly in-person (no telehealth/remote/ship-to-you
+    language anywhere).
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
 
 
-<div class="row video">
-	<iframe class="assetIframe" style="border:0" 
-			src="https://www.youtube.com/embed/videoseries?list=PLxFTymMfPQOUSr_z2lGnWSZu1QxnKYd56" allowfullscreen></iframe> 
-</div>
+  
 
-<div class="row cards">
-	<div class="third card dark">
-		<p>See the difference between a pound of muscle and a pound of fat</p>
-	</div>
-	<div class="third card dark">
-		<p>Track progress, customize health plan and monitor for diseases</p>
-	</div>
-	<div class="third card dark">
-		<p>Fast and Easy -<br>get results in less than 20 seconds</p>
-	</div>
-</div>
+  /* ===== SECA mBCA page ===== */
+  /* Layout: brand-kit container; light sections alternating paper / paper-raised; one light-blue band. */
+  .nav{top:env(safe-area-inset-top, 0px);}
+  .eyebrow{font-family:var(--font-display); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+  .crumbs{font-size:.85rem; color:var(--ink-soft); display:flex; gap:8px; flex-wrap:wrap;}
+  .crumbs a{text-decoration:none;}
+  .crumbs a:hover{color:var(--gold);}
+  .section--raised{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section__title{text-wrap:balance;}
+  .prose{display:grid; gap:16px; color:var(--ink-soft); font-size:1.02rem; max-width:62ch;}
+  .prose strong{color:var(--ink);}
 
-<div class="row light blurb">
-	<div class="third">
-		<h2>Body Fat Percentage</h2>
-		<p>Experience a cutting-edge bioelectrical impedance analysis with the seca mBCA.<br>
-		An accurate health indicator better than BMI</p>
-	</div>
-	<div class="two-thirds">
-		<p>A high body fat percentage is a valuable indicator of your fitness as well as your risk for future complications such as <b>diabetes, hypertension, and multiple cardiac conditions</b>.<br>
-		In contrast, BMI only takes into account your height and weight. It doesn’t provide any indication of your body fat content whatsoever, making Body Fat Percentage a more accurate health indicator than BMI.</p>
-	</div>
-</div>
+  /* HERO */
+  .svc-hero{padding:48px 0 72px;}
+  .svc-hero__grid{display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center; margin-top:28px;}
+  .svc-hero__copy{display:flex; flex-direction:column; gap:18px; min-width:0;}
+  .svc-hero__title{font-size:clamp(2rem,4.2vw,3.1rem); font-weight:700; text-wrap:balance;}
+  .svc-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;}
+  .svc-hero__phone{font-size:.9rem; color:var(--ink-soft);}
+  .svc-hero__phone strong{color:var(--ink); user-select:all;}
 
-<div class="row">
-	<div class="third">
-		<img src="../img/third/third-seca.jpg" />
-	</div>
-	<div class="two-thirds">
-		<h3>This is more than a scale.</h3>
-		<p>When you step on a scale and see that you’ve lost 3 pounds, what did you really lose? Fat? Muscle? Water? Some of each? Measuring your <b>body composition</b> allows you to truly understand the changes in your weight, and the changes in your body even when your weight remains the same.</p>
-		<p>Body composition, or fat vs. fat-free (lean) mass, has long been considered one of the best determinants of disease prediction and a person’s overall health. It reflects the results of your physical activity and nutritional practices. Solely using body weight can be misleading because a scale can’t tell the difference between a pound of fat and a pound of muscle.</p>
-		<p>Our non-invasive assessment is a medical-grade body composition analyzer that provides an in-depth evaluation more accurate than a bone density test. It measures <b>fat mass, fat-free mass, total body water, intracellular water, extracellular water, and skeletal muscle mass in a rapid 17 seconds</b> and prints out a detailed report. This is something a bathroom scale cannot do.</p>
-		<p>With the seca mBCA, see the whole picture of what’s really going on in your body so you can track progress and make changes for better nutrition, exercise and health &amp; wellness.</p>
-	</div>
-</div>
+  .video{position:relative; aspect-ratio:16/9; max-width:100%; border-radius:4px; overflow:hidden; display:grid; place-items:center; text-decoration:none; border:1px solid var(--line); color:var(--band-text);}
+  .video__art{position:absolute; inset:0; width:100%; height:100%;}
+  .video__inner{position:relative; display:grid; gap:8px; justify-items:center; text-align:center; padding:20px;}
+  .video__play{width:60px; height:60px; border-radius:50%; background:var(--gold); color:var(--white); display:grid; place-items:center; transition:background .15s ease, transform .15s ease;}
+  .video__play svg{width:22px; height:22px; margin-left:3px;}
+  .video:hover .video__play{background:var(--clay); transform:scale(1.05);}
+  .video__label{font-family:var(--font-display); font-weight:600; font-size:1.05rem; color:var(--navy);}
+  .video__meta{font-size:.85rem; color:var(--band-text-soft);}
 
-<div class="row dark">
-	<p>No special clothing required, just get barefoot for an accurate and consistent evaluation of the following.</p>
-</div>
+  .facts{list-style:none; margin:56px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); border-radius:4px; background:var(--paper);}
+  .fact{padding:22px 24px; display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start; border-left:1px solid var(--line);}
+  .fact:first-child{border-left:none;}
+  .fact__icon{width:38px; height:38px; border-radius:50%; background:var(--gold-soft); color:var(--gold); display:grid; place-items:center;}
+  .fact__icon svg{width:19px; height:19px;}
+  .fact__text{font-size:.98rem; color:var(--ink); padding-top:7px; min-width:0;}
+  .fact__text strong{color:var(--navy); font-family:var(--font-display);}
+  @media (max-width:900px){
+    .svc-hero__grid{grid-template-columns:1fr; gap:36px;}
+    .facts{grid-template-columns:1fr;}
+    .fact{border-left:none; border-top:1px solid var(--line);}
+    .fact:first-child{border-top:none;}
+  }
 
-<div class="row tiles">
-	<div class="fourth tile img">
-		<img src="../img/sm-squares/sm-square-fat.jpg" alt="Body fat percentage"/>
-		<div class="overlay">
-			<span>Body Fat Percentage</span>
-		</div>
-	</div>
-	<div class="fourth tile img">
-		<img src="../img/sm-squares/sm-square-cell.jpg" alt="Cell health (phase angle)"/>
-		<div class="overlay">
-			<span>Cell Health<br>Phase Angle</span>
-		</div>
-	</div>
-	<div class="fourth tile img">
-		<img src="../img/sm-squares/sm-square-water.jpg" alt="Fluid levels"/>
-		<div class="overlay">
-			<span>Fluid Levels</span>
-		</div>
-	</div>
-	<div class="fourth tile img">
-		<img src="../img/sm-squares/sm-square-muscle.jpg" alt="Muscle mass percentage"/>
-		<div class="overlay">
-			<span>Muscle Mass Percentage</span>
-		</div>
-	</div>
-</div>
+  /* BODY FAT */
+  .compare{display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:start;}
+  .compare > *{min-width:0;}
+  .vs{display:grid; grid-template-columns:auto 1fr; border:1px solid var(--line); border-radius:4px; background:var(--paper); overflow:hidden;}
+  .vs__col{padding:22px 24px; display:grid; gap:12px; align-content:start;}
+  .vs__col + .vs__col{border-left:1px solid var(--line);}
+  .vs__head{font-family:var(--font-display); font-weight:700; color:var(--ink-soft); font-size:.95rem;}
+  .vs__col--seca .vs__head{color:var(--gold);}
+  .vs ul{list-style:none; margin:0; padding:0; display:grid; gap:8px; font-size:.95rem;}
+  .vs li{display:flex; gap:10px; align-items:center;}
+  .vs li::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--line); flex-shrink:0;}
+  .vs__col--seca li::before{background:var(--gold);}
+  .vs__col:first-child ul{color:var(--ink-soft);}
+  @media (max-width:820px){ .compare{grid-template-columns:1fr; gap:36px;} }
 
-{% include schedule-consultation.html %}
+  /* MORE THAN A SCALE */
+  .two-col{display:grid; grid-template-columns:1.25fr 1fr; gap:56px; align-items:center;}
+  .two-col > *{min-width:0;}
+  .photo{margin:0; aspect-ratio:4/5; max-width:100%; overflow:hidden; background:#fff; border-radius:4px;}
+  .photo img{display:block; width:100%; height:100%; object-fit:contain;}
+  @media (max-width:820px){ .two-col{grid-template-columns:1fr; gap:40px;} .photo{aspect-ratio:4/3;} }
+
+  /* MEASURES (band) */
+  .band__head{margin-bottom:36px;}
+  .band__head .band__sub{font-family:var(--font-display); font-size:clamp(1.3rem,2.4vw,1.7rem); font-weight:600; color:var(--navy); line-height:1.3; max-width:34ch; text-wrap:balance;}
+  .measures{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .measure{background:var(--paper); border-radius:4px; padding:26px 22px; display:grid; gap:6px; align-content:start;}
+  .measure__icon{width:46px; height:46px; border-radius:50%; background:var(--band-bg); color:var(--band-gold); display:grid; place-items:center; margin-bottom:10px;}
+  .measure__icon svg{width:22px; height:22px;}
+  .measure h3{font-size:1.1rem;}
+  .measure p{font-size:.92rem; color:var(--ink-soft);}
+  @media (max-width:860px){ .measures{grid-template-columns:1fr 1fr;} }
+  @media (max-width:440px){ .measures{grid-template-columns:1fr;} }
+
+  /* CTA */
+  .cta{display:grid; grid-template-columns:1.3fr 1fr; gap:48px; align-items:center;}
+  .cta > *{min-width:0;}
+  .cta__title{font-size:clamp(1.7rem,3vw,2.3rem); text-wrap:balance;}
+  .cta__links{margin-top:22px; display:flex; gap:22px; flex-wrap:wrap;}
+  .cta__links a{font-size:.95rem; font-weight:600; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .cta__links a:hover{color:var(--gold);}
+  .cta__card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:28px; display:grid; gap:14px;}
+  .cta__card .btn{justify-content:center;}
+  .cta__number{font-family:var(--font-display); font-size:1.6rem; font-weight:700; color:var(--navy); user-select:all; font-variant-numeric:tabular-nums;}
+  .cta__meta{font-size:.88rem; color:var(--ink-soft);}
+  @media (max-width:820px){ .cta{grid-template-columns:1fr; gap:32px;} }
+
+  @media (max-width:600px){ .section{padding:64px 0;} .band{padding:64px 0;} .container{padding:0 16px;} }
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== HERO ===== -->
+  <section class="svc-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Services</span><span aria-hidden="true">/</span><span>Seca Body Composition</span></nav>
+      <div class="svc-hero__grid">
+        <div class="svc-hero__copy">
+          <p class="eyebrow">Seca medical Body Composition Analysis</p>
+          <h1 class="svc-hero__title">The seca mBCA - Easily assess your fat mass vs. your fat-free mass</h1>
+          <div class="svc-hero__actions">
+            <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20a%20Seca%20body%20composition%20scan">See if I'm a candidate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></a>
+            <a class="btn btn--ghost" href="/forms" target="_blank" rel="noopener">Download New Patient Forms</a>
+          </div>
+          <p class="svc-hero__phone">Call <strong>409.210.3336</strong> to book.</p>
+        </div>
+        <a class="video" href="https://www.youtube.com/playlist?list=PLxFTymMfPQOUSr_z2lGnWSZu1QxnKYd56" target="_blank" rel="noopener">
+          <svg class="video__art" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="225" style="fill:var(--band-bg)"/>
+            <g fill="none" style="stroke:var(--navy)" stroke-width="1.2" opacity=".22">
+              <path d="M0 150 C 60 150, 70 70, 120 70 S 180 150, 240 150 S 300 90, 340 90 S 380 150, 400 150"/>
+              <path d="M0 170 C 60 170, 70 100, 120 100 S 180 170, 240 170 S 300 120, 340 120 S 380 170, 400 170"/>
+              <path d="M0 190 C 60 190, 70 130, 120 130 S 180 190, 240 190 S 300 150, 340 150 S 380 190, 400 190"/>
+            </g>
+          </svg>
+          <span class="video__inner">
+            <span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video__label">Watch the seca mBCA videos</span>
+            <span class="video__meta">Opens our playlist on YouTube</span>
+          </span>
+        </a>
+      </div>
+      <ul class="facts">
+        <li class="fact">
+          <span class="fact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span>
+          <span class="fact__text">See the difference between a pound of muscle and a pound of fat</span>
+        </li>
+        <li class="fact">
+          <span class="fact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+          <span class="fact__text">Track progress, customize health plan and monitor for diseases</span>
+        </li>
+        <li class="fact">
+          <span class="fact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/></svg></span>
+          <span class="fact__text"><strong>Fast and Easy</strong> - get results in less than 20 seconds</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== BODY FAT PERCENTAGE ===== -->
+  <section class="section section--raised" id="body-fat">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Body Fat Percentage</p>
+        <h2 class="section__title" style="margin-top:10px;">An accurate health indicator better than BMI</h2>
+        <p class="section__sub">Experience a cutting-edge bioelectrical impedance analysis with the seca mBCA.</p>
+      </div>
+      <div class="compare">
+        <div class="prose">
+          <p>A high body fat percentage is a valuable indicator of your fitness as well as your risk for future complications such as <strong>diabetes, hypertension, and multiple cardiac conditions</strong>.</p>
+          <p>In contrast, BMI only takes into account your height and weight. It doesn’t provide any indication of your body fat content whatsoever, making Body Fat Percentage a more accurate health indicator than BMI.</p>
+        </div>
+        <div class="vs" aria-label="What each measure looks at">
+          <div class="vs__col">
+            <span class="vs__head">BMI</span>
+            <ul>
+              <li>Height</li>
+              <li>Weight</li>
+            </ul>
+          </div>
+          <div class="vs__col vs__col--seca">
+            <span class="vs__head">seca mBCA</span>
+            <ul>
+              <li>Fat mass</li>
+              <li>Fat-free mass</li>
+              <li>Total body water</li>
+              <li>Intracellular water</li>
+              <li>Extracellular water</li>
+              <li>Skeletal muscle mass</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE THAN A SCALE ===== -->
+  <section class="section" id="more-than-a-scale">
+    <div class="container two-col">
+      <div>
+        <h2 class="section__title" style="margin-bottom:22px;">This is more than a scale.</h2>
+        <div class="prose">
+          <p>When you step on a scale and see that you’ve lost 3 pounds, what did you really lose? Fat? Muscle? Water? Some of each? Measuring your <strong>body composition</strong> allows you to truly understand the changes in your weight, and the changes in your body even when your weight remains the same.</p>
+          <p>Body composition, or fat vs. fat-free (lean) mass, has long been considered one of the best determinants of disease prediction and a person’s overall health. It reflects the results of your physical activity and nutritional practices. Solely using body weight can be misleading because a scale can’t tell the difference between a pound of fat and a pound of muscle.</p>
+          <p>Our non-invasive assessment is a medical-grade body composition analyzer that provides an in-depth evaluation more accurate than a bone density test. It measures <strong>fat mass, fat-free mass, total body water, intracellular water, extracellular water, and skeletal muscle mass in less than 20 seconds</strong> and prints out a detailed report. This is something a bathroom scale cannot do.</p>
+          <p>With the seca mBCA, see the whole picture of what’s really going on in your body so you can track progress and make changes for better nutrition, exercise and health &amp; wellness.</p>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="/img/seca-mbca.jpg" width="640" height="1135" alt="A patient standing barefoot on the seca mBCA body composition analyzer, holding its handrails" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IT MEASURES ===== -->
+  <section class="band" id="measures">
+    <div class="container">
+      <div class="band__head">
+        <p class="band__sub" style="margin-top:0;">No special clothing required, just get barefoot for an accurate and consistent evaluation of the following.</p>
+      </div>
+      <ul class="measures">
+        <li class="measure">
+          <span class="measure__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
+          <h3>Body Fat Percentage</h3>
+        </li>
+        <li class="measure">
+          <span class="measure__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3a9 9 0 0 1 9 9"/></svg></span>
+          <h3>Cell Health</h3>
+          <p>Phase Angle</p>
+        </li>
+        <li class="measure">
+          <span class="measure__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+          <h3>Fluid Levels</h3>
+        </li>
+        <li class="measure">
+          <span class="measure__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11"/><path d="M6.5 17.5h11"/><rect x="2" y="4" width="4.5" height="16" rx="1"/><rect x="17.5" y="4" width="4.5" height="16" rx="1"/><line x1="12" y1="6.5" x2="12" y2="17.5"/></svg></span>
+          <h3>Muscle Mass Percentage</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section" id="consult">
+    <div class="container cta">
+      <div>
+        <h2 class="cta__title">Call now to Schedule a Consultation!</h2>
+        <p class="cta__links">
+          <a href="/forms" target="_blank" rel="noopener">Download New Patient Forms</a>
+          <a href="/services/cherry">Pay over time with Cherry</a>
+        </p>
+      </div>
+      <div class="cta__card">
+        <span class="cta__meta">Phone</span>
+        <span class="cta__number">409.210.3336</span>
+        <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20a%20Seca%20body%20composition%20scan">See if I'm a candidate</a>
+        <span class="cta__meta">Fax 409.527.3969 · 2927 Nall Street, Port Neches, TX 77651</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+</body>
+</html>
