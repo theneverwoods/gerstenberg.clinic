@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- comment -%}
+  Every HTML page except redirects (redirect_to stubs and jekyll-redirect-from aliases),
+  the 404 page and pages marked "sitemap: false". New pages and journal articles are
+  listed automatically; Chat Data's scheduled retraining reads this file in sitemap mode.
+{%- endcomment -%}
+{%- assign pages = site.pages | sort: "url" -%}
+{%- for p in pages -%}
+  {%- assign ext = p.name | split: "." | last -%}
+  {%- if ext != "html" and ext != "md" -%}{%- continue -%}{%- endif -%}
+  {%- if p.redirect_to or p.redirect or p.sitemap == false or p.url == "/404.html" -%}{%- continue -%}{%- endif %}
+  <url><loc>{{ site.url }}{{ p.url | replace: "/index.html", "/" }}</loc></url>
+{%- endfor %}
+</urlset>
