@@ -16,3 +16,4 @@ exclude:
   - Gemfile.lock
   - CNAME
   - .gitignore
+  - AGENTS.md
