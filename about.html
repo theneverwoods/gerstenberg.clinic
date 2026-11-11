@@ -1,274 +1,634 @@
 ---
-layout: default
+layout: null
 permalink: /about
-hero: /img/heros/hero-gclinic-about.jpg
-tagline: "Providing the care you need in two different ways:"
-stylesheet: about
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About gerstenberg.clinic</title>
+<meta name="description" content="Meet the providers of gerstenberg.clinic in Port Neches, TX: primary care for all ages and gerstenberg.clinic WELLNESS.">
 
-<div class="row about-row">
-  <div class="half">
-    <div class="card light">
-      {% include svgs/logo.html %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:env(safe-area-inset-top, 0px); z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+
+  /* ABOUT PAGE */
+  .eyebrow{font-family:var(--font-display); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
+  h1,h2,h3{text-wrap:balance;}
+  .about-hero{padding:72px 0 0;}
+  .about-hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; max-width:22ch;}
+  .about-hero__sub{margin-top:16px; color:var(--ink-soft); font-size:1.04rem; max-width:58ch;}
+  .about-hero__jump{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px;}
+  .photo{position:relative; overflow:hidden; border-radius:4px; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); max-width:100%;}
+  .photo img{position:relative; z-index:1; width:100%; height:100%; object-fit:cover; display:block;}
+  .photo__fallback{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:600; color:var(--clay); font-size:1.05rem; text-align:center; padding:12px;}
+  .about-hero__photo{aspect-ratio:31/9; margin-top:44px;}
+  @media (max-width:600px){ .about-hero{padding-top:48px;} .about-hero__photo{aspect-ratio:16/9;} }
+
+  .ways{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .way{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:30px; display:flex; flex-direction:column; gap:14px; min-width:0;}
+  .way__name{font-family:var(--font-display); font-weight:600; font-size:1.3rem; color:var(--navy);}
+  .way__name span{color:var(--gold);}
+  .way p{color:var(--ink-soft); font-size:.98rem;}
+  .way strong{color:var(--ink); font-weight:600;}
+  .way a{color:var(--gold); font-weight:600;}
+  .way__tag{align-self:flex-start; font-size:.75rem; color:var(--gold); background:var(--gold-soft); padding:3px 9px; border-radius:20px;}
+  @media (max-width:820px){ .ways{grid-template-columns:1fr;} }
+
+  .philosophy{background:var(--band-bg); color:var(--band-text); padding:80px 0;}
+  .philosophy__grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .philosophy__text{display:flex; flex-direction:column; gap:16px; color:var(--band-text-soft); font-size:1.02rem; min-width:0;}
+  .philosophy__quote{margin:0; font-family:var(--font-display); font-weight:500; font-size:clamp(1.35rem,2.4vw,1.8rem); line-height:1.3; color:var(--navy); border-left:2px solid var(--band-gold); padding-left:24px;}
+  .philosophy__quote cite{display:block; margin-top:14px; font-family:var(--font-body); font-style:normal; font-size:.9rem; font-weight:600; color:var(--band-gold);}
+  @media (max-width:820px){ .philosophy__grid{grid-template-columns:1fr; gap:32px;} }
+
+  .providers{display:flex; flex-direction:column;}
+  .provider{display:grid; grid-template-columns:260px 1fr; gap:44px; padding:48px 0; border-top:1px solid var(--line); scroll-margin-top:90px;}
+  .provider:first-child{border-top:none; padding-top:0;}
+  .provider__photo{aspect-ratio:1/1; width:100%;}
+  .provider__body{min-width:0;}
+  .provider__name{font-size:clamp(1.4rem,2.4vw,1.75rem);}
+  .provider__facts{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:22px 0 26px; padding:22px; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px;}
+  .provider__facts h3{font-family:var(--font-body); font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;}
+  .provider__facts ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:.92rem; color:var(--ink);}
+  .provider__facts li span{display:block; color:var(--ink-soft); font-size:.86rem;}
+  .provider__bio{display:flex; flex-direction:column; gap:14px; color:var(--ink-soft); max-width:68ch;}
+  @media (max-width:860px){
+    .provider{grid-template-columns:1fr; gap:24px;}
+    .provider__photo{max-width:240px;}
+    .provider__facts{grid-template-columns:1fr;}
+  }
+
+  .visit{display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center;}
+  .visit__photo{aspect-ratio:16/10;}
+  .visit__list{list-style:none; margin:24px 0 0; padding:0; display:flex; flex-direction:column; gap:10px; color:var(--ink-soft);}
+  .visit__list strong{color:var(--ink); font-weight:600; display:inline-block; min-width:72px;}
+  .visit__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:26px;}
+  .visit__note{margin-top:22px; font-size:.9rem; color:var(--ink-soft);}
+  .visit__note a{color:var(--gold); font-weight:600;}
+  @media (max-width:820px){ .visit{grid-template-columns:1fr;} }
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
     </div>
-    <p>
-      {% include svgs/logo.html %} offers primary care for all ages. This includes non-immunization newborn, infant and child checkups as well as school physicals, well-women exams and annual wellness visits for Medicare enrollees. We are not currently accepting any new pediatric patients under the age of 4 yrs. 
-    </p>
-    <p>
-      We believe in treating the person as a whole. Health is impacted by many different factors, including; vitamin and nutrient deficiency, hormone imbalance, diet choices, physical exercise, and spiritual/emotional factors. 
-    </p>
-    <p>
-      Because of this, {% include svgs/logo.html %} seeks out new and innovative solutions that target healing exactly where the patient needs it – and avoids the side effects of unnecessary treatment. 
-    </p>
-    <p>
-      We join Hippocrates in saying, “the greatest medicine of all is teaching people not to need it.”
-    </p>
   </div>
-  <div class="half">
-    <div class="card light">
-      {% include svgs/gc-wellness.html %}
+</header>
+
+<main id="main">
+
+  <section class="about-hero">
+    <div class="container">
+      <p class="eyebrow">About gerstenberg.clinic</p>
+      <h1 class="about-hero__title">Providing the care you need in two different ways</h1>
+      <p class="about-hero__sub">Primary care for every age through gerstenberg.clinic, and cash-pay wellness services through gerstenberg.clinic WELLNESS.</p>
+      <div class="about-hero__jump">
+        <a class="btn btn--soft" href="#two-ways">Our two clinics</a>
+        <a class="btn btn--soft" href="#team">Meet our providers</a>
+        <a class="btn btn--soft" href="#visit">Visit us</a>
+      </div>
+      <div class="photo about-hero__photo">
+        <span class="photo__fallback">gerstenberg.clinic</span>
+        <img src="/img/heros/hero-gclinic-about.jpg" alt="The gerstenberg.clinic care team" onerror="this.remove()">
+      </div>
     </div>
-    <p>
-      We provide cutting-edge products and services through {% include svgs/gc-wellness-inline.html %}, including: <strong>vitamins, homeopathic remedies, human-identical hormone therapy, medical weight management options, aesthetic treatments, male ED treatments and more</strong>. Look around our clinic and website for materials that detail this line as we are consistently seeking out diversification to offer the very best NON-drug treatments for our patients and community.
-    </p>
-    <p>
-      Services offered through {% include svgs/gc-wellness-abbreviated.html %} are considered cash-pay services and claims are not filed with insurance carriers since these services are not covered by insurance. Some flexible spending accounts (FSA) or health savings accounts (HSA) may reimburse for them and we gladly accept cash, check, credit card and <a href="{{ site.baseurl }}/care">CareCredit</a> for these services.
-    </p>
-  </div>
-</div>
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-g.jpg" />
-  </div>
-    <div class="half tile text light">
-    <div class="wrapper">
-      <h2>K. Paul Gerstenberg, D.O.</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Medical School: University North Texas - TCOM<br>
-        Residency: St. Anthony Hospital, Oklahoma City, OK<br>
-        Internship: Osteopathic Medical - FT. Worth, TX<br><br><br>
-        <strong>Professional Certifications:</strong><br>
-        Board Certified, Family Medicine<br>
-        Certified Biote® provider<br>
-        Certified in Age Management Medicine (AMM)<br>
-        Fellow, AMM with Cenegenics
-      </p>
+  </section>
+
+  <section class="section" id="two-ways">
+    <div class="container">
+      <div class="ways">
+        <article class="way">
+          <span class="way__tag">Primary care</span>
+          <h2 class="way__name">gerstenberg.clinic</h2>
+          <p>gerstenberg.clinic offers primary care for all ages. This includes non-immunization newborn, infant and child checkups as well as school physicals, well-women exams and annual wellness visits for Medicare enrollees. We are not currently accepting any new pediatric patients under the age of 4 yrs.</p>
+        </article>
+        <article class="way">
+          <span class="way__tag">Cash-pay wellness</span>
+          <h2 class="way__name">gerstenberg.clinic <span>WELLNESS</span></h2>
+          <p>We provide cutting-edge products and services through gerstenberg.clinic WELLNESS, including: <strong>vitamins, homeopathic remedies, human-identical hormone therapy, medical weight management options, male ED treatments and more</strong>. Look around our clinic and website for materials that detail this line as we are consistently seeking out diversification to offer the very best NON-drug treatments for our patients and community.</p>
+          <p>Services offered through gerstenberg.clinic WELLNESS are considered cash-pay services and claims are not filed with insurance carriers since these services are not covered by insurance. Some flexible spending accounts (FSA) or health savings accounts (HSA) may reimburse for them and we gladly accept cash, check, credit card, <a href="/services/cherry">Cherry payment plans</a> and <a href="/services/care">CareCredit</a> for these services.</p>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <hr>
-    <div class="overlay">
-      <p>
-        Dr. Gerstenberg received his premedical degree from Lamar University in his hometown Beaumont, TX. He then went on to the University of North Texas Health Sciences Center at Fort Worth to receive his Doctor of Osteopathy degree in 1993. He served his residency at St. Anthony Hospital in Oklahoma City, then went to serve three years in the United States Air Force at Barksdale AFB, Louisiana. After completing his tour of duty, he stayed in Shreveport, Louisiana for two years in private practice. In 2001, he had the opportunity to relocate his wife and four children to Nederland, Texas and build his own practice. Today he has seven children and three grandchildren. 
-      </p>
-      <p>
-        The clinic Dr. Gerstenberg envisioned practices the full realm of family practice, from newborn care to senior care. He has a great interest in preventative medicine, including osteopathic manipulation when needed, and enjoys working with pediatric and adolescent concerns. He offers traditional medical care, but loves to provide nutritional and alternative approaches when his patients are interested, specifically through gerstenberg.clinic WELLNESS.
-      </p>
-      <p>
-        Dr. Gerstenberg serves as the local health authority for Port Neches addressing Zika virus updates, influenza trends and other public health issues that affect our community. Since 1998 he has also been a Clinical Assistant Professor at the University of North Texas Health Sciences Center at Fort Worth-Texas College of Osteopathic Medicine.
-      </p>
+  <section class="philosophy" aria-labelledby="philosophy-title">
+    <div class="container">
+      <div class="philosophy__grid">
+        <div class="philosophy__text">
+          <p class="eyebrow" id="philosophy-title">Our approach</p>
+          <p>We believe in treating the person as a whole. Health is impacted by many different factors, including; vitamin and nutrient deficiency, hormone imbalance, diet choices, physical exercise, and spiritual/emotional factors.</p>
+          <p>Because of this, gerstenberg.clinic seeks out new and innovative solutions that target healing exactly where the patient needs it – and avoids the side effects of unnecessary treatment.</p>
+        </div>
+        <blockquote class="philosophy__quote">
+          We join Hippocrates in saying, “the greatest medicine of all is teaching people not to need it.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Our providers</p>
+        <h2 class="section__title">Meet the team</h2>
+        <div class="about-hero__jump">
+          <a class="btn btn--soft" href="#dr-gerstenberg">Dr. Gerstenberg</a>
+          <a class="btn btn--soft" href="#dr-bell">Dr. Bell</a>
+          <a class="btn btn--soft" href="#jennifer-gibson">Jennifer Gibson</a>
+          <a class="btn btn--soft" href="#mark-ramirez">Mark Ramirez</a>
+          <a class="btn btn--soft" href="#cristina-sifuentes-ayala">Cristina Sifuentes-Ayala</a>
+        </div>
+      </div>
+
+      <div class="providers">
+
+        <article class="provider" id="dr-gerstenberg">
+          <div class="photo provider__photo">
+            <span class="photo__fallback">K. Paul Gerstenberg, D.O.</span>
+            <img src="/img/lrg-squares/lrg-squares-g.jpg" alt="K. Paul Gerstenberg, D.O." onerror="this.remove()">
+          </div>
+          <div class="provider__body">
+            <h2 class="provider__name">K. Paul Gerstenberg, D.O.</h2>
+            <div class="provider__facts">
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li><span>Medical School</span>University North Texas - TCOM</li>
+                  <li><span>Residency</span>St. Anthony Hospital, Oklahoma City, OK</li>
+                  <li><span>Internship</span>Osteopathic Medical - FT. Worth, TX</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Professional Certifications</h3>
+                <ul>
+                  <li>Board Certified, Family Medicine</li>
+                  <li>Certified Biote® provider</li>
+                  <li>Certified in Age Management Medicine (AMM)</li>
+                  <li>Fellow, AMM with Cenegenics</li>
+                  <li>Member and Fellow of International Lyme and Associated Disease Society</li>
+                </ul>
+              </div>
+            </div>
+            <div class="provider__bio">
+              <p>Dr. Gerstenberg received his premedical degree from Lamar University in his hometown Beaumont, TX. He then went on to the University of North Texas Health Sciences Center at Fort Worth to receive his Doctor of Osteopathy degree in 1993. He served his residency at St. Anthony Hospital in Oklahoma City, then went to serve three years in the United States Air Force at Barksdale AFB, Louisiana. After completing his tour of duty, he stayed in Shreveport, Louisiana for two years in private practice. In 2001, he had the opportunity to relocate his wife and four children to Nederland, Texas and build his own practice. Today he has seven children and three grandchildren.</p>
+              <p>The clinic Dr. Gerstenberg envisioned practices the full realm of family practice, from newborn care to senior care. He has a great interest in preventative medicine, including osteopathic manipulation when needed, and enjoys working with pediatric and adolescent concerns. He offers traditional medical care, but loves to provide nutritional and alternative approaches when his patients are interested, specifically through gerstenberg.clinic WELLNESS.</p>
+              <p>Dr. Gerstenberg serves as the local health authority for Port Neches addressing Covid and Zika virus updates, influenza trends and other public health issues that affect our community. Since 1998 he has also been a Clinical Assistant Professor at the University of North Texas Health Sciences Center at Fort Worth-Texas College of Osteopathic Medicine.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="provider" id="dr-bell">
+          <div class="photo provider__photo">
+            <span class="photo__fallback">Stephen Bell, D.O.</span>
+            <img src="/img/lrg-squares/lrg-squares-bell.jpg" alt="Stephen Bell, D.O." onerror="this.remove()">
+          </div>
+          <div class="provider__body">
+            <h2 class="provider__name">Stephen Bell, D.O.</h2>
+            <div class="provider__facts">
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li><span>Pre-med</span>University of Texas - Dallas</li>
+                  <li><span>Medical</span>Arizona College of Osteopathic Medicine</li>
+                </ul>
+              </div>
+            </div>
+            <div class="provider__bio">
+              <p>Stephen Bell was born and raised outside Fort Worth in Weatherford, Texas. He attended university at UT Dallas and then worked for Alcon, a pharmaceutical company. He completed medical school at Arizona College of Osteopathic Medicine and, after graduation, completed his family medicine residency in Fort Worth.</p>
+              <p>Dr. Bell has been married for 15 years and has a 9-year-old son and a 7-year-old daughter. He is passionate about preventative testing and lifestyle changes and loves continuing his education on various treatments for all routine health problems. Dr. Bell usually prefers integrating non-pharmacologic treatment options into routine traditional medical practices.</p>
+              <p>During his time off, he enjoys being near the water, reading, video games, and his french bulldogs.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="provider" id="jennifer-gibson">
+          <div class="photo provider__photo">
+            <span class="photo__fallback">Jennifer B. Gibson, MS, PA-C</span>
+            <img src="/img/lrg-squares/lrg-squares-jen.jpg" alt="Jennifer B. Gibson, MS, PA-C" onerror="this.remove()">
+          </div>
+          <div class="provider__body">
+            <h2 class="provider__name">Jennifer B. Gibson, MS, PA-C</h2>
+            <div class="provider__facts">
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li><span>Bachelor of Science in Biology, Minor in Chemistry</span>Valedictorian of the College of Science, John Brown University - Siloam Springs, AR</li>
+                  <li><span>Master of Science in Allied Health/Physician Assistant</span>Baylor College of Medicine - Houston, TX</li>
+                  <li><span>Licensure</span>Physician Assistant-Certified - TX Medical Board</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Professional Certifications</h3>
+                <ul>
+                  <li>Certified Physician Assistant</li>
+                  <li>Certified Biote® provider</li>
+                </ul>
+              </div>
+            </div>
+            <div class="provider__bio">
+              <p>Jennifer graduated from Baylor College of Medicine in Houston, TX, where she trained in Pediatrics, Internal Medicine, Emergency Medicine, Obstetrics and Gynecology, Surgery, Psychiatry, Geriatrics, and Community Medicine. She also served on the PA Admissions Committee while attending Baylor College of Medicine. She is certified by the National Commission On Certification of Physician Assistants, and licensed by the state of Texas to practice medicine for all ages.</p>
+              <p>Her clinical experience includes Urgent Care, Pediatrics, and Family Medicine.</p>
+              <p>She moved here with her husband in 2001 where they have been raising their 4 children. Through the years, Jennifer has also taught High School Sciences at various local homeschool co-ops. Subjects included Anatomy and Physiology as well as Biology, Chemistry, and Physics. Her love for teaching carries over into educating her patients in healthy lifestyles as she uses a holistic approach to medicine. Prevention is a key component to health care as well as using all available resources to bring healing. Her goal is to continue this journey with her patients through the years.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="provider" id="mark-ramirez">
+          <div class="photo provider__photo">
+            <span class="photo__fallback">Ignacio Mark Ramirez, MSN, FNP-C</span>
+            <img src="/img/lrg-squares/lrg-squares-mark.jpg" alt="Ignacio Mark Ramirez, MSN, FNP-C" onerror="this.remove()">
+          </div>
+          <div class="provider__body">
+            <h2 class="provider__name">Ignacio Mark Ramirez, MSN, FNP-C</h2>
+            <div class="provider__facts">
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li><span>Lamar University</span>Bachelor of Science in Nursing</li>
+                  <li><span>Walden University</span>Master of Science in Nursing</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Professional Certifications</h3>
+                <ul>
+                  <li>BioTe</li>
+                  <li>Certified in Foundations of Advanced Injections (Aesthetics)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="provider__bio">
+              <p>Mark is a proud native of Nederland, Texas, who dedicated his life to serving in the United States Air Force. His journey through education began with an undergraduate degree at Lamar University, followed by a Master’s degree from Walden University. With diverse experience in family practice, pain management, emergency care, and intensive care, Mark has collaborated with numerous specialists in hospitals, enriching his career and the lives of those he serves. He is passionate about providing holistic care to his patients and empowering them with the knowledge to improve their physical and psychological well-being.</p>
+              <p>Mark and his wife and cherish their children and grandson. Together, they embrace life’s adventures, travel the world, and fill their days with joy alongside our three little dogs.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="provider" id="cristina-sifuentes-ayala">
+          <div class="photo provider__photo">
+            <span class="photo__fallback">Cristina Sifuentes-Ayala, RD, IBCLC, PA-C</span>
+            <img src="/img/lrg-squares/lrg-squares-cristina.jpg" alt="Cristina Sifuentes-Ayala, RD, IBCLC, PA-C" onerror="this.remove()">
+          </div>
+          <div class="provider__body">
+            <h2 class="provider__name">Cristina Sifuentes-Ayala, RD, IBCLC, PA-C</h2>
+            <div class="provider__facts">
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li><span>Lamar University</span>Bachelor of Science in Dietetics &amp; Hospitality</li>
+                  <li><span>Lamar University</span>Masters of Science in Nutrition &amp; Dietetics</li>
+                  <li><span>University of Pittsburgh</span>Masters of Science in Physician Assistant Studies</li>
+                  <li>Pi Alpha National Honor Society for Physician Assistants</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Professional Certifications</h3>
+                <ul>
+                  <li>Certified Physician Assistant licensed with Texas Medical Board</li>
+                  <li>Registered Dietitian, Commission on Dietetic Registration</li>
+                  <li>International Board Certified Lactation Consultant</li>
+                </ul>
+              </div>
+            </div>
+            <div class="provider__bio">
+              <p>Cristina, a Texas native from Beaumont, is a dedicated Physician Assistant and Registered Dietitian committed to personalized care. She earned her clinical dietitian training at Lamar University, gaining experience with diverse patients in inpatient and community settings. Inspired by her work with healthcare teams, she pursued a career as a Physician Assistant, obtaining her second master's degree from the University of Pittsburgh. Her training encompassed Pediatrics, Internal Medicine, Emergency Medicine, Obstetrics and Gynecology, Surgery, Psychiatry, Geriatrics, and Family Medicine. Board-certified by the National Commission On Certification of Physician Assistants and licensed in Texas, Cristina is qualified to practice medicine for patients of all ages.</p>
+              <p>Cristina adopts a holistic approach to medicine, integrating nutrition and medicine to promote overall wellness and offering tailored, innovative solutions. Outside of her professional life, Cristina actively volunteers with the local Junior League chapter, enjoys spending time with her family and traveling with her husband of five years.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Clinic contact">
+    <div class="strip__inner">
+      <span class="strip__item"><strong>Phone</strong> 409.210.3336</span>
+      <span class="strip__item"><strong>Fax</strong> 409.527.3969</span>
+      <span class="strip__item"><strong>Address</strong> 2927 Nall Street, Port Neches, TX 77651</span>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="container">
+      <div class="visit">
+        <div class="photo visit__photo">
+          <span class="photo__fallback">2927 Nall Street, Port Neches</span>
+          <img src="/img/heros/hero-gclinic-building.jpg" alt="The gerstenberg.clinic building on Nall Street in Port Neches" onerror="this.remove()">
+        </div>
+        <div>
+          <p class="eyebrow">Visit us</p>
+          <h2 class="section__title">Find the clinic</h2>
+          <ul class="visit__list">
+            <li><strong>Phone</strong> 409.210.3336</li>
+            <li><strong>Fax</strong> 409.527.3969</li>
+            <li><strong>Address</strong> 2927 Nall Street • Port Neches, TX • 77651</li>
+          </ul>
+          <div class="visit__actions">
+            <a class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn--ghost" href="tel:4092103336">Call 409.210.3336</a>
+          </div>
+          <p class="visit__note"><a href="/services/cherry">Pay over time with Cherry</a>, with qualifying 0% APR options. We also accept <a href="/services/care">CareCredit</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
     </div>
   </div>
-</div>
+</footer>
 
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-bell.jpg" />
-  </div>
-
-  <div class="half tile text light">
-    <div class="wrapper">
-      <h2>Stephen Bell, D.O.</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Pre-med: University of Texas - Dallas<br>
-          Medical: Arizona College of Osteopathic Medicine
-      </p>
-    </div>
-
-    <hr>
-    <div class="overlay">
-      <p>
-        Stephen Bell was born and raised outside Fort Worth in Weatherford, Texas. He attended university at UT Dallas and then worked for Alcon, a pharmaceutical company. He completed medical school at  Arizona College of Osteopathic Medicine and, after graduation, completed his family medicine residency in Fort Worth. 
-      </p>
-      <p>
-          Dr. Bell has been married for 15 years and has a 9-year-old son and a 7-year-old daughter. He is passionate about preventative testing and lifestyle changes and loves continuing his education on various treatments for all routine health problems. Dr. Bell usually prefers integrating non-pharmacologic treatment options into routine traditional medical practices. 
-
-      </p>
-      <p>
-            During his time off, he enjoys being near the water, reading, video games, and his french bulldogs. 
-        </p>
-    </div>
-  </div>
-</div>
-
-
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-jen.jpg" />
-  </div>
-  <div class="half tile text light">
-    <div class="wrapper">
-      <h2>Jennifer B. Gibson, MS, PA-C</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Bachelor of Science in Biology, Minor in Chemistry:<br>
-        Valedictorian of the College of Science,<br>
-        John Brown University - Siloam Springs, AR<br>
-        Master of Science in Allied Health/Physician Assistant:<br>
-        Baylor College of Medicine - Houston, TX<br>
-        Licensure: Physician Assistant-Certified - TX Medical Board <br><br><br>
-        <strong>Professional Certifications:</strong><br>
-        Certified Physician Assistant<br>
-        Certified Biote® provider<br>
-      </p>
-    </div>
-
-    <hr>
-    <div class="overlay">
-      <p>
-        Jennifer graduated from Baylor College of Medicine in Houston, TX, where she trained in
-        Pediatrics, Internal Medicine, Emergency Medicine, Obstetrics and Gynecology, Surgery,
-        Psychiatry, Geriatrics, and Community Medicine. She also served on the PA Admissions
-        Committee while attending Baylor College of Medicine. She is certified by the National
-        Commission On Certification of Physician Assistants, and licensed by the state of Texas to
-        practice medicine for all ages.
-      </p>
-      <p>
-        Her clinical experience includes Urgent Care, Pediatrics, and Family Medicine.
-      </p>
-      <p>
-        She moved here with her husband in 2001 where they have been raising their 4 children. Through the years, Jennifer has also taught High School Sciences at various local homeschool co-ops. Subjects included Anatomy and Physiology as well as Biology, Chemistry, and Physics. Her love for teaching carries over into educating her patients in healthy lifestyles as she uses a holistic approach to medicine. Prevention is a key component to health care as well as using all available resources to bring healing. Her goal is to continue this journey with her patients through the years.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-mark.jpg" />
-  </div>
-
-  <div class="half tile text light">
-    <div class="wrapper">
-      <h2>Ignacio Mark Ramirez, MSN, FNP-C</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Lamar University - Bachelor of Science in Nursing<br>
-          Walden University- Master of Science in Nursing<br>
-        </p>  
-        <p>
-        <strong>Professional Certifications:</strong><br>
-          BioTe <br>
-          Certified in Foundations of Advanced Injections (Aesthetics)
-      </p>
-    </div>
-
-    <hr>
-    <div class="overlay">
-      <p>
-Mark is a proud native of Nederland, Texas, who dedicated his life to serving in the United States Air Force. His journey through education began with an undergraduate degree at Lamar University, followed by a Master’s degree from Walden University. With diverse experience in family practice, pain management, emergency care, and intensive care, Mark has collaborated with numerous specialists in hospitals, enriching his career and the lives of those he serves. He is passionate about providing holistic care to his patients and empowering them with the knowledge to improve their physical and psychological well-being.
-      </p>
-      <p>
-Mark and his wife and cherish their children and grandson. Together, they embrace life’s adventures, travel the world, and fill their days with joy alongside our three little dogs.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-cristina.jpg" />
-  </div>
-  <div class="half tile text light">
-    <div class="wrapper">
-      <h2>Cristina Sifuentes-Ayala, RD, IBCLC, PA-C</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Bachelor of Science in Dietetics & Hospitality - Lamar University<br>
-        Masters of Science in Nutrition & Dietetics - Lamar University<br>
-        Masters of Science in Physician Assistant Studies - University of Pittsburgh <br>
-        Pi Alpha National Honor Society for Physician Assistants <br><br>
-        <strong>Professional Certifications:</strong><br>
-        Certified Physician Assistant licensed with Texas Medical Board <br>
-        Registered Dietitian, Commission on Dietetic Registration  <br>
-        International Board Certified Lactation Consultant
-      </p>
-    </div>
-
-    <hr>
-    <div class="overlay">
-      <p>
-        Cristina, a Texas native from Beaumont, is a dedicated Physician Assistant and Registered Dietitian committed to personalized care. She earned her clinical dietitian  training at Lamar University, gaining experience with diverse patients in inpatient and community settings. Inspired by her work with healthcare teams, she pursued a career as a Physician Assistant, obtaining her second master's degree from the University of Pittsburgh. Her training encompassed Pediatrics, Internal Medicine, Emergency Medicine, Obstetrics and Gynecology, Surgery, Psychiatry, Geriatrics, and Family Medicine. Board-certified by the National Commission On Certification of Physician Assistants and licensed in Texas, Cristina is qualified to practice medicine for patients of all ages.
-      </p>
-      <p>
-        Cristina adopts a holistic approach to medicine, integrating nutrition and medicine to promote overall wellness and offering tailored, innovative solutions. Outside of her professional life, Cristina actively volunteers with the local Junior League chapter, enjoys spending time with her family and traveling with her husband of five years. 
-      </p>
-    </div>
-  </div>
-</div>
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4421.651111366151!2d-93.97434586223012!3d29.968765781589273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145eda8261e432c1%3A0x92e99139e120f5a!2sgerstenberg.clinic!5e1!3m2!1sen!2sus!4v1746897387073!5m2!1sen!2sus" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-<div class="row img">
-  <img src="{{ site.baseurl }}/img/heros/hero-gclinic-building.jpg" />
-</div>
 <script>
-  $(function() {
-    $('.tile.text').on('click', function(e) {
-      if ($(window).width() > 1092) return false;
-
-      e.preventDefault();
-      $(this).find('.overlay').show();
-      return false;
-    });
-
-    $('.tile.text .overlay').on('click', function(e) {
-      if ($(window).width() > 1092) return false;
-
-      e.preventDefault();
-      $(this).hide();
-      return false;
-    });
-  });
+(function(){
+})();
 </script>
-<!--
-<div class="row tiles">
-  <div class="half tile img">
-    <img src="{{ site.baseurl }}/img/lrg-squares/lrg-squares-niki.jpg" />
-  </div>
-    <div class="half tile text light">
-    <div class="wrapper">
-      <h2>Renee “Niki” Broussard, MSN, APRN, FNP-C</h2>
-      <p>
-        <strong>Education:</strong><br>
-        Bachelor of Science in Nursing<br>
-        Lamar University- Beaumont, Texas<br>
-        Masters of Science in Nursing<br>
-        UTMB-Galveston, Texas<br>
-        Licensure- Advanced Practice Registered Nurse -TX BON<br><br><br>
-        <strong>Professional Certifications:</strong><br>
-        Certified Family Nurse Practitioner<br>
-        Certified BioTE provider<br>
-      </p>
-    </div>
-
-    <hr>
-    <div class="overlay">
-      <p>
-        Niki provides holistic care by utilizing her advanced practice nursing skills to prioritize the health and wellness of every patient. She is certified by the American Academy of Nurse Practitioners and licensed by the state of Texas to provide holistic care to patients of all ages.
-      </p>
-      <p>
-        She uses evidence-based practice to guide clinical decision making when treating patients. Using comprehensive critical assessment of patients, she is able to formulate a plan of care that is in the patient’s best interest. She always takes the time to listen to and understand the patient’s needs.
-      </p>
-      <p>
-        She has experience as an RN in progressive telemetry, and in the Mother-Baby unit with labor and delivery at Baptist Hospital in Beaumont.
-      </p>
-      <p>
-        Niki is married and has one daughter and enjoys spending time with her family.
-      </p>
-    </div>
-  </div>
-</div>
--->
+</body>
+</html>

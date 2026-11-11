@@ -1,109 +1,795 @@
 ---
-layout: default
+layout: null
 permalink: /services/neuropathy
-tagline: Nerve Revitalization Therapy
-keywords: "Gerstenberg,Lower extremity pain,Neuropathy,Foot pian,Leg Swelling,Stinging feet,Burning feet,Painful feet,Numb,poor Balance,PVD,Peripheral,vascular,Restless legs,"
-description: "Painful, stinging or numb feet? Leg and foot pain may be the result of the small nerve fibers in the feet dying off or poor circulation. Gerstenberg.clinic has a treatment that targets these symptoms that is proven to work."
-stylesheet: knee
 redirect_from: /foot-pain
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neuropathy Treatment | gerstenberg.clinic</title>
+<meta name="description" content="Relief for burning, tingling, numb or painful feet. MLS laser, IV alpha-lipoic acid, microdose infusion and a 90-day at-home peripheral neuropathy program at gerstenberg.clinic in Port Neches, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-<h3 style="text-align:center">Watch the video below to understand how this therapy could alleviate neuropathy symptoms.</h3>
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
 
-<div class="row video">
-	<iframe class="assetIframe" style="border:0; margin:30" 
-			src="https://www.youtube.com/embed/c05ahDP_Xg4"></iframe>
-</div>
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
 
-<div style="align-content: center;text-align: center;margin-bottom: 50px;">
-        <a href="https://bit.ly/3QXmHGh" class="btn" margin="auto">
-			Don't have an appointment? Reserve your free consultation voucher!
-		</a>
-</div>
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
 
-<div class="row light blurb">
-	<div class="two-thirds">
-		<h2>Reset Sensitivity.<br>Improve Circulation.</h2>
-		<p>Leg and feet pain may be the result of the small nerve fibers in the feet dying off or poor circulation.
-		{% include svgs/logo.html %} can give you the tools to target these factors.</p>
-		<a href="https://drive.google.com/file/d/1x70JxhfYz-Xh6J38kUkrQEcqydGSeJsx/view" class="btn">View the research summary document.</a>
-	</div>
-	<div class="third">
-		<h3>Are You Suffering?</h3>
-		<ul>
-			<li>Burning, stinging or painful feet</li>
-			<li>Numb feet</li>
-			<li>Restless legs syndrome</li>
-			<li>Poor balance</li>
-			<li>Lower leg swelling</li>
-			<li>Chemo-induced painful feet</li>
-			<li>Peripheral vascular disease</li>
-			<li>Dialysis-induced painful feet</li>
-		</ul>
-	</div>
-</div>
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
 
-<div class="row">
-	<div class="third">
-		<img src="../img/third/third-anna.png">
-	</div>
-	<div class="two-thirds">
-		<h3>What to Expect In Your Consultation:</h3>
-		<ul class="spacious">
-			<li>Please arrive 5 minutes before your appointment.</li>
-			<li>Park behind our front building, and look for the back building with a wooden entry ramp. This is the correct door.</li>
-			<li>Check in with the receptionist and feel free to grab some water and chill for a moment while we get your paperwork ready.</li>
-			<li>Your consultation will take about an hour.</li>
-			<li>If your consult reveals normal function or we determine that our program will not likely improve your pain, we will refer you alternative therapies that may be helpful.</li>
-			<li>If the consultation confirms persistant issues, or pain that is worsening, we will work with you to craft a personalized treatment plan.</li>
-		</ul>
-        <a href="https://bit.ly/3QXmHGh" class="btn">
-			Don't have an appointment? Reserve your free consultation voucher!
-		</a>
-	</div>
-</div>
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
 
-<iframe height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJVfONz2xPoYRn7S58dVOkjw&key=AIzaSyC71173RsAJ6UxaKsV8q7SpMwC4x3Ir1WM" allowfullscreen></iframe>
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
 
-<div style="height: 50px"></div>
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
 
-<div class="row cards">
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
 
-	<div class="third card light">
-		<h2>New Blood Vessel Formation</h2>
-        <p>Stimulated by prescription low level light therapy therapy to increase your peripheral circulation up to 400%</p>
-	</div>
-    
-    <div class="third card light">
-		<h2>Nerve Re-Education</h2>
-        <p>Sick nerves forget how to do their job. Electrode therapy retrains your nerve endings to work correctly</p>
-	</div>
-    
-     <div class="third card light">
-         <h2>Blood Flow Nutritional Support</h2>
-         <p>Reduce inflammation while increasing antioxidant activity and accelerate the healing process through targed supplementation.</p>
-	</div>
-    
-</div>
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
 
 
-<div class="row tiles">
-	<div class="half tile img">
-		<img src="../img/lrg-squares/lrg-squares-pain.jpg" alt="An elderly woman with her arms crossed looks up, smiling." />
-	</div>
-	<div class="half tile light text">
-		<h2>Suffer from any of the above Symptoms?</h2>
-		<h3>Come see if you are a candidate for treatment.</h3>
-		<p><b>Reset</b> the sensitivity of the pain fibers for long-term pain relief.</p>
-		<p><b>Retrain</b> the small nerve fibers to fire correctly.</p>
-		<p><b>Improve</b> circulation to keep nerve fibers functional after they are working properly.</p>
-        <a href="https://bit.ly/3QXmHGh" class="btn">
-			Reserve your free consultation!
-		</a>
-	</div>
-</div>
+  
 
-<section class="schedule-consultation center">
-  <h2>Call now to Schedule a Consultation!</h2>
-    <a style="margin-bottom: 60px" href="tel:409-999-1192"><h2>409.999.1192</h2></a>
-</section>
+  /* ===== MLS LASER THERAPY page ===== */
+  /* Layout: brand-kit container; light sections alternating paper / paper-raised; one light-blue band. */
+  .nav{top:env(safe-area-inset-top, 0px);}
+  .eyebrow{font-family:var(--font-display); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+  .crumbs{font-size:.85rem; color:var(--ink-soft); display:flex; gap:8px; flex-wrap:wrap;}
+  .crumbs a{text-decoration:none;}
+  .crumbs a:hover{color:var(--gold);}
+  .section--raised{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section__title{text-wrap:balance;}
+  .prose{display:grid; gap:16px; color:var(--ink-soft); font-size:1.02rem; max-width:62ch;}
+  .prose strong{color:var(--ink);}
+
+  /* Placeholder marker: anything the clinic still needs to supply */
+  .todo{border:1.5px dashed var(--gold); background:var(--gold-soft); color:var(--clay); border-radius:4px;}
+  .todo__tag{display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--clay);}
+  .todo-inline{border-bottom:1.5px dashed var(--gold); color:var(--clay); font-weight:600;}
+
+  /* HERO */
+  .svc-hero{padding:48px 0 72px;}
+  .svc-hero__grid{display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center; margin-top:28px;}
+  .svc-hero__copy{display:flex; flex-direction:column; gap:18px; min-width:0;}
+  .svc-hero__title{font-size:clamp(2.2rem,4.6vw,3.4rem); font-weight:700; text-wrap:balance;}
+  .svc-hero__lead{font-size:1.15rem; color:var(--ink-soft); max-width:46ch;}
+  .svc-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;}
+  .svc-hero__phone{font-size:.9rem; color:var(--ink-soft);}
+  .svc-hero__phone strong{color:var(--ink); user-select:all;}
+  .photo{position:relative; aspect-ratio:4/3; max-width:100%; border-radius:4px; overflow:hidden; display:flex; align-items:flex-end;}
+  .photo svg{position:absolute; inset:0; width:100%; height:100%;}
+  .photo__caption{position:relative; margin:16px; padding:10px 14px; background:var(--paper); border-radius:3px; font-size:.85rem; color:var(--ink-soft); display:grid; gap:2px; max-width:calc(100% - 32px);}
+  .facts{display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:4px; margin-top:56px; background:var(--paper);}
+  .fact{padding:20px 22px; display:grid; gap:4px; border-left:1px solid var(--line);}
+  .fact:first-child{border-left:none;}
+  .fact__value{font-family:var(--font-display); font-weight:700; font-size:1.35rem; color:var(--navy); font-variant-numeric:tabular-nums;}
+  .fact__label{font-size:.88rem; color:var(--ink-soft);}
+  @media (max-width:900px){
+    .svc-hero__grid{grid-template-columns:1fr; gap:36px;}
+    .facts{grid-template-columns:1fr 1fr;}
+    .fact:nth-child(3){border-left:none;}
+    .fact:nth-child(n+3){border-top:1px solid var(--line);}
+  }
+
+  /* RESEARCH */
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .stat{border-top:2px solid var(--navy); padding-top:18px; display:grid; gap:8px; align-content:start;}
+  .stat__num{font-family:var(--font-display); font-size:2.6rem; font-weight:700; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums;}
+  .stat__num.todo{display:inline-block; justify-self:start; padding:4px 10px; font-size:2.2rem;}
+  .stat__label{font-family:var(--font-display); font-weight:600; color:var(--navy); font-size:1.05rem;}
+  .stat__cite{font-size:.82rem; color:var(--ink-soft);}
+  .note{margin-top:24px; font-size:.85rem; color:var(--ink-soft); max-width:70ch;}
+  @media (max-width:760px){ .stats{grid-template-columns:1fr; gap:28px;} }
+
+  /* WHAT IS */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .two-col > *{min-width:0;}
+  .two-col h3{font-size:1.35rem; margin-bottom:14px;}
+  .video{aspect-ratio:16/9; max-width:100%; display:grid; place-items:center; text-align:center; padding:24px; margin-top:28px;}
+  .video__inner{display:grid; gap:8px; justify-items:center; max-width:40ch; font-size:.9rem;}
+  .video__play{width:52px; height:52px; border-radius:50%; background:var(--paper); display:grid; place-items:center;}
+  .video__play svg{width:20px; height:20px; color:var(--gold);}
+  @media (max-width:820px){ .two-col{grid-template-columns:1fr; gap:40px;} }
+
+  /* BENEFITS (band) */
+  .benefits{display:grid; grid-template-columns:repeat(3,1fr); gap:32px 40px;}
+  .benefit{display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start;}
+  .benefit__icon{width:40px; height:40px; border-radius:50%; background:var(--paper); display:grid; place-items:center; color:var(--band-gold);}
+  .benefit__icon svg{width:20px; height:20px;}
+  .benefit h3{font-size:1.1rem; margin-bottom:4px;}
+  .benefit p{font-size:.95rem; color:var(--band-text-soft);}
+  @media (max-width:860px){ .benefits{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .benefits{grid-template-columns:1fr;} }
+
+  /* CONDITIONS */
+  .conditions{display:grid; grid-template-columns:repeat(3,1fr); gap:0 32px; list-style:none; margin:0; padding:0;}
+  .conditions li{display:flex; gap:12px; align-items:center; padding:14px 0; border-bottom:1px solid var(--line); font-weight:500;}
+  .conditions svg{width:16px; height:16px; color:var(--gold); flex-shrink:0;}
+  .conditions li.more{color:var(--ink-soft); font-weight:400;}
+  @media (max-width:820px){ .conditions{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .conditions{grid-template-columns:1fr;} }
+
+  /* UNIQUE: wave diagram + effects */
+  .waves{border:1px solid var(--line); border-radius:4px; background:var(--paper); padding:20px 20px 14px;}
+  .waves svg{width:100%; height:auto;}
+  .waves__legend{display:flex; gap:20px; flex-wrap:wrap; font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .waves__legend span{display:inline-flex; align-items:center; gap:8px;}
+  .swatch{width:18px; height:3px; border-radius:2px; display:inline-block;}
+  .effects{display:grid; grid-template-columns:1fr 1fr; gap:0 40px; margin-top:56px;}
+  .effect{display:grid; grid-template-columns:44px 1fr; gap:14px; padding:20px 0; border-top:1px solid var(--line);}
+  .effect__n{font-family:var(--font-display); font-weight:700; font-size:.95rem; color:var(--gold); font-variant-numeric:tabular-nums; padding-top:2px;}
+  .effect h3{font-size:1.05rem; margin-bottom:6px;}
+  .effect p{font-size:.95rem; color:var(--ink-soft);}
+  @media (max-width:760px){ .effects{grid-template-columns:1fr;} }
+
+  /* VISIT + PLAN */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; list-style:none; margin:0; padding:0; counter-reset:step;}
+  .step{background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:22px; display:grid; gap:8px; align-content:start; counter-increment:step;}
+  .step::before{content:"Step " counter(step); font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold);}
+  .step h3{font-size:1.05rem;}
+  .step p{font-size:.93rem; color:var(--ink-soft);}
+  @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .steps{grid-template-columns:1fr;} }
+  .plan{margin-top:48px; display:grid; gap:22px; background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:28px;}
+  .plan__head{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;}
+  .plan__head h3{font-size:1.2rem;}
+  .plan__head p{font-size:.9rem; color:var(--ink-soft);}
+  .plan__row{display:grid; grid-template-columns:150px 1fr auto; gap:18px; align-items:center;}
+  .plan__label{font-weight:600; font-size:.95rem;}
+  .plan__label small{display:block; font-weight:400; color:var(--ink-soft); font-size:.82rem;}
+  .dots{display:flex; flex-wrap:wrap; gap:6px;}
+  .dot{width:18px; height:18px; border-radius:50%; background:var(--gold);}
+  .dot--maybe{background:transparent; border:2px solid var(--gold); opacity:.55;}
+  .plan__count{font-family:var(--font-display); font-weight:700; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .plan__foot{font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:16px;}
+  @media (max-width:600px){ .plan__row{grid-template-columns:1fr auto;} .dots{grid-column:1 / -1; grid-row:2;} }
+
+  /* STORIES */
+  .stories{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .story{padding:24px; display:grid; gap:12px; align-content:start; font-size:.92rem;}
+  .story__quote{font-family:var(--font-display); font-size:1.02rem; line-height:1.45; color:var(--clay);}
+  @media (max-width:860px){ .stories{grid-template-columns:1fr;} }
+
+  /* CTA */
+  .cta{display:grid; grid-template-columns:1.3fr 1fr; gap:48px; align-items:center;}
+  .cta__title{font-size:clamp(1.7rem,3vw,2.3rem); color:var(--navy); font-family:var(--font-display); font-weight:600; text-wrap:balance;}
+  .cta__text{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:52ch;}
+  .cta__card{background:var(--paper); border-radius:4px; padding:28px; display:grid; gap:14px;}
+  .cta__card .btn{justify-content:center;}
+  .cta__number{font-family:var(--font-display); font-size:1.6rem; font-weight:700; color:var(--navy); user-select:all; font-variant-numeric:tabular-nums;}
+  .cta__meta{font-size:.88rem; color:var(--ink-soft);}
+  @media (max-width:820px){ .cta{grid-template-columns:1fr; gap:32px;} }
+
+  /* FAQ */
+  .faq-wrap{display:grid; grid-template-columns:1fr 2fr; gap:56px; align-items:start;}
+  .faq-wrap > *{min-width:0;}
+  .faq-side{position:sticky; top:calc(env(safe-area-inset-top, 0px) + 96px); display:grid; gap:16px;}
+  .faq-side .btn{justify-self:start;}
+  .faq{border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none; cursor:pointer; padding:20px 40px 20px 0; position:relative; font-family:var(--font-display); font-weight:600; color:var(--navy); font-size:1.05rem;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:""; position:absolute; right:6px; top:50%; width:10px; height:10px; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); transform:translateY(-70%) rotate(45deg); transition:transform .2s ease;}
+  .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg);}
+  .faq summary:hover{color:var(--gold);}
+  .faq__a{padding:0 0 22px; color:var(--ink-soft); display:grid; gap:12px; max-width:64ch;}
+  .faq__a a{color:var(--gold); font-weight:600;}
+  .faq__tools{display:flex; gap:16px; margin-bottom:12px; font-size:.88rem;}
+  .faq__tools button{background:none; border:none; padding:0; color:var(--ink-soft); cursor:pointer; text-decoration:underline; text-underline-offset:3px;}
+  .faq__tools button:hover{color:var(--gold);}
+  @media (max-width:860px){ .faq-wrap{grid-template-columns:1fr; gap:28px;} .faq-side{position:static;} }
+
+  .disclaimer{font-size:.82rem; color:var(--ink-soft); max-width:80ch; padding-block:28px; border-top:1px solid var(--line);}
+  @media (max-width:600px){ .section{padding:64px 0;} .band{padding:64px 0;} .container{padding:0 16px;} }
+.nav__toggle svg{width:20px; height:20px;}
+.photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  /* ---- spinal decompression additions ---- */
+  .photo--product{background:#fff; border:1px solid var(--line);}
+  .photo--product img{object-fit:contain;}
+  .stat__cite a{color:inherit;}
+  .caution{margin-top:44px; border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:4px; background:var(--paper-raised); padding:24px 26px;}
+  .caution h3{font-size:1.2rem; margin-bottom:6px;}
+  .caution p{color:var(--ink-soft); font-size:.95rem;}
+  .caution ul{columns:2; column-gap:40px; margin:14px 0 0; padding-left:1.2em; font-size:.95rem;}
+  .caution li{break-inside:avoid; padding:3px 0;}
+  @media (max-width:600px){ .caution ul{columns:1;} }
+  .story--real{background:var(--paper); border:1px solid var(--line); border-radius:4px;}
+  .story__by{font-size:.85rem; color:var(--ink-soft);}
+  .story__by strong{color:var(--ink);}
+  .video-embed{position:relative; aspect-ratio:16/9; max-width:760px; margin:36px auto 0; border-radius:12px; overflow:hidden; background:#000;}
+  .video-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+  #stories .note{text-align:center; margin-left:auto; margin-right:auto;}
+  .section--refs{padding-top:8px; padding-bottom:24px;}
+  .refs__title{font-size:1.1rem; margin-bottom:12px;}
+  .refs{margin:0; padding-left:1.4em; display:grid; gap:8px; font-size:.85rem; color:var(--ink-soft); max-width:90ch; overflow-wrap:anywhere;}
+  .refs a{color:var(--gold); font-weight:600;}
+  .effects--3{grid-template-columns:repeat(3,1fr);}
+  @media (max-width:900px){ .effects--3{grid-template-columns:1fr;} }
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="svc-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/#explore">Services</a><span aria-hidden="true">/</span><span>Neuropathy</span></nav>
+      <div class="svc-hero__grid">
+        <div class="svc-hero__copy">
+          <p class="eyebrow">Nerve pain care</p>
+          <h1 class="svc-hero__title">Neuropathy Treatment</h1>
+          <p class="svc-hero__lead">Burning, tingling, numb or painful feet? We combine in-clinic MLS laser therapy, IV alpha-lipoic acid and microdose infusion with a 90-day at-home program built specifically for peripheral neuropathy, to calm nerve pain, improve circulation and help bring feeling back.</p>
+          <div class="svc-hero__actions">
+            <a class="btn btn--gold" href="/candidate?q=I%20have%20neuropathy%3A%20numb%2C%20tingling%20or%20burning%20feet">See if I'm a candidate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></a>
+            <a class="btn btn--ghost" href="#research">See the research</a>
+          </div>
+          <p class="svc-hero__phone">Call <strong>409.210.3336</strong> to book.</p>
+        </div>
+        <div class="video-embed" style="margin:0;">
+          <iframe src="https://www.youtube-nocookie.com/embed/c05ahDP_Xg4" title="Do you have neuropathy pain? A video from gerstenberg.clinic" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="facts" role="list">
+        <div class="fact" role="listitem"><span class="fact__value">3 in-clinic</span><span class="fact__label">MLS laser, IV ALA and MDI</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">90 days</span><span class="fact__label">at-home peripheral neuropathy program</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">Drug-free</span><span class="fact__label">non-invasive options</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">Beyond the feet</span><span class="fact__label">nerve pain in the neck, back, face and more</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH ===== -->
+  <section class="section section--raised" id="research">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What the research shows</p>
+        <h2 class="section__title" style="margin-top:10px;">The treatments in our program, by the numbers</h2>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__num">76%</span>
+          <span class="stat__label">Of diabetic neuropathy patients reported less pain with electrical nerve stimulation, an average improvement of 44%</span>
+          <span class="stat__cite"><a href="#references">Julka et al., 1998</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">67%</span>
+          <span class="stat__label">Average drop in nerve pain after infrared light therapy in 2,239 patients, with 66% fewer numb spots on the feet</span>
+          <span class="stat__cite"><a href="#references">Harkless et al., 2006</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">78%</span>
+          <span class="stat__label">Fewer falls in seniors with neuropathy once infrared light therapy restored sensation in their feet</span>
+          <span class="stat__cite"><a href="#references">Powell et al., 2006</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2&times;</span>
+          <span class="stat__label">Blood flow to the legs during vibration therapy, measured in the main artery behind the knee</span>
+          <span class="stat__cite"><a href="#references">Kerschan-Schindl et al., 2001</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">82.5%</span>
+          <span class="stat__label">Of patients improved with IV alpha-lipoic acid within 3 weeks, versus 57.6% on placebo; symptom scores fell 63.5%</span>
+          <span class="stat__cite"><a href="#references">ALADIN trial, Ziegler et al., 1995</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">51%</span>
+          <span class="stat__label">Average drop in burning, stabbing pain and numbness with daily oral alpha-lipoic acid over 5 weeks, versus 32% on placebo</span>
+          <span class="stat__cite"><a href="#references">SYDNEY 2 trial, Ziegler et al., 2006</a></span>
+        </div>
+      </div>
+      <p class="note">These are published results for each treatment on its own, mostly in diabetic neuropathy. Many of the light, stimulation and vibration studies were not placebo-controlled, and one sham-controlled trial of at-home infrared light alone found no added benefit, so results vary from person to person. That's why we combine approaches, and we'll tell you honestly whether we think our program is a good fit for you.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS ===== -->
+  <section class="section" id="about-neuropathy">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">The basics</p>
+        <h2 class="section__title" style="margin:10px 0 22px;">What is peripheral neuropathy?</h2>
+        <div class="prose">
+          <p><strong>Peripheral neuropathy is nerve damage that causes pain, most often in the feet and hands.</strong></p>
+          <p>It can feel like burning, tingling, numbness or &ldquo;pins and needles.&rdquo; Over time it can make it hard to stand, walk or hold things for long, and numb feet make falls and unnoticed injuries more likely.</p>
+          <p>Diabetes is the most common cause, but chemotherapy, dialysis, poor circulation, vitamin deficiencies and other conditions can damage nerves too.</p>
+        </div>
+      </div>
+      <div>
+        <div class="prose">
+          <p>There isn&rsquo;t a cure for neuropathy yet. But there are treatments that can slow it down, ease the symptoms and often partly reverse its effects.</p>
+          <p>Damaged nerves need two things to recover: <strong>blood flow</strong> to deliver oxygen and nutrients, and <strong>stimulation</strong> to retrain them to fire correctly. Our program targets both, in the clinic and at home, and the treatments work best when they&rsquo;re used together, consistently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYMPTOMS ===== -->
+  <section class="section section--raised" id="symptoms">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Are you suffering?</p>
+        <h2 class="section__title" style="margin-top:10px;">Symptoms our neuropathy program treats</h2>
+      </div>
+      <ul class="conditions">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Chronic pain in the legs and feet</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Burning, stinging or painful feet</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Numb feet</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Restless legs syndrome</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Poor balance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lower leg swelling</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Painful feet after chemotherapy</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Painful feet from dialysis</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Peripheral vascular disorders</li>
+        <li class="more">Not sure? Ask us about your symptoms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== IN-CLINIC ===== -->
+  <section class="section" id="in-clinic">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">In the clinic</p>
+          <h2 class="section__title" style="margin:10px 0 22px;">Three in-clinic treatments for nerve pain</h2>
+          <div class="prose">
+            <p>Your provider builds your plan from three in-clinic therapies, depending on what&rsquo;s causing your neuropathy and how severe it is. They work on different parts of the problem: calming pain and inflammation, protecting nerves from oxidative damage, and fixing the metabolism problems that damage nerves in the first place.</p>
+          </div>
+        </div>
+        <figure class="photo" style="margin:0;">
+          <img src="/img/mls-laser-knee.jpg" alt="A patient wearing protective eyewear receives MLS laser therapy from the robotic laser arm in our clinic" width="1200" height="800" loading="lazy">
+        </figure>
+      </div>
+      <div class="effects effects--3">
+        <div class="effect"><span class="effect__n">01</span><div><h3>MLS laser therapy</h3><p>Our MLS laser uses two synchronized wavelengths of light to reduce pain and inflammation and support nerve healing. Sessions are short, painless and drug-free, with no downtime. In published case reports, a patient with years of nerve pain in the jaw and face was pain-free and off all medication within 13 weeks and still pain-free 2 years later. <a href="/services/mls-laser-therapy">More on MLS laser therapy</a></p></div></div>
+        <div class="effect"><span class="effect__n">02</span><div><h3>IV alpha-lipoic acid</h3><p>Alpha-lipoic acid (ALA) is a powerful antioxidant that protects nerves from the oxidative stress behind much of diabetic neuropathy. Given by IV, it reaches levels that pills can&rsquo;t. In clinical trials, IV ALA eased burning, stabbing pain and numbness within 3 weeks, with improvement first noticed after about 8 days. <a href="/services/iv">More on IV therapy</a></p></div></div>
+        <div class="effect"><span class="effect__n">03</span><div><h3>Microdose infusion (MDI)</h3><p>For patients with diabetes or prediabetes, MDI delivers tiny, precisely timed doses of insulin by IV to mimic a healthy pancreas. That helps the body process carbohydrates properly, lowering the inflammation that damages nerves. After about three months, patients may notice less fatigue and feeling returning to their feet. <a href="/services/microdose-infusion-mdi">More on MDI</a></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AT-HOME PROGRAM ===== -->
+  <section class="band" id="at-home">
+    <div class="container">
+      <div class="band__head">
+        <h2 class="band__title">Our 90-day at-home program for peripheral neuropathy</h2>
+        <p class="band__sub">A take-home kit designed specifically for peripheral neuropathy in the feet and legs. You use it every day for about 90 days, so your nerves get consistent treatment between clinic visits.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><div><h3>Neurostimulation</h3><p>Gentle electrical stimulation retrains damaged nerve endings to fire correctly, blocks pain signals and improves circulation in the skin. In studies, most patients reported less pain, and some became symptom-free.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"/></svg></span><div><h3>Red &amp; infrared light therapy</h3><p>Red and near-infrared light releases nitric oxide, which widens small blood vessels and brings more oxygen to starving nerves. Studies link it to restored foot sensation, less pain and better balance.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0 3 3 4.5 0"/><path d="M2 17c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0 3 3 4.5 0" opacity=".5"/><path d="M2 7c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0 3 3 4.5 0" opacity=".5"/></svg></span><div><h3>Vibration therapy</h3><p>A vibration platform under your feet boosts blood flow to the legs and stimulates the sensors that help with balance. In studies, foot vibration raised calf blood flow by up to 50%.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><div><h3>Short daily sessions</h3><p>Each part of the routine takes minutes and fits into your day at home. Consistency matters more than intensity.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><h3>Guided by our team</h3><p>We set up your plan, show you how to use everything and check your progress along the way.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><div><h3>Then, maintenance</h3><p>After 90 days, most patients can scale back to a maintenance routine. Diet, exercise and supplements stay part of the long-term plan.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUPPLEMENTS ===== -->
+  <section class="section section--raised" id="supplements">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Nutritional support</p>
+        <h2 class="section__title" style="margin-top:10px;">Supplements that help nerves heal</h2>
+        <p class="section__sub">Your program includes targeted supplements to reduce inflammation, support circulation and give nerves the building blocks they need. We&rsquo;ll go over exactly what to take and when at your consultation.</p>
+      </div>
+      <div class="effects" style="margin-top:32px;">
+        <div class="effect"><span class="effect__n">01</span><div><h3>Alpha-lipoic acid (ALA)</h3><p>The same antioxidant we give by IV, taken daily by mouth. In the SYDNEY 2 trial, 600&nbsp;mg a day cut neuropathy symptoms by about half in 5 weeks.</p></div></div>
+        <div class="effect"><span class="effect__n">02</span><div><h3>L-arginine</h3><p>An amino acid your body uses to make nitric oxide, which helps blood vessels relax and improves circulation to the feet and legs.</p></div></div>
+        <div class="effect"><span class="effect__n">03</span><div><h3>M.D. Blend Neuropathy</h3><p>Dr. Gerstenberg&rsquo;s own doctor-formulated blend of nutrients that support nerve health, taken through the 90-day program.</p></div></div>
+        <div class="effect"><span class="effect__n">04</span><div><h3>Nerve Reviver blend</h3><p>A nerve-support formula that&rsquo;s part of the at-home kit, designed to work alongside the stimulation, light and vibration therapies.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOUR VISIT ===== -->
+  <section class="section" id="your-visit">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="section__title" style="margin-top:10px;">What to expect</h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><h3>Consultation</h3><p>We review your history and symptoms and test the sensation and circulation in your feet. If we don&rsquo;t think our program will help, we&rsquo;ll tell you and point you to other options.</p></li>
+        <li class="step"><h3>Your treatment plan</h3><p>Your provider recommends the in-clinic therapies that fit your situation: MLS laser, IV alpha-lipoic acid, MDI or a combination.</p></li>
+        <li class="step"><h3>Start the home program</h3><p>For peripheral neuropathy, you take home the kit and supplements and we walk you through your daily routine.</p></li>
+        <li class="step"><h3>Follow-up &amp; maintenance</h3><p>We track your progress over the 90 days, then move you to a maintenance plan to protect your results.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== BEYOND PERIPHERAL NEUROPATHY ===== -->
+  <section class="section section--raised" id="beyond">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Not just your feet</p>
+        <h2 class="section__title" style="margin-top:10px;">We treat nerve pain wherever it starts</h2>
+        <p class="section__sub">The at-home kit is designed for peripheral neuropathy in the feet and legs. Our in-clinic treatments aren&rsquo;t limited to neuropathy: we also use them for:</p>
+      </div>
+      <ul class="conditions">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pinched nerves &amp; radiculopathy</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sciatica</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Neck and arm nerve pain</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Facial and jaw nerve pain</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nerve pain after injury or surgery</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Diabetes-related complications</li>
+      </ul>
+      <div class="stats" style="margin-top:44px;">
+        <div class="stat">
+          <span class="stat__num">8 days</span>
+          <span class="stat__label">Of daily MLS laser sessions left a patient with a pinched nerve in her neck pain-free; two months later her MRI showed the herniated disc had receded and she avoided surgery</span>
+          <span class="stat__cite"><a href="#references">Perez et al., case report</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2 years</span>
+          <span class="stat__label">Pain-free after MLS laser treatment for 4 years of nerve pain in the jaw and face, with all medication stopped by week 13</span>
+          <span class="stat__cite"><a href="#references">Olmos, case report</a></span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">Back &amp; neck</span>
+          <span class="stat__label">Disc problems pressing on a nerve may also respond to <a href="/services/spinal-decompression">spinal decompression</a>, which we often pair with laser therapy</span>
+        </div>
+      </div>
+      <p class="note">Case reports describe single patients and don&rsquo;t predict your results.</p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="band" id="consult">
+    <div class="container cta">
+      <div>
+        <h2 class="cta__title">Tired of burning, tingling or numb feet?</h2>
+        <p class="cta__text">Schedule a consultation. We&rsquo;ll test your feet, talk through your history and tell you honestly whether our neuropathy program is a good fit.</p>
+      </div>
+      <div class="cta__card">
+        <span class="cta__meta">Call our Port Neches clinic</span>
+        <span class="cta__number">409.210.3336</span>
+        <a class="btn btn--gold" href="/candidate?q=I%20have%20neuropathy%3A%20numb%2C%20tingling%20or%20burning%20feet">See if I'm a candidate</a>
+        <span class="cta__meta">2927 Nall Street, Port Neches, TX 77651</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container faq-wrap">
+      <div class="faq-side">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section__title">Frequently asked questions</h2>
+        <p class="section__sub" style="margin-top:0;">Don't see your question? Call us and we'll walk you through it.</p>
+        <a class="btn btn--gold" href="tel:4092103336">Call 409.210.3336</a>
+      </div>
+      <div>
+        <div class="faq__tools"><button type="button" id="faq-open">Expand all</button><button type="button" id="faq-close">Collapse all</button></div>
+        <div class="faq" id="faq-list">
+          <details><summary>Is the at-home kit only for peripheral neuropathy?</summary><div class="faq__a"><p>Yes. The 90-day at-home program is designed for peripheral neuropathy in the feet and legs. If your nerve pain is in your neck, back, arms or face, our in-clinic treatments such as MLS laser therapy, IV alpha-lipoic acid and spinal decompression may still help, and we&rsquo;ll recommend what fits.</p></div></details>
+          <details><summary>Do I need to have diabetes?</summary><div class="faq__a"><p>No. Diabetes is the most common cause of neuropathy, but we also treat neuropathy from chemotherapy, dialysis, poor circulation and other causes. Microdose infusion (MDI) is mainly for patients with diabetes or prediabetes.</p></div></details>
+          <details><summary>Can neuropathy be cured?</summary><div class="faq__a"><p>There isn&rsquo;t a cure yet. The goal is to slow it down, ease your symptoms and, often, partly reverse its effects, such as getting feeling back in your feet. Results vary from person to person.</p></div></details>
+          <details><summary>How soon will I notice a difference?</summary><div class="faq__a"><p>It varies. In studies, some patients noticed better sensation within 6 to 12 light-therapy sessions, and IV alpha-lipoic acid improvements started after about 8 days. Nerves heal slowly, so we plan for about 90 days of consistent treatment.</p></div></details>
+          <details><summary>Do the treatments hurt?</summary><div class="faq__a"><p>No. MLS laser therapy is painless, neurostimulation feels like a light tingle, and light and vibration therapy are relaxing. IV treatments involve a small needle for the IV line.</p></div></details>
+          <details><summary>Is it safe for everyone?</summary><div class="faq__a"><p>Tell us if you have a pacemaker or another implanted electrical device, are pregnant, or have open wounds on your feet. Some parts of the program may not be right for you, and we screen for this at your consultation.</p></div></details>
+          <details><summary>Should I stop my neuropathy medication?</summary><div class="faq__a"><p>No. Keep taking your medications unless your provider tells you otherwise. If your symptoms improve, we&rsquo;ll talk with you about whether any changes make sense.</p></div></details>
+          <details><summary>How much does it cost?</summary><div class="faq__a"><p>Pricing and packages vary from patient to patient. It&rsquo;s not one-size-fits-all: your provider will recommend a plan after your consultation, and we&rsquo;ll go over pricing with you before you commit to anything. <a href="/services/cherry">Cherry payment plans</a> are available.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENCES ===== -->
+  <section class="section section--raised" id="references">
+    <div class="container">
+      <h2 class="refs__title">Research cited</h2>
+      <ol class="refs">
+        <li>Julka IS, Alvaro M, Kumar D. Beneficial effects of electrical stimulation on neuropathic symptoms in diabetes patients. <em>J Foot Ankle Surg</em>. 1998;37(3):191-194. <a href="https://pubmed.ncbi.nlm.nih.gov/9638542/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Kumar D, Marshall HJ. Diabetic peripheral neuropathy: amelioration of pain with transcutaneous electrostimulation. <em>Diabetes Care</em>. 1997;20(11):1702-1705. <a href="https://pubmed.ncbi.nlm.nih.gov/9353612/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Harkless LB, DeLellis S, Carnegie DH, Burke TJ. Improved foot sensitivity and pain reduction in patients with peripheral neuropathy after treatment with monochromatic infrared photo energy (MIRE). <em>J Diabetes Complications</em>. 2006;20(2):81-87. <a href="https://pubmed.ncbi.nlm.nih.gov/16504836/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Powell MW, Carnegie DH, Burke TJ. Reversal of diabetic peripheral neuropathy with phototherapy (MIRE) decreases falls and the fear of falling and improves activities of daily living in seniors. <em>Age Ageing</em>. 2006;35(1):11-16. <a href="https://pubmed.ncbi.nlm.nih.gov/16303775/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Leonard DR, Farooqi MH, Myers S. Restoration of sensation, reduced pain, and improved balance in subjects with diabetic peripheral neuropathy. <em>Diabetes Care</em>. 2004;27(1):168-172. <a href="https://pubmed.ncbi.nlm.nih.gov/14693984/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Kochman AB, Carnegie DH, Burke TJ. Symptomatic reversal of peripheral neuropathy in patients with diabetes. <em>J Am Podiatr Med Assoc</em>. 2002;92(3):125-130. <a href="https://pubmed.ncbi.nlm.nih.gov/11904323/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Lavery LA, Murdoch DP, Williams J, Lavery DC. Does anodyne light therapy improve peripheral neuropathy in diabetes? A double-blind, sham-controlled, randomized trial. <em>Diabetes Care</em>. 2008;31(2):316-321. <a href="https://pubmed.ncbi.nlm.nih.gov/17977931/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Kerschan-Schindl K, Grampp S, Henk C, et al. Whole-body vibration exercise leads to alterations in muscle blood volume. <em>Clin Physiol</em>. 2001;21(3):377-382. <a href="https://pubmed.ncbi.nlm.nih.gov/11380538/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Stewart JM, Karman C, Montgomery LD, McLeod KJ. Plantar vibration improves leg fluid flow in perimenopausal women. <em>Am J Physiol Regul Integr Comp Physiol</em>. 2005;288(3):R623-R629. <a href="https://pubmed.ncbi.nlm.nih.gov/15472009/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Ziegler D, Hanefeld M, Ruhnau KJ, et al. Treatment of symptomatic diabetic peripheral neuropathy with the anti-oxidant alpha-lipoic acid: a 3-week multicentre randomized controlled trial (ALADIN Study). <em>Diabetologia</em>. 1995;38(12):1425-1433. <a href="https://pubmed.ncbi.nlm.nih.gov/8786016/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Ziegler D, Nowak H, Kempler P, Vargha P, Low PA. Treatment of symptomatic diabetic polyneuropathy with the antioxidant alpha-lipoic acid: a meta-analysis. <em>Diabet Med</em>. 2004;21(2):114-121. <a href="https://pubmed.ncbi.nlm.nih.gov/14984445/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Ziegler D, Ametov A, Barinov A, et al. Oral treatment with alpha-lipoic acid improves symptomatic diabetic polyneuropathy: the SYDNEY 2 trial. <em>Diabetes Care</em>. 2006;29(11):2365-2370. <a href="https://pubmed.ncbi.nlm.nih.gov/17065669/" target="_blank" rel="noopener">Read the abstract</a></li>
+        <li>Olmos SR. Successful treatment for neuropathic pain with MLS&reg;: a case study. <em>Energy for Health</em>. Issue 15:15-18.</li>
+        <li>Perez E, Natera JA, Guzm&aacute;n Hern&aacute;ndez LD, Olalde J. Regression of cervical radiculopathy after laser therapy treatment: a case report. <em>Energy for Health</em>. Issue 17:4-5.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="container">
+    <p class="disclaimer">Neuropathy treatment isn&rsquo;t right for everyone, and the studies above looked at each therapy separately, not our combined program. Individual results vary; your provider will discuss whether our program is appropriate for your condition. The at-home program is designed for peripheral neuropathy and doesn&rsquo;t replace your regular medical care or diabetes management.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+<script>
+(function(){
+  var list=document.getElementById('faq-list');
+  function setAll(v){ list.querySelectorAll('details').forEach(function(d){ d.open=v; }); }
+  document.getElementById('faq-open').addEventListener('click',function(){setAll(true);});
+  document.getElementById('faq-close').addEventListener('click',function(){setAll(false);});
+})();
+</script>
+</body>
+</html>

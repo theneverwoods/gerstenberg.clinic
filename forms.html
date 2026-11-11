@@ -1,125 +1,604 @@
 ---
-layout: default
+layout: null
 permalink: /forms
-hero: /img/heros/hero-gclinic-forms.jpg
-tagline: 
-stylesheet: forms
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Patient Forms — gerstenberg.clinic</title>
+<meta name="description" content="New patient, update, and records forms for gerstenberg.clinic. Fill them out online or print and drop off or fax.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-<div class="row video">
-	<iframe class="assetIframe" style="border:0" 
-			src="https://www.youtube.com/embed/VqMHMwrNPvg" allowfullscreen></iframe> 
-    <p style="text-align:center">At our discretion, we may stop accepting primary care patients at any time.</p>
-    <p>Please call the office at 409.210.3336 to confirm that we are accepting new patients, or type "new patient" in our Facebook chatbot (in the lower right corner of our homepage).</p>
-</div>
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
 
-<div class="row forms-row">
-  <div class="third card light">
-    <h2>Clinic Forms</h2>
-    <p>Completed forms can be sent to {% include svgs/logo.html %} via </p>
-    <ul>
-      <li> <b>Delivery</b> - 2927 Nall St</li>
-      <li> <b>Fax</b> - 409.527.3969</li>
-      <li> <b>Email</b> - <a href="mailto:clinic@gerstenbergclinic.com?Subject=Patient%20Forms" target="_top">clinic@gerstenbergclinic.com</a></li>
-    </ul>
-    <p>Please send along a copy of the <b>front and back of your insurance card</b></p>
-    <ul>
-        <li> It takes <b>4-7 business days</b> for us to process your packet.</li>
-        <li>Once processed, <b>we will call</b> to schedule your new patient appointment.</li>
-    </ul>
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+  /* Add page-specific CSS below this line as new pages need it. */
+
+  /* ===== NEW PATIENT FORMS PAGE ===== */
+  .forms-hero{padding:72px 0 48px;}
+  .forms-hero__eyebrow{font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
+  .forms-hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; max-width:18ch; text-wrap:balance;}
+  .forms-hero__sub{margin-top:16px; color:var(--ink-soft); font-size:1.05rem; max-width:58ch;}
+  .notice{margin-top:28px; display:flex; gap:14px; align-items:flex-start; background:var(--gold-soft); border:1px solid var(--gold-soft); border-radius:4px; padding:16px 20px; max-width:720px;}
+  .notice svg{width:20px; height:20px; flex-shrink:0; color:var(--clay); margin-top:2px;}
+  .notice p{font-size:.95rem; color:var(--ink);}
+  .notice strong{font-weight:600;}
+  .notice a{color:var(--clay); font-weight:600;}
+
+  /* Steps: real sequence, so numbers carry meaning */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:0; list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .step{padding:24px 24px 4px 0; position:relative;}
+  .step + .step{padding-left:24px; border-left:1px solid var(--line);}
+  .step__num{font-family:var(--font-display); font-weight:700; font-size:.85rem; color:var(--gold); font-variant-numeric:tabular-nums; letter-spacing:.04em;}
+  .step__title{font-family:var(--font-display); font-weight:600; font-size:1.08rem; color:var(--navy); margin:8px 0 8px; line-height:1.3;}
+  .step__text{color:var(--ink-soft); font-size:.93rem;}
+  @media (max-width:860px){
+    .steps{grid-template-columns:1fr 1fr;}
+    .step:nth-child(3){padding-left:0; border-left:none;}
+    .step:nth-child(n+3){border-top:1px solid var(--line);}
+  }
+  @media (max-width:520px){
+    .steps{grid-template-columns:1fr;}
+    .step,.step + .step{padding:20px 0 4px; border-left:none;}
+    .step + .step{border-top:1px solid var(--line);}
+  }
+
+  /* Filter + form list */
+  .forms-section{padding:72px 0 84px; background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .filter{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px;}
+  .filter__btn{font-family:var(--font-body); font-size:.85rem; font-weight:600; color:var(--ink-soft); background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:8px 16px; cursor:pointer; transition:border-color .15s ease, color .15s ease, background .15s ease;}
+  .filter__btn:hover{border-color:var(--gold); color:var(--gold);}
+  .filter__btn[aria-pressed="true"]{background:var(--gold-soft); border-color:var(--gold); color:var(--clay);}
+
+  .form-list{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .form-item{background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:24px 26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .form-item:hover{border-color:var(--gold);}
+  .form-item--wide{grid-column:1 / -1;}
+  .form-item__meta{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
+  .tag{font-size:.74rem; font-weight:600; padding:3px 9px; border-radius:20px; border:1px solid var(--line); color:var(--ink-soft);}
+  .tag--gold{color:var(--gold); background:var(--gold-soft); border-color:var(--gold-soft);}
+  .form-item__title{font-size:1.2rem; margin-bottom:8px;}
+  .form-item__text{color:var(--ink-soft); font-size:.95rem; flex:1; max-width:62ch;}
+  .form-item__actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;}
+  .form-item__actions .btn{padding:10px 16px; font-size:.9rem;}
+  .form-list__empty{grid-column:1/-1; text-align:center; color:var(--ink-soft); padding:32px; border:1px dashed var(--line); border-radius:4px;}
+  @media (max-width:760px){ .form-list{grid-template-columns:1fr;} }
+
+  /* Send it in */
+  .send{padding:84px 0;}
+  .send__grid{display:grid; grid-template-columns:repeat(2,1fr); max-width:820px; gap:20px;}
+  .send-card{border-top:2px solid var(--navy); padding-top:18px;}
+  .send-card__label{font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--gold);}
+  .send-card__value{font-family:var(--font-display); font-weight:600; font-size:1.2rem; color:var(--navy); margin:8px 0 6px; overflow-wrap:anywhere; font-variant-numeric:tabular-nums;}
+  .send-card__note{color:var(--ink-soft); font-size:.92rem;}
+  .copy-btn{margin-top:12px; font-family:var(--font-body); font-size:.82rem; font-weight:600; color:var(--ink); background:none; border:none; border-bottom:1px solid var(--gold); padding:0 0 1px; cursor:pointer;}
+  .copy-btn:hover{color:var(--gold);}
+  .checklist{margin-top:44px; display:grid; grid-template-columns:1fr 1fr; gap:14px 40px; list-style:none; padding:24px 0 0; border-top:1px solid var(--line);}
+  .checklist li{display:flex; gap:10px; align-items:flex-start; font-size:.95rem; color:var(--ink);}
+  .checklist svg{width:18px; height:18px; color:var(--gold); flex-shrink:0; margin-top:2px;}
+  @media (max-width:760px){ .send__grid{grid-template-columns:1fr; gap:28px;} .checklist{grid-template-columns:1fr;} }
+
+  /* Help band — uses the light blue brand band, not a dark background */
+  .help{background:var(--band-bg); color:var(--band-text); padding:56px 0;}
+  .help__inner{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;}
+  .help__title{font-size:clamp(1.4rem,2.4vw,1.8rem);}
+  .help__text{color:var(--band-text-soft); margin-top:8px; max-width:52ch;}
+  .help__actions{display:flex; gap:12px; flex-wrap:wrap;}
+
+.nav__toggle svg{width:20px; height:20px;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
   </div>
-  <div class="two-thirds">
-       <div class="links-row">
-      <div>
-        <a href="https://form.jotform.com/222806516737056" class="btn">Online Adult New Patient</a>
-        <a href="{{ site.baseurl }}/pdf/adult.pdf" class="btn">Printable Adult New Patient</a>
-     </div>
-      <div>
-        <p>
-          All new primary care patients must fill out paperwork and submit it before scheduling an appointment. This form is for those 18+. Note the digital form is in beta testing, so please give us feedback on any difficulties.
-        </p>
+</header>
+
+<main id="main">
+
+  
+  <section class="forms-hero">
+    <div class="container">
+      <p class="forms-hero__eyebrow">Patient forms</p>
+      <h1 class="forms-hero__title">Get your paperwork done before your first visit</h1>
+      <p class="forms-hero__sub">Every new primary care patient completes a packet before we schedule an appointment. Fill it out online, or print it and drop it off or fax it to us.</p>
+      <div class="notice" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Call first to confirm we're taking new patients.</strong> We may stop accepting new primary care patients at any time. Call <a href="tel:4092103336">409.210.3336</a>, or type "new patient" in the Facebook chat on our homepage.</p>
       </div>
     </div>
-      
-    <div class="links-row">
-      <div>
-        <a href="https://form.jotform.com/240127511769153" class="btn">Online Child New Patient</a>
-          <a href="{{ site.baseurl }}/pdf/pedi.pdf" class="btn">Printable Child New Patient</a>
+  </section>
+
+  <section class="container" aria-labelledby="steps-title" style="padding-bottom:72px;">
+    <h2 id="steps-title" class="visually-hidden">How it works</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num">STEP 1</span>
+        <h3 class="step__title">Call to confirm</h3>
+        <p class="step__text">Make sure we're accepting new patients before you start your packet.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 2</span>
+        <h3 class="step__title">Complete your packet</h3>
+        <p class="step__text">Use the online form or the printable PDF. Adults 18+ and children have separate packets.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 3</span>
+        <h3 class="step__title">Send it with your insurance card</h3>
+        <p class="step__text">Include a copy of the front and back of your card. Drop it off at the clinic or fax it.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 4</span>
+        <h3 class="step__title">We'll call you</h3>
+        <p class="step__text">Processing takes 4–7 business days. Once it's done, we call to schedule your first appointment.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="forms-section" id="forms" aria-labelledby="forms-title">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" id="forms-title">Find your form</h2>
+        <p class="section__sub">Online forms are in beta. If anything gives you trouble, let us know or use the printable version instead.</p>
       </div>
-      <div>
-        <p>
-          Minors may become a patient if their guardian is a patient.
-        </p>
+
+      <div class="filter" role="group" aria-label="Filter forms">
+        <button type="button" class="filter__btn" id="filter-all" data-filter="all" aria-pressed="true">All forms</button>
+        <button type="button" class="filter__btn" id="filter-new" data-filter="new" aria-pressed="false">New patients</button>
+        <button type="button" class="filter__btn" id="filter-returning" data-filter="returning" aria-pressed="false">Returning patients</button>
+        <button type="button" class="filter__btn" id="filter-visit" data-filter="visit" aria-pressed="false">Before a specific visit</button>
+        <button type="button" class="filter__btn" id="filter-records" data-filter="records" aria-pressed="false">Records &amp; privacy</button>
+      </div>
+
+      <div class="form-list" id="form-list">
+
+        <article class="form-item form-item--wide" data-cat="new">
+          <div class="form-item__meta"><span class="tag tag--gold">Most common</span><span class="tag">Ages 18+</span><span class="tag">Primary care</span></div>
+          <h3 class="form-item__title">Adult new patient packet</h3>
+          <p class="form-item__text">Required for all new primary care patients 18 and older. Submit it before scheduling your first appointment.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/222806516737056" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/adult.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="new">
+          <div class="form-item__meta"><span class="tag">Under 18</span><span class="tag">Primary care</span></div>
+          <h3 class="form-item__title">Child new patient packet</h3>
+          <p class="form-item__text">Minors can become patients when their parent or guardian is also a patient here.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/240127511769153" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/pedi.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="new">
+          <div class="form-item__meta"><span class="tag">Cash-pay</span><span class="tag">No insurance card needed</span></div>
+          <h3 class="form-item__title">Wellness new patient packet</h3>
+          <p class="form-item__text">For wellness services only, if you aren't already a primary care patient. Covers Biote® hormone therapy, DermaSweep, and ED treatments.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--ghost" href="/pdf/wellness.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="returning">
+          <div class="form-item__meta"><span class="tag">Existing patients</span></div>
+          <h3 class="form-item__title">Annual update packet</h3>
+          <p class="form-item__text">Haven't been seen yet this calendar year? Fill this out ahead of time and save time at check-in.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/240126861766157" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/update.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="visit">
+          <div class="form-item__meta"><span class="tag">Consult visit</span></div>
+          <h3 class="form-item__title">Reforming Life new patient packet</h3>
+          <p class="form-item__text">Complete this before your Reforming Life consult so we can get you in and out of the office quickly.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/240145434896158" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/reflife.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="visit">
+          <div class="form-item__meta"><span class="tag">Cardiovascular exam</span></div>
+          <h3 class="form-item__title">HeartSmart patient packet</h3>
+          <p class="form-item__text">Complete this paperwork before your HeartSmart cardiovascular exam.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/222274403298052" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/HS_patient_packet.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="records">
+          <div class="form-item__meta"><span class="tag">Records transfer</span></div>
+          <h3 class="form-item__title">Medical records consent</h3>
+          <p class="form-item__text">Use this to have your records transferred to us from another facility or doctor.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--gold" href="https://form.jotform.com/240145495653156" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="btn btn--ghost" href="/pdf/records.pdf" target="_blank" rel="noopener">Printable PDF</a>
+          </div>
+        </article>
+
+        <article class="form-item" data-cat="records">
+          <div class="form-item__meta"><span class="tag">For your information</span></div>
+          <h3 class="form-item__title">Notice of Privacy Practices</h3>
+          <p class="form-item__text">How we protect your personal health information, and when and how it may be disclosed.</p>
+          <div class="form-item__actions">
+            <a class="btn btn--ghost" href="/pdf/NPP.pdf" target="_blank" rel="noopener">Read the notice (PDF)</a>
+          </div>
+        </article>
+
+        <p class="form-list__empty" id="form-empty" hidden>No forms in this group.</p>
       </div>
     </div>
-    <div class="links-row">
-      <div>
-        <a href="https://form.jotform.com/240126861766157" class="btn">Update Packet Digital [beta]</a>
-          <a href="{{ site.baseurl }}/pdf/update.pdf" class="btn">Update Packet PDF</a>
+  </section>
+
+  <section class="send" id="send" aria-labelledby="send-title">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" id="send-title">Send in a printed packet</h2>
+        <p class="section__sub">Online forms come straight to us. For printed packets, drop them off or fax them. For your privacy, we can't accept forms by email.</p>
       </div>
-      <div>
-        <p>
-          If you haven’t been seen within the current calendar year, save time by filling the update packet out ahead of time.
-        </p>
-      </div>
-    </div>
-    
-    <div class="links-row">
-      <div>
-        <a href="{{ site.baseurl }}/pdf/wellness.pdf" class="btn">{% include svgs/gc-wellness-abbreviated.html %} New Patient</a>
-      </div>
-      <div>
-        <p>
-          For those interested in cash-pay wellness services, but not already primary-care patients. You don’t need an insurance card. This includes: BioTE, DermaSweep, and E.D. Treatments.
-        </p>
-      </div>
-      </div> 
-      
-    <div class="links-row">
-      <div>
-        <a href="https://form.jotform.com/240145434896158" class="btn">Online Reforming Life New Patient</a>
-          <a href="{{ site.baseurl }}/pdf/reflife.pdf" class="btn">Printable Reforming Life New Patient</a>
-      </div>
-      <div>
-        <p>
-          Please fill these papers out before coming for a ReformingLife consult. This will help us get you in and out of the office quickly.
-        </p>
-      </div>
-      </div> 
-      
-    <div class="links-row">
-        <div>
-          <a href="{{ site.baseurl }}/pdf/NPP.pdf" class="btn">Notice of Privacy Practices</a>
+      <div class="send__grid">
+        <div class="send-card">
+          <p class="send-card__label">Drop off</p>
+          <p class="send-card__value">2927 Nall Street<br>Port Neches, TX 77651</p>
+          <p class="send-card__note">Bring it to the front desk during office hours.</p>
+          <a class="copy-btn" href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener" style="text-decoration:none; display:inline-block;">Get directions</a>
         </div>
-      <div>
-        <p>
-          Our practice is dedicated to maintaining the privacy of your individually identifiable health information (PHI). Our Notice of Privacy Practices outlines how and when your information will be disclosed.
-        </p>
-       </div> 
+        <div class="send-card">
+          <p class="send-card__label">Fax</p>
+          <p class="send-card__value" id="fax-value">409.527.3969</p>
+          <p class="send-card__note">Include every page plus your insurance card.</p>
+          <button type="button" class="copy-btn" id="copy-fax" data-copy="4095273969" data-target="fax-value">Copy fax number</button>
+        </div>
+      </div>
+
+      <ul class="checklist" aria-label="Before you send">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Every page of the packet is complete and signed</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>A copy of the front and back of your insurance card</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>A phone number where we can reach you to schedule</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Allow 4–7 business days for processing</li>
+      </ul>
     </div>
-    
-    <div class="links-row">
-        <div>
-          <a href="https://form.jotform.com/240145495653156" class="btn">Medical Records Consent Digital [beta]</a>
-            <a href="{{ site.baseurl }}/pdf/records.pdf" class="btn">Medical Records Consent PDF</a>
-        </div>
+  </section>
+
+  <section class="help" aria-labelledby="help-title">
+    <div class="container help__inner">
       <div>
-        <p>
-          Use this form when seeking to transfer records from another fascility or doctor.
-        </p>
-       </div> 
-    </div>  
-    <div class="links-row">
-        <div>
-          <a href="{{ site.baseurl }}/pdf/HS_patient_packet.pdf" class="btn">HeartSmart Printable</a>
-         <a href="https://form.jotform.com/222274403298052" class="btn">HeartSmart Digital Form</a>      
-        </div>
+        <h2 class="help__title" id="help-title">Not sure which form you need?</h2>
+        <p class="help__text">Call the front desk and we'll point you to the right packet. Wellness visits for Biote® and ED treatment use a separate cash-pay packet.</p>
+      </div>
+      <div class="help__actions">
+        <a class="btn btn--gold" href="tel:4092103336"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>409.210.3336</a>
+        <a class="btn btn--ghost" href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
       <div>
-        <p>
-          Please complete this paperwork before your HeartSmart cardiovascular exam.
-        </p>
-      </div>  
-    </div>  
-    <div class="links-row">
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
   </div>
-</div>
+</footer>
+
+<script>
+(function(){
+  // form filter
+  var btns=document.querySelectorAll('.filter__btn');
+  var items=document.querySelectorAll('.form-item');
+  var empty=document.getElementById('form-empty');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-filter'), shown=0;
+      btns.forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false');});
+      items.forEach(function(it){
+        var on = f==='all' || it.getAttribute('data-cat')===f;
+        it.hidden=!on; if(on) shown++;
+        it.classList.toggle('form-item--wide', on && f==='all' && it.querySelector('.tag--gold')!==null);
+      });
+      empty.hidden = shown>0;
+    });
+  });
+  // copy buttons
+  document.querySelectorAll('button.copy-btn').forEach(function(b){
+    var label=b.textContent;
+    b.addEventListener('click',function(){
+      var done=function(){b.textContent='Copied'; setTimeout(function(){b.textContent=label;},1600);};
+      var fallback=function(){
+        var el=document.getElementById(b.getAttribute('data-target'));
+        var r=document.createRange(); r.selectNodeContents(el);
+        var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent='Selected, press Ctrl+C'; setTimeout(function(){b.textContent=label;},2200);
+      };
+      try{ navigator.clipboard.writeText(b.getAttribute('data-copy')).then(done,fallback); }catch(e){ fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

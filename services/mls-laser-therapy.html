@@ -1,0 +1,735 @@
+---
+layout: null
+permalink: /services/mls-laser-therapy
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MLS Laser Therapy</title>
+<meta name="description" content="Drug-free, non-invasive MLS Laser Therapy for pain and inflammation at Gerstenberg Clinic in Port Neches, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#1B1B1E;
+    --ink-soft:#5A5A76;
+    --navy:#202B5C;
+    --paper:#FFFFFF;
+    --paper-raised:#F7F6FA;
+    --white:#FFFFFF;
+    --gold:#984A22;
+    --gold-soft:#EFDDCE;
+    --clay:#7A3B1B;
+    --line:#DCDCE2;
+    --band-bg:#D7EFF9;
+    --band-text:#1B1B1E;
+    --band-text-soft:#5A5A76;
+    --band-gold:#984A22;
+    --font-display:'Sora', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --container:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+      --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+      --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+      --band-gold:#E0895A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1EAE1; --ink-soft:#B7B4C9; --navy:#9FB3E0; --paper:#141C33; --paper-raised:#1C2740;
+    --white:#1C2740; --gold:#D98456; --gold-soft:#3A2A22; --clay:#E0895A;
+    --line:#2E3A55; --band-bg:#1C2A44; --band-text:#F1EAE1; --band-text-soft:#C9C4BC;
+    --band-gold:#E0895A;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; letter-spacing:-0.01em; color:var(--navy);}
+  p{margin:0;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+  .skip-link{position:absolute; left:-9999px; top:auto; background:var(--gold); color:var(--white); padding:10px 16px; border-radius:3px; z-index:100; text-decoration:none;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  /* NAV */
+  .nav{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--container); margin:0 auto; position:relative;}
+  .nav__mark{display:flex; align-items:center; background:#FFFFFF; border-radius:6px; padding:6px 12px; border:1px solid var(--line);}
+  .nav__logo{height:26px; width:auto; display:block;}
+  .nav__links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav__links a{text-decoration:none; font-size:.95rem; color:var(--ink-soft); transition:color .15s ease;}
+  .nav__links a:hover{color:var(--gold);}
+  .nav__right{display:flex; align-items:center; gap:18px;}
+  .nav__phone{text-decoration:none; font-size:.95rem; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap;}
+  .nav__phone svg{width:15px; height:15px;}
+  .nav__toggle{display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 10px; cursor:pointer; color:var(--ink);}
+  @media (max-width:860px){
+    .nav__links{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .nav__links.is-open{display:flex;}
+    .nav__links a{padding:14px 24px; border-top:1px solid var(--line);}
+    .nav__toggle{display:inline-flex;}
+    .nav__phone span{display:none;}
+  }
+
+  .btn{border:none; border-radius:3px; padding:13px 20px; font-family:var(--font-body); font-weight:600; font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px; text-decoration:none;}
+  .btn svg{width:16px; height:16px;}
+  .btn--gold{background:var(--gold); color:var(--white);}
+  .btn--gold:hover{background:var(--clay);}
+  .btn--ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn--soft{background:var(--paper-raised); border:1px solid var(--line); color:var(--ink); border-radius:20px;}
+  .btn--soft:hover{border-color:var(--gold); color:var(--gold); background:var(--white);}
+
+  /* HERO */
+  .hero{padding:100px 0 84px; text-align:center;}
+  .hero__inner{max-width:760px; margin:0 auto; padding:0 24px;}
+  .hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; margin-bottom:34px;}
+  .google-search__bar{
+    display:flex; align-items:center; gap:12px;
+    border:1px solid var(--line); border-radius:28px;
+    padding:15px 24px; background:var(--white);
+    box-shadow:0 1px 6px rgba(20,20,25,0.07);
+    transition:box-shadow .15s ease;
+  }
+  .google-search__bar:hover, .google-search__bar:focus-within{ box-shadow:0 3px 12px rgba(20,20,25,0.12); }
+  .google-search__icon{width:19px; height:19px; color:var(--ink-soft); flex-shrink:0;}
+  .google-search__input{flex:1; border:none; outline:none; background:transparent; font-family:var(--font-body); font-size:1.04rem; color:var(--ink); min-width:0;}
+  .google-search__actions{display:flex; justify-content:center; gap:12px; margin-top:24px; flex-wrap:wrap;}
+  #main{display:flex; flex-direction:column;}
+  .hero__status{
+    margin-top:20px; font-size:.92rem; color:var(--ink-soft);
+    max-width:56ch; margin-left:auto; margin-right:auto;
+    opacity:0; height:0; overflow:hidden; transition:opacity .15s ease;
+  }
+  .hero__status.is-visible{opacity:1; height:auto;}
+  .hero__status a{color:var(--gold); font-weight:600; text-decoration:underline;}
+  .quick-links{display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .quick-links__link{font-size:.82rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:7px 16px; border:1px solid var(--line); border-radius:20px; transition:border-color .15s ease, color .15s ease, background .15s ease, opacity .2s ease;}
+  .quick-links__link:hover{border-color:var(--gold); color:var(--gold);}
+  .quick-links__link.is-match{border-color:var(--gold); background:var(--gold-soft); color:var(--clay);}
+  .is-faded{opacity:.4; transition:opacity .2s ease;}
+  .card--featured.is-faded .card__figure{opacity:.7;}
+  .hero__scroll{display:inline-flex; align-items:center; gap:6px; margin-top:44px; color:var(--ink-soft); font-size:.88rem; text-decoration:none;}
+  .hero__scroll:hover{color:var(--gold);}
+  .hero__scroll svg{width:14px; height:14px;}
+  @media (max-width:600px){ .hero{padding:64px 0 56px;} }
+
+  /* TEAM */
+  .team{padding:8px 0 76px;}
+  .team__head{max-width:640px; margin-bottom:28px;}
+  .team__photo{
+    width:100%; aspect-ratio:31/9; border-radius:4px; overflow:hidden; margin-bottom:26px;
+  }
+  .team__photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .team__roster{display:flex; flex-wrap:wrap; gap:9px 30px; list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .team__roster strong{color:var(--ink); font-weight:600;}
+  @media (max-width:700px){ .team__roster{flex-direction:column; gap:9px;} }
+
+  /* STRIP */
+  .strip{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0;}
+  .strip__inner{max-width:var(--container); margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:.9rem; color:var(--ink-soft);}
+  .strip__item{display:flex; align-items:center; gap:7px;}
+  .strip__item strong{color:var(--ink); font-weight:600;}
+  .strip svg{width:15px; height:15px; flex-shrink:0;}
+  .strip__link{color:var(--gold); text-decoration:none; font-weight:600;}
+  .strip__link:hover{text-decoration:underline;}
+
+  /* SECTION shared */
+  .section{padding:84px 0;}
+  .section__head{max-width:640px; margin-bottom:44px;}
+  .section__title{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section__sub{margin-top:14px; color:var(--ink-soft); font-size:1.02rem; max-width:56ch;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .card{grid-column:span 3; background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
+  .card:hover{border-color:var(--gold);}
+  .card--featured{grid-column:span 6; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;}
+  .card__figure{width:120px; height:120px; border-radius:50%; background:conic-gradient(from 210deg, var(--gold-soft), var(--paper-raised) 70%); flex-shrink:0;}
+  .card__pill{align-self:flex-start; font-size:.75rem; color:var(--gold); border:1px solid var(--gold-soft); background:var(--gold-soft); padding:3px 9px; border-radius:20px; margin-bottom:14px;}
+  .card__title{font-size:1.2rem; margin-bottom:10px;}
+  .card__text{color:var(--ink-soft); font-size:.96rem; flex:1;}
+  .card__link{margin-top:16px; font-size:.92rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); align-self:flex-start; padding-bottom:1px;}
+  .card__link:hover{color:var(--gold);}
+  .grid__empty{display:none; grid-column:1/-1; text-align:center; padding:48px 24px; border:1px dashed var(--line); border-radius:4px; color:var(--ink-soft);}
+  .grid__empty.is-visible{display:block;}
+  .grid__empty p{max-width:46ch; margin:0 auto;}
+  .grid__empty .btn{margin-top:18px;}
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .card{grid-column:span 1;}
+    .card--featured{grid-column:span 2;}
+    .card--featured .card__figure{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .card,.card--featured{grid-column:span 1;}
+  }
+
+  /* BAND (discover) */
+  .band{background:var(--band-bg); color:var(--band-text); padding:88px 0;}
+  .band__head{max-width:620px; margin-bottom:48px;}
+  .band__title{font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--navy); font-family:var(--font-display); font-weight:600;}
+  .band__sub{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:56ch;}
+  .band__grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .feature__label{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--band-gold); margin-bottom:14px; letter-spacing:-0.01em;}
+  .feature__text{color:var(--band-text-soft); font-size:.98rem;}
+  .feature__cta{display:inline-block; margin-top:18px; font-size:.92rem; font-weight:600; color:var(--band-text); border-bottom:1px solid var(--band-gold); text-decoration:none; padding-bottom:2px;}
+  .feature__cta:hover{color:var(--band-gold);}
+  .band__foot{margin-top:48px; padding-top:28px; border-top:1px solid rgba(27,27,30,0.14); font-size:.92rem; color:var(--band-text-soft); max-width:60ch;}
+  @media (max-width:760px){ .band__grid{grid-template-columns:1fr; gap:36px;} }
+
+  /* CHAT */
+  /* JOURNAL */
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .article-card{border-top:2px solid var(--ink); padding-top:18px;}
+  .article-card__tag{font-size:.78rem; color:var(--gold); font-weight:600;}
+  .article-card__title{font-family:var(--font-display); font-size:1.25rem; margin:10px 0; font-weight:500; line-height:1.3;}
+  .article-card__dek{color:var(--ink-soft); font-size:.92rem;}
+  .article-card__link{display:inline-block; margin-top:14px; font-size:.88rem; font-weight:600; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  .article-card__link:hover{color:var(--gold);}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:34px;} }
+
+  /* FUNNEL */
+  .funnel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .funnel-card{background:var(--paper-raised); border:1px solid var(--line); border-radius:4px; padding:26px;}
+  .funnel-card__title{font-size:1.1rem; font-family:var(--font-display); font-weight:500;}
+  .funnel-card__meta{font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .funnel-card .btn{margin-top:18px; width:100%; justify-content:center;}
+  .funnel__note{margin-top:28px; font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px; max-width:70ch;}
+  @media (max-width:820px){ .funnel-grid{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  .footer{background:var(--paper-raised); border-top:1px solid var(--line); padding:64px 0 32px;}
+  .footer__top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line);}
+  .footer__logo-wrap{display:inline-flex; background:#FFFFFF; border-radius:6px; padding:8px 14px; border:1px solid var(--line);}
+  .footer__logo{height:24px; width:auto; display:block;}
+  .footer__tagline{color:var(--ink-soft); font-size:.92rem; margin-top:10px; max-width:32ch;}
+  .footer__credentials{margin-top:18px; font-size:.85rem; color:var(--ink-soft); line-height:1.6;}
+  .footer h4{font-family:var(--font-body); font-size:.85rem; font-weight:600; margin:0 0 14px; color:var(--ink);}
+  .footer ul{list-style:none; margin:0; padding:0;}
+  .footer li{margin-bottom:10px;}
+  .footer a{color:var(--ink-soft); text-decoration:none; font-size:.92rem;}
+  .footer a:hover{color:var(--gold);}
+  .footer__bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--ink-soft);}
+  .footer__legal{max-width:70ch;}
+  @media (max-width:820px){ .footer__top{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:520px){ .footer__top{grid-template-columns:1fr;} }
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+
+
+  
+
+  /* ===== MLS LASER THERAPY page ===== */
+  /* Layout: brand-kit container; light sections alternating paper / paper-raised; one light-blue band. */
+  .nav{top:env(safe-area-inset-top, 0px);}
+  .eyebrow{font-family:var(--font-display); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+  .crumbs{font-size:.85rem; color:var(--ink-soft); display:flex; gap:8px; flex-wrap:wrap;}
+  .crumbs a{text-decoration:none;}
+  .crumbs a:hover{color:var(--gold);}
+  .section--raised{background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section__title{text-wrap:balance;}
+  .prose{display:grid; gap:16px; color:var(--ink-soft); font-size:1.02rem; max-width:62ch;}
+  .prose strong{color:var(--ink);}
+
+
+  /* HERO */
+  .svc-hero{padding:48px 0 72px;}
+  .svc-hero__grid{display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center; margin-top:28px;}
+  .svc-hero__copy{display:flex; flex-direction:column; gap:18px; min-width:0;}
+  .svc-hero__title{font-size:clamp(2.2rem,4.6vw,3.4rem); font-weight:700; text-wrap:balance;}
+  .svc-hero__lead{font-size:1.15rem; color:var(--ink-soft); max-width:46ch;}
+  .svc-hero__actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;}
+  .svc-hero__phone{font-size:.9rem; color:var(--ink-soft);}
+  .svc-hero__phone strong{color:var(--ink); user-select:all;}
+  .photo{position:relative; aspect-ratio:4/3; max-width:100%; border-radius:4px; overflow:hidden; display:flex; align-items:flex-end;}
+  .photo svg{position:absolute; inset:0; width:100%; height:100%;}
+  .photo__caption{position:relative; margin:16px; padding:10px 14px; background:var(--paper); border-radius:3px; font-size:.85rem; color:var(--ink-soft); display:grid; gap:2px; max-width:calc(100% - 32px);}
+  .facts{display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:4px; margin-top:56px; background:var(--paper);}
+  .fact{padding:20px 22px; display:grid; gap:4px; border-left:1px solid var(--line);}
+  .fact:first-child{border-left:none;}
+  .fact__value{font-family:var(--font-display); font-weight:700; font-size:1.35rem; color:var(--navy); font-variant-numeric:tabular-nums;}
+  .fact__label{font-size:.88rem; color:var(--ink-soft);}
+  @media (max-width:900px){
+    .svc-hero__grid{grid-template-columns:1fr; gap:36px;}
+    .facts{grid-template-columns:1fr 1fr;}
+    .fact:nth-child(3){border-left:none;}
+    .fact:nth-child(n+3){border-top:1px solid var(--line);}
+  }
+
+  /* RESEARCH */
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .stat{border-top:2px solid var(--navy); padding-top:18px; display:grid; gap:8px; align-content:start;}
+  .stat__num{font-family:var(--font-display); font-size:2.6rem; font-weight:700; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums;}
+  .stat__label{font-family:var(--font-display); font-weight:600; color:var(--navy); font-size:1.05rem;}
+  .stat__cite{font-size:.82rem; color:var(--ink-soft);}
+  .note{margin-top:24px; font-size:.85rem; color:var(--ink-soft); max-width:70ch;}
+  @media (max-width:760px){ .stats{grid-template-columns:1fr; gap:28px;} }
+
+  /* WHAT IS */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .two-col > *{min-width:0;}
+  .two-col h3{font-size:1.35rem; margin-bottom:14px;}
+  @media (max-width:820px){ .two-col{grid-template-columns:1fr; gap:40px;} }
+
+  /* BENEFITS (band) */
+  .benefits{display:grid; grid-template-columns:repeat(3,1fr); gap:32px 40px;}
+  .benefit{display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start;}
+  .benefit__icon{width:40px; height:40px; border-radius:50%; background:var(--paper); display:grid; place-items:center; color:var(--band-gold);}
+  .benefit__icon svg{width:20px; height:20px;}
+  .benefit h3{font-size:1.1rem; margin-bottom:4px;}
+  .benefit p{font-size:.95rem; color:var(--band-text-soft);}
+  @media (max-width:860px){ .benefits{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .benefits{grid-template-columns:1fr;} }
+
+  /* CONDITIONS */
+  .conditions{display:grid; grid-template-columns:repeat(3,1fr); gap:0 32px; list-style:none; margin:0; padding:0;}
+  .conditions li{display:flex; gap:12px; align-items:center; padding:14px 0; border-bottom:1px solid var(--line); font-weight:500;}
+  .conditions svg{width:16px; height:16px; color:var(--gold); flex-shrink:0;}
+  .conditions li.more{color:var(--ink-soft); font-weight:400;}
+  @media (max-width:820px){ .conditions{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .conditions{grid-template-columns:1fr;} }
+
+  /* UNIQUE: wave diagram + effects */
+  .waves{border:1px solid var(--line); border-radius:4px; background:var(--paper); padding:20px 20px 14px;}
+  .waves svg{width:100%; height:auto;}
+  .waves__legend{display:flex; gap:20px; flex-wrap:wrap; font-size:.82rem; color:var(--ink-soft); margin-top:8px;}
+  .waves__legend span{display:inline-flex; align-items:center; gap:8px;}
+  .swatch{width:18px; height:3px; border-radius:2px; display:inline-block;}
+  .effects{display:grid; grid-template-columns:1fr 1fr; gap:0 40px; margin-top:56px;}
+  .effect{display:grid; grid-template-columns:44px 1fr; gap:14px; padding:20px 0; border-top:1px solid var(--line);}
+  .effect__n{font-family:var(--font-display); font-weight:700; font-size:.95rem; color:var(--gold); font-variant-numeric:tabular-nums; padding-top:2px;}
+  .effect h3{font-size:1.05rem; margin-bottom:6px;}
+  .effect p{font-size:.95rem; color:var(--ink-soft);}
+  @media (max-width:760px){ .effects{grid-template-columns:1fr;} }
+
+  /* VISIT + PLAN */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; list-style:none; margin:0; padding:0; counter-reset:step;}
+  .step{background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:22px; display:grid; gap:8px; align-content:start; counter-increment:step;}
+  .step::before{content:"Step " counter(step); font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold);}
+  .step h3{font-size:1.05rem;}
+  .step p{font-size:.93rem; color:var(--ink-soft);}
+  @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .steps{grid-template-columns:1fr;} }
+  .plan{margin-top:48px; display:grid; gap:22px; background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:28px;}
+  .plan__head{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;}
+  .plan__head h3{font-size:1.2rem;}
+  .plan__head p{font-size:.9rem; color:var(--ink-soft);}
+  .plan__row{display:grid; grid-template-columns:150px 1fr auto; gap:18px; align-items:center;}
+  .plan__label{font-weight:600; font-size:.95rem;}
+  .plan__label small{display:block; font-weight:400; color:var(--ink-soft); font-size:.82rem;}
+  .dots{display:flex; flex-wrap:wrap; gap:6px;}
+  .dot{width:18px; height:18px; border-radius:50%; background:var(--gold);}
+  .dot--maybe{background:transparent; border:2px solid var(--gold); opacity:.55;}
+  .plan__count{font-family:var(--font-display); font-weight:700; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .plan__foot{font-size:.88rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:16px;}
+  @media (max-width:600px){ .plan__row{grid-template-columns:1fr auto;} .dots{grid-column:1 / -1; grid-row:2;} }
+
+  /* STORIES */
+  .stories{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .story{padding:24px; display:grid; gap:12px; align-content:start; font-size:.92rem;}
+  .story__quote{font-family:var(--font-display); font-size:1.02rem; line-height:1.45; color:var(--clay);}
+  .story--video{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:14px 14px 16px;}
+  .story__video{aspect-ratio:9/16; width:100%; border-radius:10px; overflow:hidden; background:#1A2147;}
+  .story__video iframe{display:block; width:100%; height:100%; border:0;}
+  .story--video figcaption{font-size:.95rem; color:var(--ink-soft);} .story--video figcaption strong{color:var(--navy);}
+  @media (max-width:860px){ .story--video{max-width:360px; width:100%; justify-self:center;} }
+  @media (max-width:860px){ .stories{grid-template-columns:1fr;} }
+
+  /* CTA */
+  .cta{display:grid; grid-template-columns:1.3fr 1fr; gap:48px; align-items:center;}
+  .cta__title{font-size:clamp(1.7rem,3vw,2.3rem); color:var(--navy); font-family:var(--font-display); font-weight:600; text-wrap:balance;}
+  .cta__text{margin-top:14px; color:var(--band-text-soft); font-size:1.02rem; max-width:52ch;}
+  .cta__card{background:var(--paper); border-radius:4px; padding:28px; display:grid; gap:14px;}
+  .cta__card .btn{justify-content:center;}
+  .cta__number{font-family:var(--font-display); font-size:1.6rem; font-weight:700; color:var(--navy); user-select:all; font-variant-numeric:tabular-nums;}
+  .cta__meta{font-size:.88rem; color:var(--ink-soft);}
+  @media (max-width:820px){ .cta{grid-template-columns:1fr; gap:32px;} }
+
+  /* FAQ */
+  .faq-wrap{display:grid; grid-template-columns:1fr 2fr; gap:56px; align-items:start;}
+  .faq-wrap > *{min-width:0;}
+  .faq-side{position:sticky; top:calc(env(safe-area-inset-top, 0px) + 96px); display:grid; gap:16px;}
+  .faq-side .btn{justify-self:start;}
+  .faq{border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none; cursor:pointer; padding:20px 40px 20px 0; position:relative; font-family:var(--font-display); font-weight:600; color:var(--navy); font-size:1.05rem;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:""; position:absolute; right:6px; top:50%; width:10px; height:10px; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); transform:translateY(-70%) rotate(45deg); transition:transform .2s ease;}
+  .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg);}
+  .faq summary:hover{color:var(--gold);}
+  .faq__a{padding:0 0 22px; color:var(--ink-soft); display:grid; gap:12px; max-width:64ch;}
+  .faq__a a{color:var(--gold); font-weight:600;}
+  .faq__tools{display:flex; gap:16px; margin-bottom:12px; font-size:.88rem;}
+  .faq__tools button{background:none; border:none; padding:0; color:var(--ink-soft); cursor:pointer; text-decoration:underline; text-underline-offset:3px;}
+  .faq__tools button:hover{color:var(--gold);}
+  @media (max-width:860px){ .faq-wrap{grid-template-columns:1fr; gap:28px;} .faq-side{position:static;} }
+
+  .disclaimer{font-size:.82rem; color:var(--ink-soft); max-width:80ch; padding-block:28px; border-top:1px solid var(--line);}
+  @media (max-width:600px){ .section{padding:64px 0;} .band{padding:64px 0;} .container{padding:0 16px;} }
+.nav__toggle svg{width:20px; height:20px;}
+.photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+</style>
+<link rel="stylesheet" href="/css/wellness.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="/" aria-label="gerstenberg.clinic home">
+      <img src="/img/logo.png" alt="gerstenberg.clinic" class="nav__logo">
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="/candidate"><span class="nav__cta-long">Find out if I'm a candidate</span><span class="nav__cta-short">Get screened</span></a>
+      <a class="nav__phone" href="tel:4092103336" aria-label="Call 409.210.3336">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>409.210.3336</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== HERO ===== -->
+  <section class="svc-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/#explore">Services</a><span aria-hidden="true">/</span><span>MLS Laser Therapy</span></nav>
+      <div class="svc-hero__grid">
+        <div class="svc-hero__copy">
+          <p class="eyebrow">Pain &amp; injury care</p>
+          <h1 class="svc-hero__title">MLS Laser Therapy</h1>
+          <p class="svc-hero__lead">Drug-free, non-invasive pain relief. Light energy helps your body calm inflammation and heal itself, in sessions that take about 15 minutes at our Port Neches clinic.</p>
+          <div class="svc-hero__actions">
+            <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20MLS%20laser%20therapy">See if I'm a candidate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></a>
+            <a class="btn btn--ghost" href="#faq">Read the FAQs</a>
+          </div>
+          <p class="svc-hero__phone">Call <strong>409.210.3336</strong> to book.</p>
+        </div>
+        <figure class="photo" style="margin:0;">
+          <img src="/img/mls-laser-knee.jpg" alt="A patient wearing protective eyewear receives MLS laser therapy on her knee from the robotic laser arm in our clinic" width="1600" height="1195">
+        </figure>
+      </div>
+      <div class="facts" role="list">
+        <div class="fact" role="listitem"><span class="fact__value">10–15 min</span><span class="fact__label">per treatment session</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">1–3 visits</span><span class="fact__label">when most patients notice a change</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">No downtime</span><span class="fact__label">go straight back to your day</span></div>
+        <div class="fact" role="listitem"><span class="fact__value">FDA-cleared</span><span class="fact__label">safe, painless, noninvasive</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH ===== -->
+  <section class="section section--raised" id="research">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What the research shows</p>
+        <h2 class="section__title" style="margin-top:10px;">Measured pain relief in clinical studies</h2>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__num">88%</span>
+          <span class="stat__label">Decrease in lumbosacral sciatic pain</span>
+          <span class="stat__cite">Guzman et al., 2019</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">78%</span>
+          <span class="stat__label">Decrease in plantar fasciitis pain</span>
+          <span class="stat__cite">Blevins et al., 2019</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">78%</span>
+          <span class="stat__label">Decrease in shoulder periarthritis pain</span>
+          <span class="stat__cite">Corti, 2004</span>
+        </div>
+      </div>
+      <p class="note">Percentages come from MLS / Cutting Edge Laser Technologies study summaries. Results vary from person to person.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS ===== -->
+  <section class="section" id="about-mls">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">The basics</p>
+        <h2 class="section__title" style="margin:10px 0 22px;">What is MLS Laser Therapy?</h2>
+        <div class="prose">
+          <p><strong>When a physical condition or injury affects your mobility and quality of life, there is one goal: a rapid return to everyday activities.</strong></p>
+          <p>Multiwave Locked System® (MLS) Laser Therapy uses light to stimulate the body's natural healing processes. It is safe, painless, noninvasive, cleared by the FDA, and backed by decades of research at research facilities around the world.</p>
+        </div>
+      </div>
+      <div>
+        <h3>How can light help with pain?</h3>
+        <div class="prose">
+          <p>Light is energy, and almost every form of life depends on it. Your cells use light energy in many ways every day. Sunlight on your skin, for example, is an important source of vitamin D.</p>
+          <p>Decades of research have found that certain wavelengths of light also help cells carry out healing processes more effectively.</p>
+          <p>The patented MLS system delivers those specific wavelengths to help your body manage pain, improve blood flow, and decrease inflammation at the same time, for a wide range of painful conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="band" id="benefits">
+    <div class="container">
+      <div class="band__head">
+        <h2 class="band__title">Benefits of MLS Laser Therapy</h2>
+        <p class="band__sub">Relief that works with your body instead of masking symptoms.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></span><div><h3>Relieves pain</h3><p>Rapid relief, often within the first few sessions.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span><div><h3>Reduces inflammation</h3><p>Strong anti-inflammatory effects that ease swelling.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><div><h3>Improves circulation</h3><p>Immediate improvement in local blood flow to the injured area.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div><h3>No downtime</h3><p>Treatments are quick, and you can return to normal activity right away.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg></span><div><h3>No drugs or injections</h3><p>Helps you avoid unnecessary medications and, in many cases, surgery.</p></div></div>
+        <div class="benefit"><span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span><div><h3>No known side effects</h3><p>Non-addictive and painless, with no known negative side effects.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONDITIONS ===== -->
+  <section class="section" id="conditions">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Common conditions</p>
+        <h2 class="section__title" style="margin-top:10px;">What we treat with MLS</h2>
+        <p class="section__sub">MLS Laser Therapy treats the pain and inflammation associated with:</p>
+      </div>
+      <ul class="conditions">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Acute injuries</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Arthritis &amp; bursitis</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Back &amp; neck pain</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Musculoskeletal disorders</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Neuropathic pain</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Occupational &amp; sports injuries</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Plantar fasciitis</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Post-surgical recovery</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sprains &amp; strains</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tendon &amp; ligament injuries</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wound healing</li>
+        <li class="more">And many more. Ask us about your condition.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== UNIQUE ===== -->
+  <section class="section section--raised" id="how-it-works">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 class="section__title" style="margin:10px 0 22px;">What makes the MLS laser unique?</h2>
+          <div class="prose">
+            <p>MLS is the only therapy laser that precisely synchronizes continuous and pulsed wavelengths of light. That lets photons (particles of light energy) reach deep into the body while staying safe and painless.</p>
+            <p>The result is a system designed to reduce pain, contracture, inflammation, and swelling at the same time, in a short period. As your body responds to the light, several therapeutic effects begin together.</p>
+          </div>
+        </div>
+        <figure class="waves" style="margin:0;">
+          <svg viewBox="0 0 560 170" role="img" aria-label="Diagram: a continuous 808 nm wave and pulsed 905 nm bursts, timed together">
+            <line x1="0" y1="150" x2="560" y2="150" style="stroke:var(--line)" stroke-width="1"/>
+            <path d="M0,60.0 L4,65.9 L8,71.3 L12,75.9 L16,79.4 L20,81.4 L24,82.0 L28,80.9 L32,78.4 L36,74.5 L40,69.5 L44,63.9 L48,58.0 L52,52.3 L56,47.1 L60,42.8 L64,39.8 L68,38.2 L72,38.2 L76,39.8 L80,42.8 L84,47.1 L88,52.3 L92,58.0 L96,63.9 L100,69.5 L104,74.5 L108,78.4 L112,80.9 L116,82.0 L120,81.4 L124,79.4 L128,75.9 L132,71.3 L136,65.9 L140,60.0 L144,54.1 L148,48.7 L152,44.1 L156,40.6 L160,38.6 L164,38.0 L168,39.1 L172,41.6 L176,45.5 L180,50.5 L184,56.1 L188,62.0 L192,67.7 L196,72.9 L200,77.2 L204,80.2 L208,81.8 L212,81.8 L216,80.2 L220,77.2 L224,72.9 L228,67.7 L232,62.0 L236,56.1 L240,50.5 L244,45.5 L248,41.6 L252,39.1 L256,38.0 L260,38.6 L264,40.6 L268,44.1 L272,48.7 L276,54.1 L280,60.0 L284,65.9 L288,71.3 L292,75.9 L296,79.4 L300,81.4 L304,82.0 L308,80.9 L312,78.4 L316,74.5 L320,69.5 L324,63.9 L328,58.0 L332,52.3 L336,47.1 L340,42.8 L344,39.8 L348,38.2 L352,38.2 L356,39.8 L360,42.8 L364,47.1 L368,52.3 L372,58.0 L376,63.9 L380,69.5 L384,74.5 L388,78.4 L392,80.9 L396,82.0 L400,81.4 L404,79.4 L408,75.9 L412,71.3 L416,65.9 L420,60.0 L424,54.1 L428,48.7 L432,44.1 L436,40.6 L440,38.6 L444,38.0 L448,39.1 L452,41.6 L456,45.5 L460,50.5 L464,56.1 L468,62.0 L472,67.7 L476,72.9 L480,77.2 L484,80.2 L488,81.8 L492,81.8 L496,80.2 L500,77.2 L504,72.9 L508,67.7 L512,62.0 L516,56.1 L520,50.5 L524,45.5 L528,41.6 L532,39.1 L536,38.0 L540,38.6 L544,40.6 L548,44.1 L552,48.7 L556,54.1 L560,60.0" fill="none" style="stroke:var(--navy)" stroke-width="2.5"/>
+            <g style="stroke:var(--gold)" stroke-width="3" stroke-linecap="round"><line x1="23.3" y1="150" x2="23.3" y2="112" /><line x1="30.3" y1="150" x2="30.3" y2="112" /><line x1="37.3" y1="150" x2="37.3" y2="112" /><line x1="44.3" y1="150" x2="44.3" y2="112" /><line x1="116.7" y1="150" x2="116.7" y2="112" /><line x1="123.7" y1="150" x2="123.7" y2="112" /><line x1="130.7" y1="150" x2="130.7" y2="112" /><line x1="137.7" y1="150" x2="137.7" y2="112" /><line x1="210.0" y1="150" x2="210.0" y2="112" /><line x1="217.0" y1="150" x2="217.0" y2="112" /><line x1="224.0" y1="150" x2="224.0" y2="112" /><line x1="231.0" y1="150" x2="231.0" y2="112" /><line x1="303.3" y1="150" x2="303.3" y2="112" /><line x1="310.3" y1="150" x2="310.3" y2="112" /><line x1="317.3" y1="150" x2="317.3" y2="112" /><line x1="324.3" y1="150" x2="324.3" y2="112" /><line x1="396.7" y1="150" x2="396.7" y2="112" /><line x1="403.7" y1="150" x2="403.7" y2="112" /><line x1="410.7" y1="150" x2="410.7" y2="112" /><line x1="417.7" y1="150" x2="417.7" y2="112" /><line x1="490.0" y1="150" x2="490.0" y2="112" /><line x1="497.0" y1="150" x2="497.0" y2="112" /><line x1="504.0" y1="150" x2="504.0" y2="112" /><line x1="511.0" y1="150" x2="511.0" y2="112" /></g>
+          </svg>
+          <figcaption class="waves__legend">
+            <span><i class="swatch" style="background:var(--navy)"></i>808 nm, continuous or pulsed</span>
+            <span><i class="swatch" style="background:var(--gold)"></i>905 nm, pulsed</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="effects">
+        <div class="effect"><span class="effect__n">01</span><div><h3>Anti-inflammatory</h3><p>Reduces inflammation and swelling by stimulating lymphatic drainage and widening blood vessels.</p></div></div>
+        <div class="effect"><span class="effect__n">02</span><div><h3>Pain relief</h3><p>Stimulates endorphins and enkephalins, which block pain signals to the brain. Less inflammation and swelling also means less pain.</p></div></div>
+        <div class="effect"><span class="effect__n">03</span><div><h3>Faster tissue repair</h3><p>Photons reach deep into tissue and give cells more energy, so they take in nutrients, clear waste, and repair themselves faster.</p></div></div>
+        <div class="effect"><span class="effect__n">04</span><div><h3>Better blood vessel activity</h3><p>Encourages new capillaries to form in damaged tissue and temporarily widens blood vessels to speed healing.</p></div></div>
+        <div class="effect"><span class="effect__n">05</span><div><h3>Increased metabolic activity</h3><p>Boosts output of specific enzymes and the oxygen and nutrients carried by blood cells.</p></div></div>
+        <div class="effect"><span class="effect__n">06</span><div><h3>Trigger and acupuncture points</h3><p>Stimulates trigger points and acupuncture points to relieve musculoskeletal pain without needles.</p></div></div>
+        <div class="effect"><span class="effect__n">07</span><div><h3>Less scar tissue</h3><p>Reduces scar tissue that forms after cuts, scratches, burns, or surgery.</p></div></div>
+        <div class="effect"><span class="effect__n">08</span><div><h3>Improved nerve function</h3><p>Speeds the reconnection of nerve cells and strengthens nerve signals to help muscles heal.</p></div></div>
+        <div class="effect"><span class="effect__n">09</span><div><h3>Immune support</h3><p>Stimulates immunoglobulins and lymphocytes and supports production of ATP, the main energy source for your cells.</p></div></div>
+        <div class="effect"><span class="effect__n">10</span><div><h3>Faster wound healing</h3><p>Stimulates fibroblasts, the cells that build new tissue, which makes MLS useful after surgery and for open wounds and burns.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISIT ===== -->
+  <section class="section" id="your-visit">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Your visit</p>
+        <h2 class="section__title" style="margin-top:10px;">What a treatment looks like</h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><h3>Arrive a few minutes early</h3><p>Check in about 10 minutes before your appointment. Wear clothing that lets us reach the treatment area easily.</p></li>
+        <li class="step"><h3>Put on eyewear</h3><p>You and your provider wear protective glasses while the laser is in use.</p></li>
+        <li class="step"><h3>Relax for 10–15 minutes</h3><p>The laser head is guided over the area. Most patients feel nothing at all.</p></li>
+        <li class="step"><h3>Head back to your day</h3><p>There is no downtime. Effects build with each visit in your plan.</p></li>
+      </ol>
+      <div class="plan">
+        <div class="plan__head">
+          <h3>A typical treatment plan</h3>
+          <p>Each dot is one session. Your provider sets your plan at your consultation.</p>
+        </div>
+        <div class="plan__row">
+          <span class="plan__label">Acute conditions<small>recent injuries, sprains</small></span>
+          <span class="dots" aria-hidden="true"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></span>
+          <span class="plan__count">~6 sessions</span>
+        </div>
+        <div class="plan__row">
+          <span class="plan__label">Chronic conditions<small>arthritis, long-term pain</small></span>
+          <span class="dots" aria-hidden="true"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot dot--maybe"></i><i class="dot dot--maybe"></i><i class="dot dot--maybe"></i><i class="dot dot--maybe"></i><i class="dot dot--maybe"></i></span>
+          <span class="plan__count">10–15 sessions</span>
+        </div>
+        <p class="plan__foot">Results are cumulative, so finishing the full course your provider recommends matters. Some patients come back for an occasional supportive session to maintain their results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORIES ===== -->
+  <section class="section section--raised" id="stories">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Success stories</p>
+        <h2 class="section__title" style="margin-top:10px;">Patients who found relief</h2>
+      </div>
+      <div class="stories">
+        <figure class="story story--video" style="margin:0;"><div class="story__video"><iframe src="https://www.youtube-nocookie.com/embed/vX4RQ-nRRQY" title="Nadia&rsquo;s MLS laser therapy testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><strong>Nadia</strong> &middot; Knee pain</figcaption></figure>
+        <figure class="story story--video" style="margin:0;"><div class="story__video"><iframe src="https://www.youtube-nocookie.com/embed/J8RShZWI12Y" title="Lon&rsquo;s MLS laser therapy testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><strong>Lon</strong> &middot; Achilles pain</figcaption></figure>
+        <figure class="story story--video" style="margin:0;"><div class="story__video"><iframe src="https://www.youtube-nocookie.com/embed/nz73idjFztI" title="Rita&rsquo;s MLS laser therapy testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><strong>Rita</strong> &middot; Knee pain</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="band" id="consult">
+    <div class="container cta">
+      <div>
+        <h2 class="cta__title">Is chronic pain getting in the way of your day?</h2>
+        <p class="cta__text">If pain is limiting your activities or your quality of life, schedule a consultation. Your provider will examine the problem area, talk through your history, and build a treatment plan around you.</p>
+      </div>
+      <div class="cta__card">
+        <span class="cta__meta">Call our Port Neches clinic</span>
+        <span class="cta__number">409.210.3336</span>
+        <a class="btn btn--gold" href="/candidate?q=I%27m%20interested%20in%20MLS%20laser%20therapy">See if I'm a candidate</a>
+        <span class="cta__meta">2927 Nall Street, Port Neches, TX 77651</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container faq-wrap">
+      <div class="faq-side">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section__title">Frequently asked questions</h2>
+        <p class="section__sub" style="margin-top:0;">Don't see your question? Call us and we'll walk you through it.</p>
+        <a class="btn btn--gold" href="tel:4092103336">Call 409.210.3336</a>
+      </div>
+      <div>
+        <div class="faq__tools"><button type="button" id="faq-open">Expand all</button><button type="button" id="faq-close">Collapse all</button></div>
+        <div class="faq" id="faq-list">
+          <details><summary>How does laser therapy work?</summary><div class="faq__a"><p>Therapy lasers emit a concentrated beam of photons (particles of light energy) that are absorbed by the cells in the treatment area. That energy helps the cells reduce inflammation, relieve pain, and repair themselves.</p></div></details>
+          <details><summary>How is MLS different from cold laser, LLLT, or LED therapy?</summary><div class="faq__a"><p>MLS uses a patented emission system that synchronizes two wavelengths, one continuous and one pulsed. This lets the light reach deep tissue, including joints, while other light therapies mostly reach the surface. The synchronized delivery also gives MLS a high safety profile and keeps treatments short.</p></div></details>
+          <details><summary>Why choose MLS Laser Therapy?</summary><div class="faq__a"><p>It is drug-free, non-invasive, and non-addictive, and there are no known dangerous side effects.</p></div></details>
+          <details><summary>Does MLS Laser Therapy hurt?</summary><div class="faq__a"><p>No. Treatment is painless, and many patients report no sensation at all during their session.</p></div></details>
+          <details><summary>What can I expect during treatment?</summary><div class="faq__a"><p>You'll wear protective eyewear while your provider guides the laser over the treatment area. A typical session lasts 10 to 15 minutes, depending on the size and number of areas treated.</p></div></details>
+          <details><summary>How should I prepare for treatment?</summary><div class="faq__a"><p>Arrive about 10 minutes before your appointment, and wear clothing that makes it easy to expose the treatment area.</p></div></details>
+          <details><summary>How many treatments will I need?</summary><div class="faq__a"><p>Your plan is based on you and your condition. Acute conditions typically need about 6 sessions. Chronic conditions usually need 10 to 15 sessions.</p></div></details>
+          <details><summary>When can I expect to see results?</summary><div class="faq__a"><p>Most patients notice improvement within 1 to 3 sessions, such as less pain, less swelling, or better range of motion.</p><p>The effects are cumulative, so improvement continues as you move through your plan. Once you start, it's important to complete the full course your provider recommends.</p></div></details>
+          <details><summary>What if I don't see results after the first few sessions?</summary><div class="faq__a"><p>Because the effects build over time, some patients need more sessions before they notice a change. Let your provider know how you're progressing so they can adjust your plan if needed. Schedule a consultation with one of our providers at <a href="tel:4092103336">409.210.3336</a>.</p></div></details>
+          <details><summary>Are the results long-lasting?</summary><div class="faq__a"><p>For most patients, yes. Many get long-term relief from pain and inflammation after completing their plan. Some benefit from an occasional supportive session to maintain results; you and your provider will decide how often.</p></div></details>
+          <details><summary>Does MLS Laser Therapy have side effects?</summary><div class="faq__a"><p>MLS Laser Therapy has no known negative side effects. It is non-invasive, requires no downtime, and unlike many pain and anti-inflammatory medications, it is not habit-forming.</p></div></details>
+          <details><summary>Is MLS Laser Therapy covered by insurance?</summary><div class="faq__a"><p>MLS Laser Therapy is generally not covered by insurance. We offer <a href="/services/cherry">Cherry payment plans</a>, with qualifying 0% APR options, and we also accept <a href="/services/care">CareCredit</a>.</p></div></details>
+          <details><summary>How much does treatment cost?</summary><div class="faq__a"><p>Pricing and packages vary from patient to patient. It&rsquo;s not one-size-fits-all: your provider will recommend a plan after your consultation, and we&rsquo;ll go over pricing with you before you commit to anything. Schedule a consultation with one of our providers at <a href="tel:4092103336">409.210.3336</a>.</p></div></details>
+          <details><summary>Can MLS be combined with other treatments?</summary><div class="faq__a"><p>Yes. MLS can be even more effective alongside other care. We may pair it with <a href="/services/spinal-decompression">spinal decompression</a>, <a href="/services/iv">IV therapy</a>, detox spa, or other treatment options. Schedule a consultation with one of our providers at <a href="tel:4092103336">409.210.3336</a>.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <p class="disclaimer">MLS Laser Therapy is cleared by the FDA. Individual results vary; your provider will discuss whether MLS is right for your condition.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <span class="footer__logo-wrap"><img src="/img/logo.png" alt="gerstenberg.clinic" class="footer__logo"></span>
+        <p class="footer__tagline">A holistic approach for the whole family, and beyond.</p>
+        <p class="footer__credentials">K. Paul Gerstenberg, D.O. — Board Certified, Family Medicine · Certified Biote® Provider · Fellow, Age Management Medicine</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2927 Nall Street<br>Port Neches, TX 77651</li>
+          <li><a href="tel:4092103336">409.210.3336</a></li>
+          <li>Fax (409) 527-3969</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=2927+Nall+Street+Port+Neches+TX+77651" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+        <h4 class="footer__subhead">Hours</h4>
+        <ul class="footer__hours">
+          <li>Mon&ndash;Thu: 8 a.m.&ndash;5 p.m.</li>
+          <li>Fri: 8 a.m.&ndash;12 p.m.</li>
+          <li>Sat&ndash;Sun: Closed</li>
+        </ul>      </div>
+      <div>
+        <h4>For patients</h4>
+        <ul>
+          <li><a href="https://gerstenberg.mymedaccess.com/login" target="_blank" rel="noopener">Patient portal</a></li>
+          <li><a href="/pay" target="_blank" rel="noopener">Pay a bill</a></li>
+          <li><a href="/forms" target="_blank" rel="noopener">New patient forms</a></li>
+          <li><a href="/services/education">Before you come</a></li>
+          <li><a href="/store" target="_blank" rel="noopener">Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/about">About &amp; providers</a></li>
+          <li><a href="https://g.page/gerstenbergclinic/review?gm" target="_blank" rel="noopener">Leave a review</a></li>
+          <li><a href="https://www.facebook.com/gerstenberg.clinic/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC9HfWlvz_leYJQkM4ac-yOw" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">Content here reflects the clinical opinion of gerstenberg.clinic's providers and is offered for education, not as a substitute for one-on-one care with your provider.</p>
+      <p>© 2001– gerstenberg.clinic</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+})();
+</script>
+<script>
+(function(){
+  var list=document.getElementById('faq-list');
+  function setAll(v){ list.querySelectorAll('details').forEach(function(d){ d.open=v; }); }
+  document.getElementById('faq-open').addEventListener('click',function(){setAll(true);});
+  document.getElementById('faq-close').addEventListener('click',function(){setAll(false);});
+})();
+</script>
+</body>
+</html>
