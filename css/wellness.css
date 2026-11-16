@@ -32,7 +32,7 @@
 
 html, body{ background:var(--paper); color:var(--ink); }
 body{ font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
-h1, h2, h3{ font-family:var(--font-display); font-weight:800 !important; letter-spacing:-0.02em; color:var(--navy); overflow-wrap:break-word; hyphens:auto; }
+h1, h2, h3{ font-family:var(--font-display); font-weight:800 !important; letter-spacing:-0.02em; color:var(--navy); overflow-wrap:break-word; }
 
 /* Eyebrows, tags and small labels: monospace, uppercase, rust */
 .eyebrow, [class*="__eyebrow"], [class*="-eyebrow"], .video__kicker,

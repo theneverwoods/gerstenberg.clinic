@@ -278,6 +278,7 @@ permalink: /forms
   .form-item{background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:24px 26px; display:flex; flex-direction:column; transition:border-color .15s ease;}
   .form-item:hover{border-color:var(--gold);}
   .form-item--wide{grid-column:1 / -1;}
+  .form-item[hidden]{display:none;}
   .form-item__meta{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
   .tag{font-size:.74rem; font-weight:600; padding:3px 9px; border-radius:20px; border:1px solid var(--line); color:var(--ink-soft);}
   .tag--gold{color:var(--gold); background:var(--gold-soft); border-color:var(--gold-soft);}
@@ -389,7 +390,7 @@ permalink: /forms
 
       <div class="form-list" id="form-list">
 
-        <article class="form-item form-item--wide" data-cat="new">
+        <article class="form-item form-item--wide" data-key="adult">
           <div class="form-item__meta"><span class="tag tag--gold">Most common</span><span class="tag">Ages 18+</span><span class="tag">Primary care</span></div>
           <h3 class="form-item__title">Adult new patient packet</h3>
           <p class="form-item__text">Required for all new primary care patients 18 and older. Submit it before scheduling your first appointment.</p>
@@ -399,7 +400,7 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="new">
+        <article class="form-item" data-key="child">
           <div class="form-item__meta"><span class="tag">Under 18</span><span class="tag">Primary care</span></div>
           <h3 class="form-item__title">Child new patient packet</h3>
           <p class="form-item__text">Minors can become patients when their parent or guardian is also a patient here.</p>
@@ -409,7 +410,7 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="new">
+        <article class="form-item" data-key="wellness">
           <div class="form-item__meta"><span class="tag">Cash-pay</span><span class="tag">No insurance card needed</span></div>
           <h3 class="form-item__title">Wellness new patient packet</h3>
           <p class="form-item__text">For wellness services only, if you aren't already a primary care patient. Covers Biote® hormone therapy, DermaSweep, and ED treatments.</p>
@@ -418,7 +419,7 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="returning">
+        <article class="form-item" data-key="annual">
           <div class="form-item__meta"><span class="tag">Existing patients</span></div>
           <h3 class="form-item__title">Annual update packet</h3>
           <p class="form-item__text">Haven't been seen yet this calendar year? Fill this out ahead of time and save time at check-in.</p>
@@ -428,17 +429,17 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="visit">
-          <div class="form-item__meta"><span class="tag">Consult visit</span></div>
-          <h3 class="form-item__title">Reforming Life new patient packet</h3>
-          <p class="form-item__text">Complete this before your Reforming Life consult so we can get you in and out of the office quickly.</p>
+        <article class="form-item" data-key="weightloss">
+          <div class="form-item__meta"><span class="tag">Weight loss</span><span class="tag">Consult visit</span></div>
+          <h3 class="form-item__title">Weight loss consult packet</h3>
+          <p class="form-item__text">Complete this before your weight loss consult so we can get you in and out of the office quickly.</p>
           <div class="form-item__actions">
             <a class="btn btn--gold" href="https://form.jotform.com/240145434896158" target="_blank" rel="noopener">Fill out online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             <a class="btn btn--ghost" href="/pdf/reflife.pdf" target="_blank" rel="noopener">Printable PDF</a>
           </div>
         </article>
 
-        <article class="form-item" data-cat="visit">
+        <article class="form-item" data-key="heartsmart">
           <div class="form-item__meta"><span class="tag">Cardiovascular exam</span></div>
           <h3 class="form-item__title">HeartSmart patient packet</h3>
           <p class="form-item__text">Complete this paperwork before your HeartSmart cardiovascular exam.</p>
@@ -448,7 +449,7 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="records">
+        <article class="form-item" data-key="records">
           <div class="form-item__meta"><span class="tag">Records transfer</span></div>
           <h3 class="form-item__title">Medical records consent</h3>
           <p class="form-item__text">Use this to have your records transferred to us from another facility or doctor.</p>
@@ -458,7 +459,7 @@ permalink: /forms
           </div>
         </article>
 
-        <article class="form-item" data-cat="records">
+        <article class="form-item form-item--wide" data-key="npp">
           <div class="form-item__meta"><span class="tag">For your information</span></div>
           <h3 class="form-item__title">Notice of Privacy Practices</h3>
           <p class="form-item__text">How we protect your personal health information, and when and how it may be disclosed.</p>
@@ -568,20 +569,32 @@ permalink: /forms
 
 <script>
 (function(){
-  // form filter
+  // form filter: each button shows its own forms, in its own order
+  var ORDER={
+    all:['adult','child','wellness','annual','weightloss','heartsmart','records','npp'],
+    'new':['adult','child','wellness','weightloss','heartsmart','annual'],
+    returning:['annual','heartsmart','wellness'],
+    visit:['heartsmart','weightloss'],
+    records:['records','npp']
+  };
   var btns=document.querySelectorAll('.filter__btn');
-  var items=document.querySelectorAll('.form-item');
+  var list=document.getElementById('form-list');
   var empty=document.getElementById('form-empty');
+  var byKey={};
+  list.querySelectorAll('.form-item').forEach(function(it){ byKey[it.getAttribute('data-key')]=it; });
   btns.forEach(function(b){
     b.addEventListener('click',function(){
-      var f=b.getAttribute('data-filter'), shown=0;
+      var keys=ORDER[b.getAttribute('data-filter')];
       btns.forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false');});
-      items.forEach(function(it){
-        var on = f==='all' || it.getAttribute('data-cat')===f;
-        it.hidden=!on; if(on) shown++;
-        it.classList.toggle('form-item--wide', on && f==='all' && it.querySelector('.tag--gold')!==null);
-      });
-      empty.hidden = shown>0;
+      Object.keys(byKey).forEach(function(k){ byKey[k].hidden=keys.indexOf(k)<0; byKey[k].classList.remove('form-item--wide'); });
+      keys.forEach(function(k){ list.insertBefore(byKey[k], empty); });
+      // Two-column grid: with 3+ forms the first spans the full width, and so does the last
+      // when it would otherwise sit alone in its row.
+      if(keys.length>2){
+        byKey[keys[0]].classList.add('form-item--wide');
+        if((keys.length-1)%2) byKey[keys[keys.length-1]].classList.add('form-item--wide');
+      }
+      empty.hidden=keys.length>0;
     });
   });
   // copy buttons
